@@ -1,0 +1,58 @@
+@import "helpers/fonts";
+@import "helpers/normalize";
+@import 'helpers/media_mixins';
+@import "helpers/vars_and_mixins";
+@import "header";
+@import "hero";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: Avenir, sans-serif;
+  font-weight: 400;
+}
+
+.btn.btn--primary  {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Avenir, sans-serif;
+  font-weight: 700;
+  padding: 8px 24px;
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(125.55deg, #9124B8 1.14%, #2782D3 50.97%, #1BDAC3 114.58%);
+  box-shadow: 0px 20px 15px rgba(56, 159, 203, 0.05), 0px 6px 7px rgba(56, 159, 203, 0.06), 0px 0.5px 1px rgba(56, 159, 203, 0.3);
+}
+
+.section__subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  color: #D5DCE2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-family: Avenir, sans-serif;
+  font-weight: 800;
+}
+.section__subtitle.section__subtitle--gradient {
+  background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+section {
+  padding: 130px 0;
+}

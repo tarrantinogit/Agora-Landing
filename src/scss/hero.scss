@@ -1,0 +1,60 @@
+.hero {
+  background: linear-gradient(125.55deg, #9124B8 1.14%, #2782D3 50.97%, #1BDAC3 114.58%);
+  position: relative;
+
+  &__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    column-gap: 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 48px;
+    line-height: 64px;
+    color: #FFF;
+    font-family: Avenir, sans-serif;
+    font-weight: 800;
+    margin: 24px 0 20px 0;
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 32px;
+    font-family: Avenir, sans-serif;
+    font-weight: 400;
+    color: #D5DCE2;
+    max-width: 411px;
+    margin-bottom: 64px;
+  }
+
+  &__btn {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Avenir, sans-serif;
+    font-weight: 700;
+    padding: 8px 24px;
+    border-radius: 999px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #fff;
+    & > span {
+      background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+}
