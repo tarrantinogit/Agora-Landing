@@ -1,0 +1,101 @@
+.faq {
+  &__wrapper {
+    .section__description {
+      max-width: 868px;
+
+    }
+  }
+
+  &__accordion {
+    max-width: 868px;
+    margin: 88px auto;
+    @include tablet_md {
+      margin: 50px auto;
+    }
+    &-item {
+      background: #FFFFFF;
+      border-radius: 40px;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+
+
+      &-header {
+        cursor: pointer;
+        padding: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include tablet_sm {
+          padding: 24px 32px;
+        }
+
+        & + .faq__accordion-item-body {
+          padding-left: 32px;
+          padding-right: 32px;
+          transition: all .3s linear;
+        }
+
+        &.active {
+          padding-bottom: 8px;
+
+          & + .faq__accordion-item-body {
+            padding: 0 32px 32px 32px;
+          }
+
+        }
+
+        &.active .faq__accordion-item-header-text {
+          background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          pointer-events: none;
+        }
+
+        &.active .faq__accordion-item-header-ico {
+          background: url("../images/Minus.svg") center center no-repeat;
+        }
+
+        &-text {
+          font-family: Avenir, sans-serif;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 23px;
+          line-height: 32px;
+          color: #242D3B;
+          @include tablet_sm {
+            font-weight: 800;
+            font-size: 17px;
+            line-height: 24px;
+            color: #242D3B;
+          }
+
+
+        }
+
+        &-ico {
+          width: 32px;
+          height: 32px;
+          display: block;
+          background: url("../images/Plus.svg") center center no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.accordion .accordion-item .accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #384350;
+
+}

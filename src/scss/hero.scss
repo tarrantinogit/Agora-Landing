@@ -1,6 +1,6 @@
 .hero {
-  background: linear-gradient(125.55deg, #9124B8 1.14%, #2782D3 50.97%, #1BDAC3 114.58%);
   position: relative;
+  background: linear-gradient(125.55deg, #9124B8 1.14%, #2782D3 50.97%, #1BDAC3 114.58%);
 
   &__overlay {
     position: absolute;
@@ -8,7 +8,26 @@
     width: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(17, 31, 43, 0.6);
+  }
+
+  &__img-wrapper {
+    max-width: 508px;
+    height: auto;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    @include tablet {
+      & .btn.btn--secondary {
+        display: none;
+      }
+    }
+
   }
 
   &__wrapper {
@@ -18,6 +37,11 @@
     column-gap: 32px;
     position: relative;
     z-index: 1;
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 48px;
+    }
   }
 
   &__title {
@@ -27,6 +51,21 @@
     font-family: Avenir, sans-serif;
     font-weight: 800;
     margin: 24px 0 20px 0;
+    max-width: 508px;
+    @include tablet {
+      text-align: center;
+      max-width: 100%;
+    }
+    @include tablet_sm {
+      text-align: left;
+      font-size: 42px;
+      line-height: 58px;
+    }
+    @include mobile_md {
+      font-size: 33px;
+      line-height: 46px;
+      margin-top: 0;
+    }
   }
 
   &__description {
@@ -35,26 +74,20 @@
     font-family: Avenir, sans-serif;
     font-weight: 400;
     color: #D5DCE2;
-    max-width: 411px;
+    max-width: 508px;
     margin-bottom: 64px;
-  }
-
-  &__btn {
-    font-size: 16px;
-    line-height: 24px;
-    font-family: Avenir, sans-serif;
-    font-weight: 700;
-    padding: 8px 24px;
-    border-radius: 999px;
-    color: #fff;
-    text-decoration: none;
-    background-color: #fff;
-    & > span {
-      background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
+    @include tablet {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    @include tablet_sm {
+      text-align: left;
+    }
+    @include mobile_md {
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 0;
     }
   }
 }

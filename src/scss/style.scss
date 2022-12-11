@@ -2,8 +2,24 @@
 @import "helpers/normalize";
 @import 'helpers/media_mixins';
 @import "helpers/vars_and_mixins";
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/effect-fade/effect-fade";
+@import "form-elements";
+@import "cards";
 @import "header";
 @import "hero";
+@import "processes";
+@import "capabilities";
+@import "management";
+@import "solutions";
+@import "benefits";
+@import "testimonials";
+@import "technologies";
+@import "faq";
+@import "subscribe-form";
+@import "contact-us";
+@import "footer";
+@import "popup";
 
 * {
   padding: 0;
@@ -23,7 +39,7 @@ p {
   font-weight: 400;
 }
 
-.btn.btn--primary  {
+.btn.btn--primary {
   font-size: 16px;
   line-height: 24px;
   font-family: Avenir, sans-serif;
@@ -34,6 +50,73 @@ p {
   text-decoration: none;
   background: linear-gradient(125.55deg, #9124B8 1.14%, #2782D3 50.97%, #1BDAC3 114.58%);
   box-shadow: 0px 20px 15px rgba(56, 159, 203, 0.05), 0px 6px 7px rgba(56, 159, 203, 0.06), 0px 0.5px 1px rgba(56, 159, 203, 0.3);
+  transition: background .3s linear;
+  background-size: 150% 150%;
+  &:hover {
+    -webkit-animation: gradient 3s ease infinite;
+    -moz-animation: gradient 3s ease infinite;
+    animation: gradient 3s ease infinite;
+  }
+
+  &:active {
+    background: #384350;
+  }
+}
+
+.btn-secondary__wrapper {
+  padding: 2px;
+  background-image: linear-gradient(125.55deg, #9124B8 1.14%, #2782D3 50.97%, #1BDAC3 114.58%);
+  display: none;
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @include tablet {
+    display: flex;
+  }
+}
+
+.btn.btn--secondary {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Avenir, sans-serif;
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #fff;
+  box-shadow: 0px 80px 90px rgba(17, 26, 43, 0.08), 0px 40px 30px rgba(0, 14, 26, 0.03), 0px 5px 7px rgba(0, 14, 26, 0.02);
+  transition: all .3s linear;
+
+  &.btn--mobile {
+    display: none;
+    @include tablet {
+      display: block;
+      padding: 12px;
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+    }
+  }
+
+  &:active {
+    background: #F8F8FA;
+    box-shadow: 0px 12px 40px rgba(17, 26, 43, 0.02), 0px 0.5px 2px rgba(17, 26, 43, 0.08);
+  }
+
+  &:hover {
+    background: #EBEFF1;
+    box-shadow: 0px 12px 40px rgba(17, 26, 43, 0.02), 0px 0.5px 2px rgba(17, 26, 43, 0.08);
+  }
+
+  & > span {
+    background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
 }
 
 .section__subtitle {
@@ -44,7 +127,9 @@ p {
   letter-spacing: 0.04em;
   font-family: Avenir, sans-serif;
   font-weight: 800;
+  text-align: center;
 }
+
 .section__subtitle.section__subtitle--gradient {
   background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
   -webkit-background-clip: text;
@@ -53,6 +138,118 @@ p {
   text-fill-color: transparent;
 }
 
+.section__title {
+  font-size: 36px;
+  line-height: 48px;
+  color: #111A2B;
+  margin: 20px 0;
+  font-family: Avenir, sans-serif;
+  font-weight: 800;
+  text-align: center;
+  @include tablet_md {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  @include mobile {
+    font-size: 23px;
+    line-height: 32px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+}
+
+.section__title.section__title--white {
+  color: #FFFFFF;
+}
+
+.section__description {
+  font-size: 20px;
+  line-height: 32px;
+  color: #242D3B;
+  font-weight: 400;
+  font-family: Avenir, sans-serif;
+  text-align: center;
+  max-width: 865px;
+  margin: 0 auto;
+  @include tablet_md {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  @include mobile {
+    font-size: 15px;
+  }
+
+}
+
+
+.section__description.section__description--white {
+  color: #F8F8FA;
+}
+
 section {
   padding: 130px 0;
+  background-size: cover !important;
+  @include desktop {
+    padding: 130px 24px;
+  }
+  @include tablet {
+    padding: 50px 24px;
+  }
+  @include mobile {
+    padding: 50px 16px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 31, 43, 0.6);
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

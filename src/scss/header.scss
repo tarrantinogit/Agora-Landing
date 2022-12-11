@@ -4,6 +4,136 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    @include tablet {
+      padding: 20px 24px;
+      & .btn.btn--primary {
+        display: none;
+      }
+    }
+
+
+  }
+
+  &__burger {
+    display: none;
+    @include tablet {
+      width: 32px;
+      height: 32px;
+      padding: 8px 4px;
+      justify-content: space-between;
+      cursor: pointer;
+      display: block;
+      &-item {
+        position: relative;
+        display: block;
+        width: 24px;
+        height: 2px;
+        border-radius: 999px;
+        background: #222;
+        transition: all .2s ease-in-out;
+
+        &:before, &:after {
+          position: absolute;
+          background: #222;
+          content: '';
+          width: 24px;
+          height: 2px;
+          border-radius: 999px;
+          transition: all .2s ease-in-out;
+        }
+
+        &:before {
+          top: -8px;
+        }
+        &:after {
+          top: 8px;
+        }
+      }
+    }
+    &.active {
+      & .header__burger-item {
+        background: transparent;
+        &:before {
+          transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        &:after {
+          transform: rotate(-45deg) translate(5px, -6px);
+        }
+      }
+    }
+
+    &-menu {
+      background-color: #F9FBFC;
+      position: absolute;
+      left: -9999px;
+      top: 64px;
+      padding: 24px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: calc(100vh - 60px) ;
+      transition: left .5s linear;
+      &.active {
+        left: 0;
+        z-index: 2;
+      }
+      & a.btn.btn--primary {
+        display: block;
+        max-width: 360px;
+        text-align: center;
+        margin-top: auto;
+      }
+    }
+
+    &-list {
+      list-style: none;
+      max-width: 360px;
+
+      &-link {
+
+      }
+
+      &-item:not(:last-child) {
+        margin-bottom: 32px;
+      }
+
+      &-link {
+        text-decoration: none;
+        font-family: Avenir, sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #242D3B;
+        position: relative;
+        width: 100%;
+        display: flex;
+        margin-left: 0;
+        margin-right: auto;
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          width: 24px;
+          height: 24px;
+          background: url("../images/arrow-right.svg") center center no-repeat;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    @include tablet {
+      display: none;
+    }
   }
 
   &__list {
@@ -13,6 +143,10 @@
     &-item {
       padding: 16px 20px;
       transition: all .3s linear;
+      @include desktop {
+        padding: 16px 8px;
+      }
+
 
       &:hover {
         background-color: #F8F8FA;
@@ -51,6 +185,10 @@
         bottom: 0;
         left: -20px;
         transition: all .3s linear;
+        @include desktop {
+          width: 100%;
+          left: 0;
+        }
       }
 
       &:hover:after {

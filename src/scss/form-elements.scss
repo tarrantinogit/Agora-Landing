@@ -1,0 +1,202 @@
+.input {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #111A2B;
+  padding: 12px 16px 12px 24px;
+  background: #FFFFFF;
+  border: 1px solid #AFB5BA;
+  box-shadow: 0px 12px 40px rgba(17, 26, 43, 0.02), 0px 0.5px 2px rgba(17, 26, 43, 0.08);
+  border-radius: 16px;
+  transition: all .3s linear;
+  &::placeholder {
+    font-family: Avenir, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #5F6972;
+  }
+
+  &:hover {
+    background: #F8F8FA;
+    box-shadow: 0px 80px 90px rgba(17, 26, 43, 0.08), 0px 40px 30px rgba(0, 14, 26, 0.03), 0px 5px 7px rgba(0, 14, 26, 0.02);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.input__wrapper:has(.input:focus-visible) {
+  background-image: linear-gradient(125.55deg, #9124B8 1.14%, #2782D3 50.97%, #1BDAC3 114.58%);
+  padding: 2px;
+  //width: fit-content;
+  border-radius: 16px;
+}
+
+.input__wrapper {
+  padding: 2px;
+  width: 100%;
+  display: block;
+}
+
+.input.input--textarea {
+  resize: none;
+  height: 120px;
+  width: 100%;
+  @include tablet_sm {
+    height: 72px;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-family: Avenir, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+    color: #384350;
+    margin-left: 8px;
+    margin-bottom: 8px;
+
+    &--additional {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      text-align: right;
+      color: #5F6972;
+      margin-right: 8px;
+    }
+
+    &--required {
+      position: relative;
+
+      &:after {
+        content: '*';
+        background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+.check-label {
+  margin-bottom: 32px;
+  display: none;
+}
+
+.input--checkbox {
+  appearance: none;
+
+  &:checked + span:after {
+    content: '';
+    position: absolute;
+    background: url("../images/checked-checkbox.svg") 50% 50% no-repeat;
+    width: 32px;
+    height: 32px;
+    left: -48px;
+    top: 50%;
+    transform: translateY(-50%);
+    //z-index: 2;
+  }
+  &:checked + span:before {
+    display: none;
+  }
+
+  & + span {
+    font-family: Avenir, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #111A2B;
+    position: relative;
+    margin-left: 48px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background: transparent;
+      border: 1.5px solid #AFB5BA;
+      box-shadow: 0px 12px 40px rgba(17, 26, 43, 0.02), 0px 0.5px 2px rgba(17, 26, 43, 0.08);
+      border-radius: 9px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -48px;
+      box-sizing: border-box;
+    }
+
+  }
+}
+
+.input--file {
+  width: 0;
+  height: 0;
+}
+.desktop {
+  @include tablet {
+    display: none;
+  }
+}
+.mobile {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+.download__wrapper {
+  padding: 12px 32px 12px 60px;
+  position: relative;
+  cursor: pointer;
+  background: #F8F8FA;
+  border-radius: 999px;
+  &:after {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("../images/Attach_file.svg") center center no-repeat;
+    left: 24px;
+  }
+}
+.download__text {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.download__wrapper.mobile {
+  @include tablet {
+    max-width: 280px;
+    display: inline-block;
+    margin: 0 auto 48px auto;
+  }
+}

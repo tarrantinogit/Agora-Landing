@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', {
-    'title': 'home'
-  })
-  <body>
-    @@include('html/header.html', {})
-    <main>
-        @@include('html/hero.html', {})
-    </main>
-    @@include('html/footer.html', {})
-    <script src="js/app.min.js"></script>
-  </body>
+@@include('html/head.html', {
+'title': 'home'
+})
+<body>
+@@include('html/header.html', {})
+<main>
+    @@include('html/hero.html', {})
+    @@include('html/processes.html', {})
+    @@include('html/capabilities.html', {})
+    @@include('html/management.html', {})
+    @@include('html/faq.html', {})
+    @@include('html/benefits.html', {})
+    @@include('html/solutions.html', {})
+    @@include('html/technologies.html', {})
+    @@include('html/testimonials.html', {})
+<!--    @@include('html/contact-us.html', {})-->
+</main>
+@@include('html/footer.html', {})
+@@include('html/popup.html', {})
+@@include('html/popup-contact.html', {})
+<div class="overlay"></div>
+<script src="js/app.min.js"></script>
+</body>
 </html> 

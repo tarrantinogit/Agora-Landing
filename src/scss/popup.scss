@@ -1,0 +1,120 @@
+.popup {
+  position: fixed;
+  top: -999px;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  filter: drop-shadow(0px 80px 90px rgba(17, 26, 43, 0.08)) drop-shadow(0px 40px 30px rgba(0, 14, 26, 0.03)) drop-shadow(0px 5px 7px rgba(0, 14, 26, 0.02));
+  border-radius: 24px;
+  background-color: #fff;
+  max-width: 625px;
+  transition: top .4s linear;
+  &.active {
+    top: 50%;
+  }
+
+  &__header {
+    background-color: #1BDAC3;
+    background-size: cover !important;
+    padding: 40px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+
+  &__title {
+    font-family: Avenir, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 23px;
+    line-height: 32px;
+    color: #FFFFFF;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__btn-close {
+    cursor: pointer;
+
+  }
+
+  &__caption {
+    font-family: Avenir, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #EBEFF1;
+  }
+
+  &__body {
+    padding: 32px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    &-inner {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 24px;
+
+      & .label {
+        max-width: 268px;
+        width: 50%;
+
+        & .input {
+          width: 100%;
+        }
+      }
+    }
+
+    & .btn.btn--primary {
+      padding: 12px 40px;
+      margin-left: auto;
+    }
+  }
+}
+
+.btn__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  & .btn.btn--secondary {
+    padding: 12px 32px;
+  }
+}
+
+.popup-contact {
+  max-width: 688px;
+  margin: 0 auto;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  top: -9999999px;
+  left: 50%;
+  transition: top .4s linear;
+  transform: translate(-50%, -50%);
+  &.active {
+    top: 50%;
+    z-index: 9;
+  }
+  @include tablet_sm {
+    padding: 0 16px;
+    height: 100vh;
+  }
+  & .contact-us__form-wrapper .contact-us__form {
+    @include tablet {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+}
+
+
+
