@@ -60,6 +60,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
   }
 
   &__text {
@@ -152,6 +153,7 @@
   height: 0;
 }
 .desktop {
+  display: block;
   @include tablet {
     display: none;
   }
@@ -179,6 +181,18 @@
     background: url("../images/Attach_file.svg") center center no-repeat;
     left: 24px;
   }
+  &.desktop {
+    display: flex;
+    @include tablet {
+      display: none;
+    }
+  }
+  &.mobile {
+    display: none;
+    @include tablet {
+      display: flex;
+    }
+  }
 }
 .download__text {
   font-family: Avenir, sans-serif;
@@ -191,12 +205,50 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  max-width: 100px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
+
 
 .download__wrapper.mobile {
   @include tablet {
     max-width: 280px;
-    display: inline-block;
-    margin: 0 auto 48px auto;
+    display: flex;
+  }
+  @include mobile_md {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.btn__inner {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  &.mobile {
+    @include tablet {
+      margin-bottom: 48px;
+    }
+  }
+}
+.download__reset-btn {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 24px;
+  background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  cursor: pointer;
+  margin-left: 10px;
+  display: none;
+  &.active {
+    display: block;
   }
 }

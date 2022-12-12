@@ -28,6 +28,7 @@
     margin-top: 88px;
     column-gap: 32px;
     width: min-content;
+    transition: all .4s linear;
 
     @include tablet {
       flex-direction: column-reverse;
@@ -40,6 +41,7 @@
       align-items: center;
       justify-content: center;
       column-gap: 32px;
+      transition: all .4s linear;
       @include tablet {
         align-self: flex-start;
       }
@@ -50,6 +52,7 @@
       align-items: center;
       justify-content: center;
       column-gap: 32px;
+      transition: all .4s linear;
     }
   }
 

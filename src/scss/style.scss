@@ -26,7 +26,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .container {
   max-width: 1050px;
   margin: 0 auto;
@@ -48,11 +50,12 @@ p {
   border-radius: 999px;
   color: #fff;
   text-decoration: none;
-  background: linear-gradient(125.55deg, #9124B8 1.14%, #2782D3 50.97%, #1BDAC3 114.58%);
+  background: linear-gradient(135deg, #9124B8, #2782D3, #1BDAC3);
   box-shadow: 0px 20px 15px rgba(56, 159, 203, 0.05), 0px 6px 7px rgba(56, 159, 203, 0.06), 0px 0.5px 1px rgba(56, 159, 203, 0.3);
-  transition: background .3s linear;
-  background-size: 150% 150%;
+  transition: all .3s linear;
+
   &:hover {
+    background-size: 150% 150%;
     -webkit-animation: gradient 3s ease infinite;
     -moz-animation: gradient 3s ease infinite;
     animation: gradient 3s ease infinite;
@@ -213,7 +216,7 @@ section {
 
   &.active {
     opacity: 1;
-    z-index: 2;
+    z-index: 1;
     visibility: visible;
   }
 }

@@ -3,7 +3,7 @@
     <div class="popup__header" style="background: url('../images/bg/popup-header.jpg') center center no-repeat">
         <div class="popup__title-wrapper">
             <h3 class="popup__title">Contact Us</h3>
-            <img src="../images/popup_close.svg " data-popup-contact-close  alt="" class="popup__btn-close">
+            <img src="../images/popup_close.svg " data-popup-contact-close alt="" class="popup__btn-close">
         </div>
         <p class="popup__caption">You can contact us by sending
             a message via this pop-up form</p>
@@ -52,18 +52,21 @@
                           class="input input--textarea"></textarea>
                     </span>
             </label>
-            <label for="download" class="download__wrapper mobile">
-                <span class="download__text">Attach a file</span>
-                <input type="file" accept=".pdf" class="input--file " name="" id="download">
-            </label>
+            <div class="btn__inner mobile">
+                <span class="download__reset-btn">Delete a file</span>
+                <label for="download" class="download__wrapper mobile">
+                    <span class="download__text">Attach a file</span>
+                    <input type="file"  class="input--file " name="" id="download">
+                </label>
+            </div>
             <div class="btn__wrapper">
                 <div class="btn__inner">
+                    <span class="download__reset-btn">Delete a file</span>
+                    <label for="download" class="download__wrapper desktop">
+                        <span class="download__text">Attach a file</span>
+                        <input type="file" class="input--file " name="" id="download">
+                    </label>
                     <div class="btn-secondary__wrapper">
-                        <label for="download" class="download__wrapper desktop">
-                            <span class="download__text">Attach a file</span>
-                            <input type="file" accept=".pdf" class="input--file " name="" id="download">
-                        </label>
-
                         <a data-contact-us-close class="btn btn--secondary"><span>Close</span></a>
                     </div>
                 </div>

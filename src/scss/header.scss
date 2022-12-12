@@ -1,4 +1,9 @@
 .header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
   &__wrapper {
     padding: 0 24px;
     display: flex;
@@ -65,20 +70,24 @@
     }
 
     &-menu {
-      background-color: #F9FBFC;
+      background: url("../images/bg/header-mobile-menu.jpg") center center/cover no-repeat;
       position: absolute;
       left: -9999px;
-      top: 64px;
+      top: 72px;
       padding: 24px;
       width: 100%;
+      max-width: 400px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: calc(100vh - 60px) ;
       transition: left .5s linear;
       &.active {
-        left: 0;
+        left: calc(100vw - 400px);
         z-index: 2;
+        @include mobile_md {
+          left: 0;
+        }
       }
       & a.btn.btn--primary {
         display: block;
