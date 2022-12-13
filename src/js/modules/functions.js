@@ -32,20 +32,13 @@ export function downloadButton() {
 			resetBtns[index].classList.add('active');
 		})
 	})
-	resetBtns.forEach((btn, index) =>{
+	resetBtns.forEach((btn, index) => {
 		btn.addEventListener('click', function (e) {
 			btn.classList.remove('active');
 			downloadButtons[index].value = '';
 			fileChosen[index].textContent = 'Choose a file'
 		})
 	})
-
-	// downloadButtons.forEach((button, index) => {
-	// 	button.addEventListener('change', function (e) {
-	// 		button.firstElementChild.textContent =  downloadInputs[index].files[0].name
-	// 	})
-	// })
-
 
 }
 
@@ -57,15 +50,15 @@ export const testimonilasSwiper = new Swiper('.swiper.testimonials__swiper', {
 	slidesPerView: "2",
 	spaceBetween: 32,
 	calculateHeight: true,
-	initialSlide: 2,
-	mousewheel: true,
+	initialSlide: 1,
 
 	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-		renderBullet: function (index, className) {
-			return `<span class="swiper-pagination-bullet"></span>`;
-		},
+		el: ".swiper-pagination",
+		type: "fraction",
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
 	},
 	breakpoints: {
 		360: {
@@ -83,6 +76,30 @@ export const testimonilasSwiper = new Swiper('.swiper.testimonials__swiper', {
 
 	}
 });
+
+export function capabilitiesSwiper() {
+	if (document.body.clientWidth <= 640) {
+		const swiper = new Swiper('.capabilities__swiper.swiper', {
+			direction: 'horizontal',
+			loop: false,
+			spaceBetween: 32,
+			centeredSlides: true,
+			slidesPerView: "auto",
+			observer: true,
+			observeParents: true,
+
+			pagination: {
+				el: ".capabilities__swiper-pagination",
+				type: "fraction",
+			},
+			navigation: {
+				nextEl: ".capabilities__swiper-button-next",
+				prevEl: ".capabilities__swiper-button-prev",
+			}
+		});
+
+	}
+}
 
 
 export function accordion() {
@@ -120,8 +137,8 @@ export function popup(btnSelector, btnCloseSelector, popupSelector) {
 	const mobileMenu = document.querySelector('.header__burger-menu');
 
 
-	if (document.querySelector('.a[data-contact-us-close]')) {
-		document.querySelector('.a[data-contact-us-close]').addEventListener('click', (e) => {
+	if (document.querySelector('a[data-contact-us-close]')) {
+		document.querySelector('a[data-contact-us-close]').addEventListener('click', (e) => {
 			if (e.target) {
 				popup.classList.remove('active');
 				overlay.classList.remove('active');
@@ -194,100 +211,6 @@ export function burgerMenu() {
 			overlay.classList.remove('active');
 		}
 	});
-}
-
-
-export function capabilities() {
-	if (document.body.clientWidth <= 993) {
-		const section = document.querySelector('.capabilities');
-		const sectionHeight = section.offsetHeight;
-		const positionTop = section.getBoundingClientRect().top
-		const cards = document.querySelectorAll('.capabilities__wrapper .cards__wrapper .card');
-		let cardsLeft = [];
-		let cardsRight = [];
-
-		cardsLeft.push(cards[0], cards[1], cards[4], cards[5])
-		cardsRight.push(cards[2], cards[3], cards[6], cards[7])
-
-
-		document.addEventListener('scroll', (e) => {
-			let positionTop = section.getBoundingClientRect().top + 200
-			let transitionNumber1 = (sectionHeight * positionTop) * 0.1 / 1000
-			let transitionNumber2 = ((sectionHeight * positionTop) * 0.1 / 1000) * -1
-
-			if (positionTop <= 0) {
-				cardsLeft.forEach(cardLeft => {
-					cardLeft.style.transform = `translateX(${transitionNumber1}%)`;
-				})
-				cardsRight.forEach(cardRight => {
-					cardRight.style.transform = `translateX(${transitionNumber2}%)`;
-				})
-			} else {
-				cardsLeft.forEach(cardLeft => {
-					cardLeft.style.transform = `translateX(${transitionNumber1}%)`;
-				})
-				cardsRight.forEach(cardRight => {
-					cardRight.style.transform = `translateX(${transitionNumber2}%)`;
-				})
-			}
-		})
-	}
-
-}
-
-
-export function solutions() {
-	if (document.querySelector(".solutions")) {
-		let prevSlide;
-		let activeSlide;
-		let slides = document.querySelectorAll(".solutions__card-wrapper");
-		let triggerOfTop = document.querySelector(".solutions__card-wrapper .card__title-wrapper").getBoundingClientRect().top + scrollY; // РАССТОЯНИЕ от triger до верха страницы
-		let scrollPercent = (scrollY - triggerOfTop + window.innerHeight) / window.innerHeight;
-
-		function updateParams(e) {
-			triggerOfTop = document.querySelector(".solutions__card-wrapper .card__title-wrapper").getBoundingClientRect().top + scrollY; // РАССТОЯНИЕ от нужной секции до верха страницы
-			scrollPercent = (scrollY - triggerOfTop + window.innerHeight) / window.innerHeight;
-		}
-
-		function changeSlide(activeSlide) {
-			if (prevSlide !== activeSlide) {
-				prevSlide = activeSlide;
-				slides.forEach((elem) => {
-					elem.classList.remove("_active");
-				});
-				setItemsContainerHeight(slides[activeSlide]);
-				slides[activeSlide].classList.add("_active");
-			}
-		}
-
-		function scrollPage() {
-			updateParams();
-
-			if (scrollPercent < 0.45) {
-				activeSlide = 0;
-				changeSlide(activeSlide);
-			}
-			if (scrollPercent >= 0.45 && scrollPercent < 0.8) {
-				activeSlide = 1;
-				changeSlide(activeSlide);
-			}
-			if (scrollPercent >= 0.8) {
-				activeSlide = 2;
-				changeSlide(activeSlide);
-			}
-		}
-
-		function setItemsContainerHeight(activeElement) {
-			let activeElementHeight = activeElement.scrollHeight;
-			document.documentElement.style.setProperty("--height-items-container", `${activeElementHeight}px`);
-		}
-
-		const throttleScrollPage = throttle(scrollPage, 500)
-		const throttleUpdateParams = throttle(updateParams, 500)
-
-		window.addEventListener("scroll", throttleScrollPage);
-		window.addEventListener("resize", throttleUpdateParams);
-	}
 }
 
 
@@ -364,3 +287,5 @@ export function technologies() {
 
 	}
 }
+
+

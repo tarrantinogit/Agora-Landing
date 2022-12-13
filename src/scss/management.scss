@@ -44,6 +44,14 @@
     @include tablet_md {
       padding: 50px 0;
     }
+    & .cards__wrapper {
+      @include tablet {
+        padding: 0 24px;
+      }
+      @include tablet_sm {
+        padding: 0 16px;
+      }
+    }
     & .section__description {
       @include desktop {
         padding: 0px 24px;
@@ -51,9 +59,10 @@
       @include tablet {
         padding: 0px 24px;
       }
-      @include mobile {
-        padding: 0px 16px;
+      @include tablet_sm {
+        padding: 0 16px;
       }
+
     }
     & + .management__wrapper > .cards__wrapper {
      position: relative;
