@@ -3,7 +3,7 @@ import {
 	popup,
 	burgerMenu,
 	capabilities,
-	downloadButton, technologies, focusVisible, capabilitiesSwiper,
+	downloadButton, technologies, focusVisible, capabilitiesSwiper, symbolsCounter,
 
 } from "./modules/functions.js";
 import {accordion} from "./modules/functions.js";
@@ -22,4 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	capabilitiesSwiper();
 	downloadButton();
 	technologies();
+	symbolsCounter();
 })

@@ -289,3 +289,15 @@ export function technologies() {
 }
 
 
+export function symbolsCounter() {
+	const text = document.querySelectorAll('.label__text--additional span');
+	const textArea = document.querySelectorAll('textarea[data-type]');
+	textArea.forEach((input, index) => {
+		input.addEventListener('input', (e) => {
+			text[index].innerHTML = 500 - (+input.value.length)
+		});
+	})
+
+}
+
+
