@@ -1,33 +1,41 @@
 .capabilities {
- @include tablet {
-   padding-left: 0;
-   padding-right: 0;
- }
+
+  @include tablet {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &__swiper {
     overflow: initial;
+
     &-wrapper {
       box-sizing: border-box;
       @include tablet_sm {
         box-sizing: content-box;
       }
     }
+
     @include tablet_sm {
       overflow: hidden;
     }
   }
+
   &__wrapper {
     max-width: 1050px;
     margin: 0 auto;
+
     & .section__title {
-      @include mobile_md  {
+      @include mobile_md {
         max-width: 285px;
         margin: 20px auto;
       }
     }
   }
+
   &__swiper-wrapper {
     align-items: stretch;
   }
+
   &__swiper-controls {
     display: none;
     justify-content: center;
@@ -38,6 +46,7 @@
       display: flex;
     }
   }
+
   &__swiper-pagination {
     display: flex;
     justify-content: center;
@@ -48,6 +57,7 @@
     font-size: 20px;
     line-height: 32px;
   }
+
   &__swiper-button-next {
     width: 48px;
     height: 48px;
@@ -56,6 +66,7 @@
     cursor: pointer;
     background: url("../images/swiper-next.svg") center center no-repeat, #fff;
   }
+
   &__swiper-button-prev {
     width: 48px;
     height: 48px;

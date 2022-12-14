@@ -42,6 +42,16 @@ export function downloadButton() {
 
 }
 
+export  function preventLinks(linksNodesSelector) {
+	const links = document.querySelectorAll(linksNodesSelector);
+	console.log(linksNodesSelector)
+	links.forEach(link => {
+		link.addEventListener('click', (e) =>{
+			e.preventDefault();
+		})
+	})
+}
+
 
 export const testimonilasSwiper = new Swiper('.swiper.testimonials__swiper', {
 	direction: 'horizontal',
@@ -50,7 +60,6 @@ export const testimonilasSwiper = new Swiper('.swiper.testimonials__swiper', {
 	slidesPerView: "2",
 	spaceBetween: 32,
 	calculateHeight: true,
-	initialSlide: 1,
 
 	pagination: {
 		el: ".swiper-pagination",
@@ -270,8 +279,8 @@ export function technologies() {
 			}
 			if (scrollPercent2Container > 1) {
 				if (windowInnerWidth <= 993) {
-					oneRow.style.cssText = `transform: translateX(-${oneRowWidth - test2WrapperWidth}px );`;
-					twoRow.style.cssText = `transform: translateX(${twoRowWidth - test2WrapperWidth}px );`;
+					oneRow.style.cssText = `transform: translateX(-${oneRowWidth - test2WrapperWidth }px );`;
+					twoRow.style.cssText = `transform: translateX(${twoRowWidth - test2WrapperWidth }px );`;
 				} else {
 					// console.log(test2InnerWidth);
 					test2Inner.style.cssText = `transform: translateX(-${test2InnerWidth - test2WrapperWidth}px );`;
@@ -279,8 +288,8 @@ export function technologies() {
 			}
 		}
 
-		const throttleScrollPage = throttle(scrollPage, 200)
-		const throttleUpdateParams = throttle(updateParams, 200)
+		const throttleScrollPage = throttle(scrollPage, 100)
+		const throttleUpdateParams = throttle(updateParams, 100)
 
 		window.addEventListener("scroll", throttleScrollPage);
 		window.addEventListener("resize", throttleUpdateParams);

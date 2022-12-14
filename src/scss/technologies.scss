@@ -9,11 +9,20 @@
 
   &__trigger {
     position: absolute;
-    top: 65%;
+    top: 70%;
     transform: translateY(-50%);
     width: 1px;
     height: 1px;
     left: 0;
+    @include tablet {
+      top: 20%;
+    }
+    @include tablet_md {
+      top: 43%;
+    }
+    @include tablet_sm {
+      top: 60%;
+    }
   }
 
   &__wrapper {
@@ -28,7 +37,7 @@
     margin-top: 88px;
     column-gap: 32px;
     width: min-content;
-    transition: all .4s linear;
+    transition: all .2s linear;
 
     @include tablet {
       flex-direction: column-reverse;
@@ -41,8 +50,9 @@
       align-items: center;
       justify-content: center;
       column-gap: 32px;
-      transition: all .4s linear;
+      transition: all .2s linear;
       @include tablet {
+        column-gap: 24px;
         align-self: flex-start;
       }
     }
@@ -52,7 +62,11 @@
       align-items: center;
       justify-content: center;
       column-gap: 32px;
-      transition: all .4s linear;
+      transition: all .2s linear;
+      @include tablet {
+        column-gap: 24px;
+        align-self: flex-end;
+      }
     }
   }
 
