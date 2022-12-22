@@ -3,7 +3,7 @@ import {
 	popup,
 	burgerMenu,
 	capabilities,
-	downloadButton, technologies, focusVisible, capabilitiesSwiper, symbolsCounter, preventLinks,
+	downloadButton, technologies, focusVisible, capabilitiesSwiper, symbolsCounter, scroll,
 
 } from "./modules/functions.js";
 import {accordion} from "./modules/functions.js";
@@ -11,17 +11,13 @@ import {accordion} from "./modules/functions.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
+	scroll();
 	testimonilasSwiper;
 	accordion();
-	popup('a[data-popup-contact]', 'img[data-popup-contact-close]', '.popup-contact');
-	popup('a[data-popup-expert]', 'img[data-popup-expert-close]', '.popup.popup--expert');
-	popup('a[data-popup]', 'img[data-popup-expert-close]', '.popup.popup--expert');
-	popup('a[data-popup-expert-mobile]', 'img[data-popup-expert-close]', '.popup.popup--expert');
-	popup('a[data-popup-expert-mobile-header]', 'img[data-popup-expert-close]', '.popup.popup--expert');
+	popup('button[data-popup-contact]', 'img[data-popup-contact-close]', '.popup-contact');
 	burgerMenu();
 	capabilitiesSwiper();
 	downloadButton();
 	technologies();
 	symbolsCounter();
-	preventLinks('.header__list-link');
 })

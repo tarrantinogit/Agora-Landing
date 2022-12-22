@@ -42,14 +42,16 @@ export function downloadButton() {
 
 }
 
-export  function preventLinks(linksNodesSelector) {
-	const links = document.querySelectorAll(linksNodesSelector);
-	console.log(linksNodesSelector)
-	links.forEach(link => {
-		link.addEventListener('click', (e) =>{
+export function scroll() {
+	document.querySelectorAll('.scroll-link').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
 			e.preventDefault();
-		})
-	})
+
+			document.querySelector(this.getAttribute('href')).scrollIntoView({
+				behavior: 'smooth'
+			});
+		});
+	});
 }
 
 
@@ -147,8 +149,11 @@ export function popup(btnSelector, btnCloseSelector, popupSelector) {
 
 
 	if (document.querySelector('a[data-contact-us-close]')) {
-		document.querySelector('a[data-contact-us-close]').addEventListener('click', (e) => {
+		const mobileCloseBtn = document.querySelector('a[data-contact-us-close]');
+
+		mobileCloseBtn.addEventListener('click', (e) => {
 			if (e.target) {
+				e.preventDefault();
 				popup.classList.remove('active');
 				overlay.classList.remove('active');
 				document.body.style.overflowY = 'visible';
@@ -300,7 +305,7 @@ export function technologies() {
 
 export function symbolsCounter() {
 	const text = document.querySelectorAll('.label__text--additional span');
-	const textArea = document.querySelectorAll('textarea[data-type]');
+	const textArea = document.querySelectorAll('.input--textarea');
 	textArea.forEach((input, index) => {
 		input.addEventListener('input', (e) => {
 			text[index].innerHTML = 500 - (+input.value.length)

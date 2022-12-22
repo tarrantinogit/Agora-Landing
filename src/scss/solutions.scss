@@ -47,9 +47,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    &.reverse {
+    & .card .card__description p:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &:nth-child(even){
       flex-direction: row-reverse;
+
       @include tablet {
         & .card.card--transparent {
           margin-left: 24px;
