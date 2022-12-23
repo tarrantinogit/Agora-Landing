@@ -30,7 +30,8 @@
   "bugs": {
     "url": ""
   },
-  "homepage": "",
+  "homepage": "https://tarrantino.github.io/Agora-Landing602935",
+
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/polyfill": "^7.12.1",

@@ -156,7 +156,7 @@
 }
 
 .testimonials__swiper .swiper-slide-active {
-  filter: drop-shadow(0px 80px 90px rgba(17, 26, 43, 0.08)) drop-shadow(0px 40px 30px rgba(0, 14, 26, 0.03)) drop-shadow(0px 5px 7px rgba(0, 14, 26, 0.02));
+  //filter: drop-shadow(0px 80px 90px rgba(17, 26, 43, 0.08)) drop-shadow(0px 40px 30px rgba(0, 14, 26, 0.03)) drop-shadow(0px 5px 7px rgba(0, 14, 26, 0.02));
   background-color: #FFF;
   opacity: 1;
   @include tablet_sm {
