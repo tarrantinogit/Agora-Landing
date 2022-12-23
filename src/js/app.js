@@ -2,11 +2,11 @@ import {
 	testimonilasSwiper,
 	popup,
 	burgerMenu,
-	capabilities,
-	downloadButton, technologies, focusVisible, capabilitiesSwiper, symbolsCounter, scroll,
+	accordion,
+	downloadButton, technologies, capabilitiesSwiper, symbolsCounter, scroll,
 
-} from "./modules/functions.js";
-import {accordion} from "./modules/functions.js";
+} from "./modules/helpers.js";
+
 
 
 
