@@ -18,6 +18,7 @@
 
     &-wrapper {
       margin-bottom: 66px;
+      align-items: stretch !important;
       @include tablet_sm {
         margin-bottom: 48px;
       }
@@ -63,7 +64,7 @@
       border-radius: 40px;
       padding: 40px;
       //max-width: 688px;
-      transition: all .3s linear;
+      //transition: all .3s linear;
       @include tablet_sm {
         padding: 24px;
       }
@@ -111,7 +112,7 @@
         font-size: 23px;
         line-height: 32px;
         color: #FFFFFF;
-        max-width: 608px;
+        //max-width: 608px;
       }
 
       &-occupation {
@@ -156,8 +157,10 @@
 }
 
 .testimonials__swiper .swiper-slide-active {
-  //filter: drop-shadow(0px 80px 90px rgba(17, 26, 43, 0.08)) drop-shadow(0px 40px 30px rgba(0, 14, 26, 0.03)) drop-shadow(0px 5px 7px rgba(0, 14, 26, 0.02));
-  background-color: #FFF;
+  background: #FFF url("../images/testimonials_card_bg.jpg") center right ;
+  background-size: cover !important;
+
+  box-shadow: 0px 80px 90px rgba(17, 26, 43, 0.08), 0px 40px 30px rgba(0, 14, 26, 0.03), 0px 5px 7px rgba(0, 14, 26, 0.02);
   opacity: 1;
   @include tablet_sm {
     padding: 24px;

@@ -18,6 +18,18 @@
 
 
       & .card {
+        &:nth-child(2) {
+          background: url("../images/benefits_card_bg_1.jpg") left center no-repeat;
+          background-size: cover !important;
+        }
+        &:nth-child(4) {
+          background: url("../images/benefits_card_bg_2.jpg") left center no-repeat;
+          background-size: cover !important;
+        }
+        &:nth-child(6) {
+          background: url("../images/benefits_card_bg_3.jpg") left center no-repeat;
+          background-size: cover !important;
+        }
         margin-top: 0;
         @include desktop {
           padding: 48px 40px 40px;

@@ -1,8 +1,9 @@
 .contact-us {
-  //filter: drop-shadow(0px 80px 90px rgba(17, 26, 43, 0.08)) drop-shadow(0px 40px 30px rgba(0, 14, 26, 0.03)) drop-shadow(0px 5px 7px rgba(0, 14, 26, 0.02));
+  box-shadow: 0px 80px 90px rgba(17, 26, 43, 0.08), 0px 40px 30px rgba(0, 14, 26, 0.03), 0px 5px 7px rgba(0, 14, 26, 0.02);
   border-radius: 56px;
   max-width: 1344px;
-  margin: 130px auto;
+  margin: 0 auto 130px auto;
+  padding-top: 130px;
   @include desktop {
     padding: 50px 24px;
     margin: 50px auto;

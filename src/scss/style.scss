@@ -53,7 +53,6 @@ p {
   border: none;
   background: linear-gradient(135deg, #9124B8, #2782D3, #1BDAC3);
   box-shadow: 0px 20px 15px rgba(56, 159, 203, 0.05), 0px 6px 7px rgba(56, 159, 203, 0.06), 0px 0.5px 1px rgba(56, 159, 203, 0.3);
-  transition: all .3s linear;
 
   &:hover {
     background: #111A2B;
@@ -126,7 +125,7 @@ p {
   line-height: 20px;
   color: #D5DCE2;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.64px;
   font-family: Avenir, sans-serif;
   font-weight: 800;
   text-align: center;
@@ -292,4 +291,8 @@ section {
 }
 .wpcf7-spinner {
   display: none !important;
+}
+
+#wpcf7-f6-o2 .wpcf7-response-output {
+  display: none;
 }

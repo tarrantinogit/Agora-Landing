@@ -1,8 +1,10 @@
 .footer {
   background-size: cover !important;
   padding-bottom: 88px;
+  padding-top: 130px;
   @include desktop {
     padding-bottom: 50px;
+    padding-top: 50px;
   }
   &__wrapper {
     @include desktop {
@@ -199,6 +201,7 @@
     max-width: 1050px;
     margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     @include desktop {

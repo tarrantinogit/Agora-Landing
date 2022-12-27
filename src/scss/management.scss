@@ -1,7 +1,46 @@
 .management {
+  & .cards__wrapper.first {
+    & .card:nth-child(2) {
+      box-shadow: 0px 80px 100px rgba(17, 26, 43, 0.03), 0px 40px 30px rgba(17, 26, 43, 0.02), 0px 5px 2px rgba(17, 26, 43, 0.01);
+      & .card__content {
+        background: url("../images/management_card_1.jpg") center right no-repeat;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        box-shadow: 0px 80px 100px rgba(17, 26, 43, 0.03), 0px 40px 30px rgba(17, 26, 43, 0.02), 0px 5px 2px rgba(17, 26, 43, 0.01);
+        @include tablet {
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 40px;
+          background-position-x: 70%;
+          background-size: cover;
+        }
+      }
+
+    }
+  }
+
+  & .cards__wrapper.second {
+    & .card:nth-child(1) {
+      box-shadow: 0px 80px 100px rgba(17, 26, 43, 0.03), 0px 40px 30px rgba(17, 26, 43, 0.02), 0px 5px 2px rgba(17, 26, 43, 0.01);
+      & .card__content {
+        background: url("../images/managment_card_2.jpg") center right no-repeat;
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;
+        @include tablet {
+          border-top-left-radius: 0;
+          border-bottom-right-radius: 40px;
+          background-size: cover;
+          background-position-x: right;
+        }
+      }
+
+    }
+  }
+
   padding: 0;
+
   &__wrapper {
     background-size: cover !important;
+
     &:first-child {
       padding-top: 130px;
       @include desktop {
@@ -9,6 +48,11 @@
       }
 
     }
+
+    & .card {
+      box-shadow: 0px 12px 40px rgba(17, 26, 43, 0.02), 0px 0.5px 2px rgba(17, 26, 43, 0.08);
+    }
+
     & .section__title, .section__description {
       @include desktop {
         padding: 0 24px;
@@ -44,6 +88,7 @@
     @include tablet_md {
       padding: 50px 0;
     }
+
     & .cards__wrapper {
       @include tablet {
         padding: 0 24px;
@@ -52,6 +97,7 @@
         padding: 0 16px;
       }
     }
+
     & .section__description {
       @include desktop {
         padding: 0px 24px;
@@ -64,12 +110,14 @@
       }
 
     }
+
     & + .management__wrapper > .cards__wrapper {
-     position: relative;
+      position: relative;
       top: -100px;
       margin-bottom: 0;
       margin-top: 0;
       padding-bottom: 30px;
+
       @include tablet {
         top: 0;
         padding-bottom: 50px;

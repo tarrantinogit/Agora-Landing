@@ -3,7 +3,7 @@ import {
 	popup,
 	burgerMenu,
 	accordion,
-	downloadButton, technologies, capabilitiesSwiper, symbolsCounter, scroll,
+	downloadButton, technologies, capabilitiesSwiper, symbolsCounter, scroll, inputsValidation,
 
 } from "./modules/helpers.js";
 
@@ -20,4 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	downloadButton();
 	technologies();
 	symbolsCounter();
+	inputsValidation();
 })

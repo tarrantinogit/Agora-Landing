@@ -76,3 +76,9 @@
     background: url("../images/swiper-prev.svg") no-repeat center center, #fff;
   }
 }
+
+@media (max-width: 450px) {
+  .capabilities__swiper {
+    padding: 0 16px;
+  }
+}

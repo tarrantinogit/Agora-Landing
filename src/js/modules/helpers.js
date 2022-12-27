@@ -57,11 +57,14 @@ export function scroll() {
 
 export const testimonilasSwiper = new Swiper('.swiper.testimonials__swiper', {
 	direction: 'horizontal',
-	loop: false,
 	centeredSlides: true,
 	slidesPerView: "2",
+	speed: 800,
+	autoHeight: true,
+	// roundLengths: true,
+	loop: true,
+	loopAdditionalSlides: 30,
 	spaceBetween: 32,
-	calculateHeight: true,
 
 	pagination: {
 		el: ".swiper-pagination",
@@ -106,6 +109,16 @@ export function capabilitiesSwiper() {
 			navigation: {
 				nextEl: ".capabilities__swiper-button-next",
 				prevEl: ".capabilities__swiper-button-prev",
+			},
+			breakpoints: {
+				450: {
+					slidesPerView: 1,
+					spaceBetween: 30,
+				},
+				500: {
+					slidesPerView: "auto",
+					spaceBetween: 32,
+				},
 			}
 		});
 
@@ -199,6 +212,7 @@ export function burgerMenu() {
 
 	burgerBtn.addEventListener('click', (e) => {
 		if (e.target && overlay.classList.contains('active')) {
+			document.body.style.overflowY = 'visible';
 			burgerBtn.classList.remove('active');
 			mobileMenu.classList.remove('active');
 			overlay.classList.remove('active');
@@ -207,6 +221,7 @@ export function burgerMenu() {
 			burgerBtn.classList.add('active');
 			mobileMenu.classList.add('active');
 			overlay.classList.add('active');
+			document.body.style.overflowY = 'hidden';
 		}
 	});
 	mobileMenuLinks.forEach(link => {
@@ -215,6 +230,7 @@ export function burgerMenu() {
 				burgerBtn.classList.remove('active');
 				mobileMenu.classList.remove('active');
 				overlay.classList.remove('active');
+				document.body.style.overflowY = 'visible';
 			}
 		})
 	})
@@ -223,6 +239,7 @@ export function burgerMenu() {
 			burgerBtn.classList.remove('active');
 			mobileMenu.classList.remove('active');
 			overlay.classList.remove('active');
+			document.body.style.overflowY = 'visible';
 		}
 	});
 }
@@ -309,6 +326,30 @@ export function symbolsCounter() {
 		});
 	})
 
+}
+
+
+export function inputsValidation() {
+
+	const wpcf7Elm = document.querySelector('#wpcf7-f6-o2');
+	if (document.querySelector('.input[aria-required="true"]')) {
+		const inputs = wpcf7Elm.querySelectorAll('.input[aria-required="true"]');
+
+
+		wpcf7Elm.addEventListener('wpcf7invalid', function (event) {
+			inputs.forEach(input => {
+				input.addEventListener('change', (e) => {
+					if (input.getAttribute('aria-invalid') == 'true') {
+						input.classList.remove('error');
+					}
+				})
+
+				input.classList.add('error');
+
+
+			})
+		}, false);
+	}
 }
 
 
