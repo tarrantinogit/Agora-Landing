@@ -6,10 +6,6 @@
     padding-right: 16px;
   }
 
-  &__wrapper {
-
-  }
-
   &__swiper {
     margin-top: 88px;
     @include tablet_sm {
@@ -67,6 +63,7 @@
       //transition: all .3s linear;
       @include tablet_sm {
         padding: 24px;
+        border-radius: 32px;
       }
 
       & .testimonials__swiper-slide-text {

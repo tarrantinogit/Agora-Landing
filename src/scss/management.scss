@@ -125,5 +125,11 @@
       }
     }
   }
+
+  .card {
+    @include tablet{
+      padding: 0;
+    }
+  }
 }
 

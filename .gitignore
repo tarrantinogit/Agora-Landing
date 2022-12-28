@@ -3,3 +3,26 @@ package-lock.json
 gulp/version.json
 
 src/.temporary_cache
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.idea
+.idea/
+.vscode
+.github
+.env
+.yarn/cache
+.yarn/install-state.gz
+ehthumbs.db
+Thumbs.db
+_config.yml
+dist
+
+deployment.xml
+misc.xml
+php.xml
+vcs.xml
+webServers.xml

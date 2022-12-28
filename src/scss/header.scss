@@ -1,11 +1,12 @@
+$header-height-mob: 62px; //TODO: move cacl and set this value to positions menu in JS
+
 .header {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 2;
   background-color: #fff;
   box-shadow: 0px 12px 40px rgba(17, 26, 43, 0.02), 0px 0.5px 2px rgba(17, 26, 43, 0.08);
-
+  z-index: 99;
   &__wrapper {
     padding: 0 24px;
     display: flex;
@@ -18,12 +19,16 @@
         display: none;
       }
     }
-
-
+  }
+  &__logo {
+    position: relative;
+    z-index: 99;
   }
 
   &__burger {
     display: none;
+    position: relative;
+    z-index: 99;
     @include tablet {
       padding: 8px 4px;
       justify-content: space-between;
@@ -75,22 +80,24 @@
     &-menu {
       background: #FFFFFF url("../images/bg/header-mobile-menu.jpg") center center/cover no-repeat;
       background-color: #FFFFFF;
-      position: absolute;
-      left: -9999px;
-      top: 62px;
-      padding: 24px;
+      position: fixed;
+      right: -9999px;
+      top: $header-height-mob;
+      padding: $header-height-mob+24px 24px 24px; // TODO: calculate this value in JS ( iOS devices incorrect calc vh )
       width: 100%;
-      max-width: 400px;
+      max-width: 440px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: calc(100vh - 110px);
-      transition: left .5s linear;
+      height: 100vh; // TODO: calculate this value in JS ( iOS devices incorrect calc vh )
+      transform: translateY(-$header-height-mob);// TODO: calculate this value in JS ( iOS devices incorrect calc vh )
+      transition: left .3s linear;
       &.active {
-        left: calc(100vw - 400px);
-        z-index: 2;
+
+        right: 0;
+        z-index: 90;
         @include mobile_md {
-          left: 0;
+          right: 0;
         }
       }
 
@@ -106,10 +113,6 @@
       list-style: none;
       max-width: 360px;
 
-      &-link {
-
-      }
-
       &-item:not(:last-child) {
         margin-bottom: 32px;
       }
@@ -118,7 +121,7 @@
         text-decoration: none;
         font-family: Avenir, sans-serif;
         font-style: normal;
-        font-weight: 900;
+        font-weight: 700;
         font-size: 16px;
         line-height: 24px;
         text-align: center;
@@ -173,7 +176,7 @@
       text-decoration: none;
       color: #5F6972;
       font-family: Avenir, sans-serif;
-      font-weight: 900;
+      font-weight: 700;
       font-size: 14px;
       line-height: 24px;
       position: relative;

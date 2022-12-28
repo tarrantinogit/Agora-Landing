@@ -10,6 +10,7 @@
   }
   @include tablet {
     margin: 50px 16px !important;
+    border-radius: 32px;
   }
   @include mobile {
     padding: 40px 24px;
