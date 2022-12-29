@@ -53,6 +53,11 @@
     & .card .card__description p:not(:last-child) {
       margin-bottom: 20px;
     }
+    @include tablet_md {
+      &:nth-child(1) .solutions__img-wrapper > img{
+        object-position: top;
+      }
+    }
     &:nth-child(even){
       flex-direction: row-reverse;
 
@@ -133,6 +138,13 @@
     @include tablet_md {
       width: 100%;
       max-width: 100%;
+      height: 300px;
+    }
+    @include tablet_sm {
+      height: 250px;
+    }
+    @include mobile {
+      height: 200px;
     }
 
 

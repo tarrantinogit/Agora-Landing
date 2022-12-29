@@ -29,13 +29,13 @@
 .card--100 .card__description {
   max-width: 550px;
 }
+
 .card.card--100:nth-child(even) .card__wrapper {
   flex-direction: row-reverse;
   @include tablet {
     flex-direction: column-reverse;
   }
 }
-
 
 
 .card.card--image {
@@ -161,7 +161,7 @@
   line-height: 24px;
   color: #384350;
 
-  &  strong {
+  & strong {
     background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -362,9 +362,12 @@
 .section__description + .cards__wrapper .card.card--transparent {
   margin-top: 176px;
   width: calc(100% / 3);
+  @include tablet {
+    width: calc(100%/3 - 24px);
+  }
   @include tablet_md {
     margin-top: 50px;
-    width: 50%;
+    width: calc(50% - 16px);
 
     & .card__icon-wrapper {
       position: static;

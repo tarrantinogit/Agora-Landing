@@ -57,7 +57,16 @@
 
         &.active .faq__accordion-item-header-ico {
           pointer-events: none;
-          background-image: url("../images/Minus.svg");
+
+          &:after {
+            content: '';
+            flex-shrink: 0;
+            display: block;
+            background: url("../images/Minus.svg") no-repeat center  / 32px;
+            background-size: contain;
+            width: 400%;
+            height: 400%;
+          }
         }
 
         &-text {
@@ -79,11 +88,22 @@
         }
 
         &-ico {
+          pointer-events: none;
           flex-shrink: 0;
-          width: 34px;
-          height: 34px;
-          display: block;
-          background: url("../images/Plus.svg") no-repeat center  / 32px;
+          position: relative;
+          transform: scale(0.25);
+          transform-origin: 0 0;
+          width: 32px;
+          height: 32px;
+          &:after {
+            content: '';
+            flex-shrink: 0;
+            display: block;
+            background: url("../images/Plus.svg") no-repeat center  / 32px;
+            background-size: contain;
+            width: 400%;
+            height: 400%;
+          }
         }
       }
     }
