@@ -50,6 +50,8 @@ export { dev }
 export { build }
 export { deployZIP }
 export { deployFTP }
+export { scss }
+export { js }
 
 // Выполнение сценария по умолчанию
 gulp.task('default', dev)
