@@ -1,4 +1,10 @@
 .faq {
+  @include tablet {
+    padding: 50px 24px 75px 24px;
+  }
+  @include mobile  {
+    padding: 50px 16px 75px 16px;
+  }
   &__wrapper {
     .section__description {
       max-width: 868px;

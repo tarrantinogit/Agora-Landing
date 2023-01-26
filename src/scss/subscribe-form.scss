@@ -61,6 +61,27 @@
   &__inner {
     max-width: 508px;
     width: 100%;
+    & .wpcf7-spinner {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include tablet_sm {
+        margin: 0 12px;
+      }
+      @include mobile_md {
+        margin-left: 5px;
+        margin-right: 0;
+      }
+    }
+  }
+  &__form {
+    position: relative;
+    @include tablet_sm {
+      width: calc(100% - 48px);
+    }
+    @include mobile_md {
+      width: calc(100% - 29px);
+    }
   }
 
   &__label {

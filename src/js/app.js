@@ -2,7 +2,7 @@ import {
 	testimonilasSwiper,
 	burgerMenu,
 	accordion,
-	downloadButton, capabilitiesSwiper, symbolsCounter, scroll, inputsValidation,
+	downloadButton, capabilitiesSwiper, symbolsCounter, scroll, inputsValidation, techSwiper,
 
 } from "./modules/helpers.js";
 
@@ -12,6 +12,7 @@ import {
 document.addEventListener('DOMContentLoaded', () => {
 	scroll();
 	testimonilasSwiper;
+	techSwiper;
 	accordion();
 	burgerMenu();
 	capabilitiesSwiper();
