@@ -305,10 +305,8 @@ section {
   white-space: nowrap;
 }
 
-//.wpcf7-spinner {
-//  display: none !important;
-//}
-//
-//#wpcf7-f6-o2 .wpcf7-response-output {
-//  display: none;
-//}
+.subscribe-form__form.invalid .wpcf7-response-output {
+  text-align: center;
+  margin-top: 25px !important;
+  line-height: 100% !important;
+}
