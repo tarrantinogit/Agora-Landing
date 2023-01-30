@@ -74,6 +74,7 @@ export const testimonilasSwiper = new Swiper('.swiper.testimonials__swiper', {
 export const techSwiper = new Swiper('.swiper.technologies-swiper', {
 	slidesPerView: 1,
 	centeredSlides: false,
+	rewind: true,
 	grid: {
 		rows: 2,
 	},
@@ -92,7 +93,9 @@ export const techSwiper = new Swiper('.swiper.technologies-swiper', {
 			centeredSlides: true,
 			slidesPerGroup: 1,
 			spaceBetween: 32,
-			grid: false
+			grid: false,
+			loop: true,
+			loopAdditionalSlides: 30,
 		}
 	}
 });
