@@ -706,6 +706,7 @@ template {
   .download__wrapper.mobile {
     max-width: 100%;
     width: 100%;
+    margin-bottom: 12px;
   }
 }
 
@@ -2724,7 +2725,7 @@ template {
 @media (max-width: 640px) {
   .contact-us__form {
     padding: 32px 24px;
-    height: calc(100vh - 216px);
+    height: calc(100vh - 300px);
     overflow-y: scroll;
     scrollbar-color: #D5DCE2 #FFFFFF;
     scrollbar-width: auto;
@@ -3129,12 +3130,22 @@ template {
 }
 .popup-contact.active {
   top: 50%;
-  z-index: 9;
+  z-index: 120;
+}
+@media (max-width: 992px) {
+  .popup-contact.active {
+    top: 70px;
+  }
+}
+@media (max-width: 992px) {
+  .popup-contact {
+    transform: translate(-50%, 0);
+  }
 }
 @media (max-width: 640px) {
   .popup-contact {
     padding: 0 16px;
-    height: 100vh;
+    height: 50vh;
   }
 }
 @media (max-width: 992px) {

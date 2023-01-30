@@ -102,11 +102,17 @@
   transform: translate(-50%, -50%);
   &.active {
     top: 50%;
-    z-index: 9;
+    z-index: 120;
+    @include tablet {
+      top: 70px;
+    }
+  }
+  @include tablet {
+    transform: translate(-50%, 0);
   }
   @include tablet_sm {
     padding: 0 16px;
-    height: 100vh;
+    height: 50vh;
   }
   & .contact-us__form-wrapper .contact-us__form {
     @include tablet {
