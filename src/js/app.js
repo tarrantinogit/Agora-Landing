@@ -21,5 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	downloadButton();
 	symbolsCounter();
 	inputsValidation();
-	popup();
+	popup('a[data-popup-contact]', 'img[data-popup-contact-close]', '.popup-contact');
 });
