@@ -2,12 +2,14 @@ import {
 	testimonilasSwiper,
 	burgerMenu,
 	accordion,
-	downloadButton, capabilitiesSwiper, symbolsCounter, scroll, inputsValidation, techSwiper,
-
-} from "./modules/helpers.js";
-
-
-
+	downloadButton,
+	capabilitiesSwiper,
+	symbolsCounter,
+	scroll,
+	inputsValidation,
+	techSwiper,
+	popup,
+} from './modules/helpers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	scroll();
@@ -19,5 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	downloadButton();
 	symbolsCounter();
 	inputsValidation();
-
-})
+	popup('a[data-popup-contact]', 'img[data-popup-contact-close]', '.popup-contact');
+});
