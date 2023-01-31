@@ -130,6 +130,9 @@
       left: 50%;
       transform: translateX(-50%);
       white-space: nowrap;
+      @include tablet_sm {
+        bottom: 30px;
+      }
     }
 
     @include desktop {
@@ -148,6 +151,7 @@
       overflow-y: scroll;
       scrollbar-color: #D5DCE2 #FFFFFF;
       scrollbar-width: auto;
+      position: static;
     }
 
     &-wrapper {

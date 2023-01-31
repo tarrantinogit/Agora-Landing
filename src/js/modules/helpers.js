@@ -246,23 +246,27 @@ export function popup(btnSelector, btnCloseSelector, popupSelector) {
 	const btnClose = document.querySelector(btnCloseSelector);
 	const mobileMenu = document.querySelector('.header__burger-menu');
 
-	if (document.querySelector('a[data-contact-us-close]')) {
-		const mobileCloseBtn = document.querySelector('a[data-contact-us-close]');
 
-		mobileCloseBtn.addEventListener('click', (e) => {
-			if (e.target) {
-				e.preventDefault();
-				popup.classList.remove('active');
-				overlay.classList.remove('active');
-				document.body.style.overflowY = 'visible';
-			}
+	const mobileCloseBtns = document.querySelectorAll('a[data-contact-us-close]');
+	mobileCloseBtns.forEach(btn => {
+		btn.addEventListener('click', (e) => {
+
+			e.preventDefault();
+
+			popup.classList.remove('active');
+			overlay.classList.remove('active');
+			document.body.style.overflowY = 'visible';
+
 		});
-	}
+	})
+
 
 	btnOpen.addEventListener('click', (e) => {
 		if (e.target) {
 			e.preventDefault();
 			document.body.style.overflowY = 'hidden';
+			document.body.style.position = 'relative';
+			document.body.style.height = '100%';
 			popup.classList.add('active');
 			overlay.classList.add('active');
 		}
@@ -270,11 +274,15 @@ export function popup(btnSelector, btnCloseSelector, popupSelector) {
 		btnClose.addEventListener('click', (e) => {
 			if (e.target && mobileMenu.classList.contains('active')) {
 				document.body.style.overflowY = 'visible';
+				document.body.style.position = 'initial';
+				document.body.style.height = 'auto';
 				popup.classList.remove('active');
 			} else {
 				overlay.classList.remove('active');
 				popup.classList.remove('active');
 				document.body.style.overflowY = 'visible';
+				document.body.style.position = 'initial';
+				document.body.style.height = 'auto';
 			}
 		});
 
@@ -283,6 +291,8 @@ export function popup(btnSelector, btnCloseSelector, popupSelector) {
 				popup.classList.remove('active');
 				overlay.classList.remove('active');
 				document.body.style.overflowY = 'visible';
+				document.body.style.position = 'initial';
+				document.body.style.height = 'auto';
 			}
 		});
 	});
