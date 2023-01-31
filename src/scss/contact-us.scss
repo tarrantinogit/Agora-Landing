@@ -131,7 +131,7 @@
       transform: translateX(-50%);
       white-space: nowrap;
       @include tablet_sm {
-        bottom: 30px;
+        bottom: 5px;
       }
     }
 
@@ -209,5 +209,11 @@
   }
   @include mobile_md {
     margin: 0 5px;
+  }
+}
+
+@include tablet_sm {
+  .contact-us__form-wrapper-popup {
+    position: relative;
   }
 }

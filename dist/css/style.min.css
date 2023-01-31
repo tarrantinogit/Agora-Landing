@@ -2711,7 +2711,7 @@ template {
 }
 @media (max-width: 640px) {
   .contact-us__form .wpcf7-response-output {
-    bottom: 30px;
+    bottom: 5px;
   }
 }
 @media (max-width: 1200px) {
@@ -2795,6 +2795,11 @@ template {
   }
 }
 
+@media (max-width: 640px) {
+  .contact-us__form-wrapper-popup {
+    position: relative;
+  }
+}
 .footer {
   background-color: #FCFCFE;
   padding-bottom: 88px;
