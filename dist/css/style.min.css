@@ -2481,16 +2481,20 @@ template {
   top: 50%;
   right: -60px;
   transform: translateY(-50%);
+  width: 0;
+  height: 0;
 }
 @media (max-width: 640px) {
   .subscribe-form__inner .wpcf7-spinner {
-    margin: 0 12px;
+    margin: 0 !important;
+    right: -30px;
+    display: none;
   }
 }
 @media (max-width: 400px) {
   .subscribe-form__inner .wpcf7-spinner {
-    margin-left: 5px;
     margin-right: 0;
+    margin-left: 0;
   }
 }
 .subscribe-form__form {
@@ -2564,6 +2568,14 @@ template {
   background-image: linear-gradient(white, white), linear-gradient(135deg, #9124B8, #2782D3, #1BDAC3);
   background-origin: border-box;
   background-clip: padding-box, border-box;
+}
+
+.wpcf7-form.submitting .wpcf7-spinner {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  right: -30px;
+  display: block;
 }
 
 .contact-us {

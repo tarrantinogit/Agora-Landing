@@ -1,3 +1,4 @@
+
 .subscribe-form {
   &__wrapper {
     max-width: 868px;
@@ -61,20 +62,27 @@
   &__inner {
     max-width: 508px;
     width: 100%;
+
     & .wpcf7-spinner {
       position: absolute;
       top: 50%;
       right: -60px;
       transform: translateY(-50%);
+      width: 0;
+      height: 0;
       @include tablet_sm {
-        margin: 0 12px;
+        margin: 0 !important;
+        right: -30px;
+        display: none;
       }
       @include mobile_md {
-        margin-left: 5px;
+        //margin-left: 5px;
         margin-right: 0;
+        margin-left: 0;
       }
     }
   }
+
   &__form {
     position: relative;
     @include tablet_sm {
@@ -97,6 +105,7 @@
       right: 10px;
       cursor: pointer;
     }
+
     & .input__wrapper {
       position: absolute;
       top: 0;
@@ -148,4 +157,12 @@
 
     }
   }
+}
+
+.wpcf7-form.submitting .wpcf7-spinner {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  right: -30px;
+ display: block;
 }
