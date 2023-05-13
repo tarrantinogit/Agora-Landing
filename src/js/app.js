@@ -8,10 +8,13 @@ import {
 	scroll,
 	inputsValidation,
 	popup,
+	headerMenu,
 } from './modules/helpers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	scroll();
+	headerMenu();
+
 	testimonilasSwiper;
 	accordion();
 	burgerMenu();

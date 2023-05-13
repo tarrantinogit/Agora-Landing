@@ -7,19 +7,21 @@ $header-height-mob: 62px; //TODO: move cacl and set this value to positions menu
   background-color: #fff;
   box-shadow: 0px 12px 40px rgba(17, 26, 43, 0.02), 0px 0.5px 2px rgba(17, 26, 43, 0.08);
   z-index: 99;
+
   &__wrapper {
     padding: 0 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    @include tablet {
+    @include tablet_md {
       padding: 20px 24px;
       & .btn.btn--primary {
         display: none;
       }
     }
   }
+
   &__logo {
     position: relative;
     z-index: 99;
@@ -29,7 +31,7 @@ $header-height-mob: 62px; //TODO: move cacl and set this value to positions menu
     display: none;
     position: relative;
     z-index: 99;
-    @include tablet {
+    @include tablet_md {
       padding: 8px 4px;
       justify-content: space-between;
       cursor: pointer;
@@ -90,8 +92,9 @@ $header-height-mob: 62px; //TODO: move cacl and set this value to positions menu
       flex-direction: column;
       justify-content: space-between;
       height: 100vh; // TODO: calculate this value in JS ( iOS devices incorrect calc vh )
-      transform: translateY(-$header-height-mob);// TODO: calculate this value in JS ( iOS devices incorrect calc vh )
+      transform: translateY(-$header-height-mob); // TODO: calculate this value in JS ( iOS devices incorrect calc vh )
       transition: left .3s linear;
+
       &.active {
 
         right: 0;
@@ -103,19 +106,14 @@ $header-height-mob: 62px; //TODO: move cacl and set this value to positions menu
 
       & a.btn.btn--primary {
         display: block;
-        max-width: 360px;
         text-align: center;
         margin-top: auto;
+        padding: 12px 24px;
       }
     }
 
     &-list {
       list-style: none;
-      max-width: 360px;
-
-      &-item:not(:last-child) {
-        margin-bottom: 32px;
-      }
 
       &-link {
         text-decoration: none;
@@ -131,8 +129,13 @@ $header-height-mob: 62px; //TODO: move cacl and set this value to positions menu
         display: flex;
         margin-left: 0;
         margin-right: auto;
+        padding: 12px 0;
 
-        &:after {
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+
+        &.arrow:after {
           content: '';
           display: block;
           position: absolute;
@@ -141,14 +144,15 @@ $header-height-mob: 62px; //TODO: move cacl and set this value to positions menu
           right: 0;
           width: 24px;
           height: 24px;
-          background: url("../images/arrow-right.svg") center center no-repeat;
+          background: url("../images/burger-arrow.svg") center center no-repeat;
         }
       }
     }
   }
 
   &__nav {
-    @include tablet {
+    flex-grow: 1;
+    @include tablet_md {
       display: none;
     }
   }
@@ -156,51 +160,35 @@ $header-height-mob: 62px; //TODO: move cacl and set this value to positions menu
   &__list {
     display: flex;
     list-style: none;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 16px;
 
     &-item {
-      padding: 16px 20px;
       transition: all .3s linear;
-      @include desktop {
-        padding: 16px 8px;
-      }
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      position: relative;
 
-
-      &:hover {
+      &.active {
         background-color: #F8F8FA;
       }
 
-    }
-
-    &-link {
-
-      text-decoration: none;
-      color: #5F6972;
-      font-family: Avenir, sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 24px;
-      position: relative;
-      transition: all .3s linear;
-      padding-bottom: 19px;
-
-      &:hover {
+      &.active:after {
         transition: all .3s linear;
         background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
       }
 
       &:after {
         content: '';
         position: absolute;
         display: block;
-        width: calc(100% + 40px);
+        width: calc(100%);
         height: 1px;
         background-color: transparent;
         bottom: 0;
-        left: -20px;
+        left: 0;
         transition: all .3s linear;
         @include desktop {
           width: 100%;
@@ -212,6 +200,249 @@ $header-height-mob: 62px; //TODO: move cacl and set this value to positions menu
         transition: all .3s linear;
         background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
       }
+
+      &:hover {
+        background-color: #F8F8FA;
+
+        & svg #clock-gradient {
+          opacity: 1.0;
+        }
+      }
+
+      &.drop-down {
+        position: relative;
+      }
+
+    }
+
+    &-link {
+      padding: 16px 24px;
+      text-decoration: none;
+      color: #5F6972;
+      font-family: Avenir, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 24px;
+      position: relative;
+      transition: all .3s linear;
+
+      &.active {
+        transition: all .3s linear;
+        background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+        & + svg {
+          transform: rotate(180deg);
+        }
+
+        & + svg #clock-gradient {
+          opacity: 1.0;
+        }
+      }
+
+      & + svg {
+        position: relative;
+        right: 24px;
+        transition: all .4s linear;
+      }
+
+      &:hover {
+        transition: all .3s linear;
+        background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+
+    }
+  }
+
+  &__sub-nav {
+    position: absolute;
+    top: 73px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 296px;
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0px 80px 90px rgba(17, 26, 43, 0.08), 0px 40px 30px rgba(0, 14, 26, 0.03), 0px 5px 7px rgba(0, 14, 26, 0.02);
+    z-index: -999;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s linear;
+
+    &.active {
+      z-index: 9999;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &-list {
+      position: relative;
+      list-style: none;
+      padding: 24px 16px;
+
+      &:after {
+        width: 0;
+        height: 0;
+        border-width: 0 8px 12px 8px;
+        border-color: transparent transparent #FFFFFF transparent;
+        border-style: solid;
+        position: absolute;
+        display: block;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+      }
+
+      &-link {
+        font-family: 'Avenir', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 22px;
+        color: #384350;
+        text-decoration: none;
+        padding: 8px 16px 8px 8px;
+        transition: all .4s linear;
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+
+        & svg {
+          margin-left: auto;
+        }
+
+        &:hover {
+          background: #F8F8FA;
+          border-radius: 20px;
+        }
+
+        &:hover img {
+          background-color: #FFF;
+        }
+      }
+    }
+
+    &-ico {
+      padding: 12px;
+      background-color: #F8F8FA;
+      border-radius: 12px;
+      width: 40px;
+      height: 40px;
+      transition: all .4s linear;
+    }
+
+    &-link-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 32px;
+      border-bottom-right-radius: 24px;
+      border-bottom-left-radius: 24px;
+      background-color: #F8F8FA;
+    }
+
+  }
+
+  &__sub-link {
+    background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: 'Avenir', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &__burger-sub-nav {
+    position: fixed;
+    max-width: 440px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    padding-bottom: 32px;
+    top: 60px;
+    background-color: #fff;
+    z-index: 9999;
+    right: -999px;
+    transition: right .4s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.active {
+      right: 0;
+    }
+
+    & .header__sub-nav-list-link {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__sub-nav-links-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+
+  &__burger-sub-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: double 2px transparent;
+    border-radius: 999px;
+    background-image: linear-gradient(white, white), linear-gradient(135deg, #9124B8, #2782D3, #1BDAC3);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 12px 28px;
+    font-family: 'Avenir', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    width: 250px;
+
+    & > span {
+      background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      font-weight: 900;
+    }
+
+    &--back {
+      width: 48px;
+      height: 48px;
+      border-radius: 100%;
+      padding: 12px;
+
+      & svg {
+        flex-shrink: 0;
+      }
     }
   }
 }
+
+#clock-gradient {
+  opacity: 0;
+  display: inline-block;
+  -webkit-transition: opacity .4s ease;
+  -moz-transition: opacity .4s ease;
+  -o-transition: opacity .4s ease;
+  transition: opacity .4s ease;
+}
+

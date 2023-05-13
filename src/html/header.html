@@ -3,31 +3,197 @@
         <div class="header__logo"><img src="../images/header_logo.svg"></div>
         <nav class="header__nav">
             <ul class="header__list">
-                <li class="header__list-item">
-                    <a href="#processes" class="header__list-link  scroll-link">Processes</a>
+                <li class="header__list-item drop-down">
+                    <a href="javascript:void(0);" class="header__list-link ">About</a>
+                    <svg class="gradient" width="8" height="5" viewBox="0 0 8 5" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <lineargradient id="gradient" gradientunits="userSpaceOnUse" fy="90%">
+                                <stop offset="0.0633718" stop-color="#3619AB"/>
+                                <stop offset="0.517512" stop-color="#2272BB"/>
+                                <stop offset="1" stop-color="#00814B"/>
+                            </lineargradient>
+                            <mask id="clock-icon-mask" maskunits="userSpaceOnUse" x="0" y="0" width="8" height="5">
+                                <path d="M3.29928 4.3L0.69928 1.7C0.382613 1.38333 0.311946 1.021 0.48728 0.613C0.662613 0.205 0.974947 0.000666667 1.42428 0L6.57428 0C7.02428 0 7.33695 0.204333 7.51228 0.613C7.68761 1.02167 7.61661 1.384 7.29928 1.7L4.69928 4.3C4.59928 4.4 4.49095 4.475 4.37428 4.525C4.25761 4.575 4.13261 4.6 3.99928 4.6C3.86595 4.6 3.74095 4.575 3.62428 4.525C3.50761 4.475 3.39928 4.4 3.29928 4.3Z"
+                                      fill="white"/>
+                            </mask>
+                        </defs>
+                        <g mask="url(#clock-icon-mask)">
+                            <rect x="0" y="0" width="8" height="5" fill="#384350"/>
+                            <rect id="clock-gradient" x="0" y="0" width="8" height="5" fill="url(#gradient)"/>
+                        </g>
+                    </svg>
+                    <nav class="header__sub-nav">
+                        <ul class="header__sub-nav-list">
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico1.svg" alt="" class="header__sub-nav-ico">
+                                    Processes</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico2.svg" alt="" class="header__sub-nav-ico">
+                                    Capabilities</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico3.svg" alt="" class="header__sub-nav-ico">
+                                    Management</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico4.svg" alt="" class="header__sub-nav-ico">
+                                    FAQ</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico5.svg" alt="" class="header__sub-nav-ico">
+                                    Benefits</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico6.svg" alt="" class="header__sub-nav-ico">
+                                    Solutions</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico7.svg" alt="" class="header__sub-nav-ico">
+                                    Technologies</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico8.svg" alt="" class="header__sub-nav-ico">
+                                    Testimonials</a>
+                            </li>
+                        </ul>
+                        <div class="header__sub-nav-link-wrapper">
+                            <a href="" class="header__sub-link">Open About Page</a>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3328 6.99984L5.93701 14.4165C5.77034 14.5832 5.57229 14.6665 5.34285 14.6665C5.1134 14.6665 4.91562 14.5832 4.74951 14.4165C4.58284 14.2498 4.49951 14.0518 4.49951 13.8223C4.49951 13.5929 4.58284 13.3951 4.74951 13.229L12.1662 5.83317H5.83285C5.59673 5.83317 5.39868 5.75317 5.23868 5.59317C5.07868 5.43317 4.99896 5.2354 4.99951 4.99984C4.99951 4.76373 5.07951 4.56567 5.23951 4.40567C5.39951 4.24567 5.59729 4.16595 5.83285 4.16651H14.1662C14.4023 4.16651 14.6003 4.24651 14.7603 4.40651C14.9203 4.56651 15.0001 4.76428 14.9995 4.99984V13.3332C14.9995 13.5693 14.9195 13.7673 14.7595 13.9273C14.5995 14.0873 14.4017 14.1671 14.1662 14.1665C13.9301 14.1665 13.732 14.0865 13.572 13.9265C13.412 13.7665 13.3323 13.5687 13.3328 13.3332V6.99984Z"
+                                      fill="url(#paint0_linear_1401_4506)"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1401_4506" x1="3.67056" y1="1.81494" x2="15.6561"
+                                                    y2="13.2941" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.0633718" stop-color="#3619AB"/>
+                                        <stop offset="0.517512" stop-color="#2272BB"/>
+                                        <stop offset="1" stop-color="#00814B"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </nav>
                 </li>
-                <li class="header__list-item">
-                    <a href="#capabilities" class="header__list-link scroll-link">Capabilities</a>
-                </li>
-                <li class="header__list-item">
-                    <a href="#management" class="header__list-link scroll-link">Management</a>
-                </li>
-                <li class="header__list-item">
-                    <a href="#faq" class="header__list-link scroll-link">FAQ</a>
-                </li>
-                <li class="header__list-item">
-                    <a href="#benefits" class="header__list-link scroll-link">Benefits</a>
-                </li>
-                <li class="header__list-item">
-                    <a href="#solutions" class="header__list-link scroll-link">Solutions</a>
-                </li>
-                <li class="header__list-item">
-                    <a href="#technologies" class="header__list-link scroll-link">Technologies</a>
-                </li>
-                <li class="header__list-item">
-                    <a href="#testimonials" class="header__list-link scroll-link">Testimonials</a>
-                </li>
+                <li class="header__list-item drop-down">
+                    <a href="javascript:void(0);" class="header__list-link">Specifications</a>
+                    <svg class="gradient" width="8" height="5" viewBox="0 0 8 5" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <lineargradient id="gradient" gradientunits="userSpaceOnUse" fy="90%">
+                                <stop offset="0.0633718" stop-color="#3619AB"/>
+                                <stop offset="0.517512" stop-color="#2272BB"/>
+                                <stop offset="1" stop-color="#00814B"/>
+                            </lineargradient>
+                            <mask id="clock-icon-mask" maskunits="userSpaceOnUse" x="0" y="0" width="8" height="5">
+                                <path d="M3.29928 4.3L0.69928 1.7C0.382613 1.38333 0.311946 1.021 0.48728 0.613C0.662613 0.205 0.974947 0.000666667 1.42428 0L6.57428 0C7.02428 0 7.33695 0.204333 7.51228 0.613C7.68761 1.02167 7.61661 1.384 7.29928 1.7L4.69928 4.3C4.59928 4.4 4.49095 4.475 4.37428 4.525C4.25761 4.575 4.13261 4.6 3.99928 4.6C3.86595 4.6 3.74095 4.575 3.62428 4.525C3.50761 4.475 3.39928 4.4 3.29928 4.3Z"
+                                      fill="white"/>
+                            </mask>
+                        </defs>
+                        <g mask="url(#clock-icon-mask)">
+                            <rect x="0" y="0" width="8" height="5" fill="#384350"/>
+                            <rect id="clock-gradient" x="0" y="0" width="8" height="5" fill="url(#gradient)"/>
+                        </g>
+                    </svg>
+                    <nav class="header__sub-nav">
+                        <ul class="header__sub-nav-list">
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico1.svg" alt="" class="header__sub-nav-ico">
+                                    Architecture
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3328 6.99984L5.93701 14.4165C5.77034 14.5832 5.57229 14.6665 5.34285 14.6665C5.1134 14.6665 4.91562 14.5832 4.74951 14.4165C4.58284 14.2498 4.49951 14.0518 4.49951 13.8223C4.49951 13.5929 4.58284 13.3951 4.74951 13.229L12.1662 5.83317H5.83285C5.59673 5.83317 5.39868 5.75317 5.23868 5.59317C5.07868 5.43317 4.99896 5.2354 4.99951 4.99984C4.99951 4.76373 5.07951 4.56567 5.23951 4.40567C5.39951 4.24567 5.59729 4.16595 5.83285 4.16651H14.1662C14.4023 4.16651 14.6003 4.24651 14.7603 4.40651C14.9203 4.56651 15.0001 4.76428 14.9995 4.99984V13.3332C14.9995 13.5693 14.9195 13.7673 14.7595 13.9273C14.5995 14.0873 14.4017 14.1671 14.1662 14.1665C13.9301 14.1665 13.732 14.0865 13.572 13.9265C13.412 13.7665 13.3323 13.5687 13.3328 13.3332V6.99984Z"
+                                              fill="url(#paint0_linear_1401_4506)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_1401_4506" x1="3.67056" y1="1.81494"
+                                                            x2="15.6561"
+                                                            y2="13.2941" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0.0633718" stop-color="#3619AB"/>
+                                                <stop offset="0.517512" stop-color="#2272BB"/>
+                                                <stop offset="1" stop-color="#00814B"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </a>
 
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico2.svg" alt="" class="header__sub-nav-ico">
+                                    Technologies
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3328 6.99984L5.93701 14.4165C5.77034 14.5832 5.57229 14.6665 5.34285 14.6665C5.1134 14.6665 4.91562 14.5832 4.74951 14.4165C4.58284 14.2498 4.49951 14.0518 4.49951 13.8223C4.49951 13.5929 4.58284 13.3951 4.74951 13.229L12.1662 5.83317H5.83285C5.59673 5.83317 5.39868 5.75317 5.23868 5.59317C5.07868 5.43317 4.99896 5.2354 4.99951 4.99984C4.99951 4.76373 5.07951 4.56567 5.23951 4.40567C5.39951 4.24567 5.59729 4.16595 5.83285 4.16651H14.1662C14.4023 4.16651 14.6003 4.24651 14.7603 4.40651C14.9203 4.56651 15.0001 4.76428 14.9995 4.99984V13.3332C14.9995 13.5693 14.9195 13.7673 14.7595 13.9273C14.5995 14.0873 14.4017 14.1671 14.1662 14.1665C13.9301 14.1665 13.732 14.0865 13.572 13.9265C13.412 13.7665 13.3323 13.5687 13.3328 13.3332V6.99984Z"
+                                              fill="url(#paint0_linear_1401_4506)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_1401_4506" x1="3.67056" y1="1.81494"
+                                                            x2="15.6561"
+                                                            y2="13.2941" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0.0633718" stop-color="#3619AB"/>
+                                                <stop offset="0.517512" stop-color="#2272BB"/>
+                                                <stop offset="1" stop-color="#00814B"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico3.svg" alt="" class="header__sub-nav-ico">
+                                    Multilingual</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico4.svg" alt="" class="header__sub-nav-ico">
+                                    Scaling and Fault Safety</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico5.svg" alt="" class="header__sub-nav-ico">
+                                    Security</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico6.svg" alt="" class="header__sub-nav-ico">
+                                    Integrations</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico7.svg" alt="" class="header__sub-nav-ico">
+                                    Licensing</a>
+                            </li>
+                        </ul>
+                        <div class="header__sub-nav-link-wrapper">
+                            <a href="" class="header__sub-link">Open About Page</a>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3328 6.99984L5.93701 14.4165C5.77034 14.5832 5.57229 14.6665 5.34285 14.6665C5.1134 14.6665 4.91562 14.5832 4.74951 14.4165C4.58284 14.2498 4.49951 14.0518 4.49951 13.8223C4.49951 13.5929 4.58284 13.3951 4.74951 13.229L12.1662 5.83317H5.83285C5.59673 5.83317 5.39868 5.75317 5.23868 5.59317C5.07868 5.43317 4.99896 5.2354 4.99951 4.99984C4.99951 4.76373 5.07951 4.56567 5.23951 4.40567C5.39951 4.24567 5.59729 4.16595 5.83285 4.16651H14.1662C14.4023 4.16651 14.6003 4.24651 14.7603 4.40651C14.9203 4.56651 15.0001 4.76428 14.9995 4.99984V13.3332C14.9995 13.5693 14.9195 13.7673 14.7595 13.9273C14.5995 14.0873 14.4017 14.1671 14.1662 14.1665C13.9301 14.1665 13.732 14.0865 13.572 13.9265C13.412 13.7665 13.3323 13.5687 13.3328 13.3332V6.99984Z"
+                                      fill="url(#paint0_linear_1401_4506)"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1401_4506" x1="3.67056" y1="1.81494" x2="15.6561"
+                                                    y2="13.2941" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.0633718" stop-color="#3619AB"/>
+                                        <stop offset="0.517512" stop-color="#2272BB"/>
+                                        <stop offset="1" stop-color="#00814B"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </nav>
+                </li>
+                <li class="header__list-item">
+                    <a href="#" class="header__list-link ">Solutions</a>
+                </li>
             </ul>
         </nav>
         <a href="#" data-popup class="btn btn--primary">Talk to Expert</a>
@@ -37,29 +203,173 @@
         <nav class="header__burger-menu">
             <ul class="header__burger-list">
                 <li class="header__burger-list-item">
-                    <a href="#processes" class="header__burger-list-link scroll-link">Processes</a>
+                    <a href="javascript:void(0);" class="header__burger-list-link arrow">About</a>
+                    <nav class="header__burger-sub-nav">
+                        <ul class="header__sub-nav-list">
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico1.svg" alt="" class="header__sub-nav-ico">
+                                    Processes</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico2.svg" alt="" class="header__sub-nav-ico">
+                                    Capabilities</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico3.svg" alt="" class="header__sub-nav-ico">
+                                    Management</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico4.svg" alt="" class="header__sub-nav-ico">
+                                    FAQ</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico5.svg" alt="" class="header__sub-nav-ico">
+                                    Benefits</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico6.svg" alt="" class="header__sub-nav-ico">
+                                    Solutions</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico7.svg" alt="" class="header__sub-nav-ico">
+                                    Technologies</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico8.svg" alt="" class="header__sub-nav-ico">
+                                    Testimonials</a>
+                            </li>
+                        </ul>
+                        <div class="header__sub-nav-links-wrapper">
+                            <a href="" class="header__burger-sub-link header__burger-sub-link--back">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.000976562 8C0.000976562 8.14035 0.0225506 8.27193 0.0656967 8.39474C0.108158 8.51754 0.180754 8.63158 0.283482 8.73684L7.06358 15.6842C7.26903 15.8947 7.51319 16 7.79603 16C8.07819 16 8.322 15.8947 8.52746 15.6842C8.73292 15.4737 8.83565 15.2281 8.83565 14.9474C8.83565 14.6667 8.73292 14.4211 8.52746 14.2105L3.49375 9.05263L14.9994 9.05263C15.2904 9.05263 15.5301 8.95158 15.7185 8.74948C15.9068 8.54807 16.001 8.29825 16.001 8C16.001 7.70176 15.9027 7.45158 15.7061 7.24948C15.5089 7.04807 15.2648 6.94737 14.9737 6.94737L3.49375 6.94737L8.52746 1.78947C8.73292 1.57895 8.83565 1.33333 8.83565 1.05263C8.83565 0.77193 8.73292 0.526317 8.52746 0.315791C8.322 0.105264 8.07819 1.2334e-08 7.79603 0C7.51319 -1.23633e-08 7.26904 0.105264 7.06358 0.315791L0.283482 7.26316C0.180754 7.36842 0.108158 7.48246 0.0656967 7.60526C0.0225506 7.72807 0.000976562 7.85965 0.000976562 8Z"
+                                          fill="url(#paint0_linear_1401_11413)"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1401_11413" x1="17.2641" y1="-3.58333"
+                                                        x2="-0.999485" y2="13.9088" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.0633718" stop-color="#3619AB"/>
+                                            <stop offset="0.517512" stop-color="#2272BB"/>
+                                            <stop offset="1" stop-color="#00814B"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="" class="header__burger-sub-link">
+                                <span>
+                                Open About Page
+                                </span>
+                            </a>
+                        </div>
+                    </nav>
                 </li>
                 <li class="header__burger-list-item">
-                    <a href="#capabilities" class="header__burger-list-link scroll-link">Capabilities</a>
+                    <a href="javascript:void(0);" class="header__burger-list-link arrow">Specifications</a>
+                                        <nav class="header__burger-sub-nav">
+                                            <ul class="header__sub-nav-list">
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico1.svg" alt="" class="header__sub-nav-ico">
+                                                        Architecture
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M13.3328 6.99984L5.93701 14.4165C5.77034 14.5832 5.57229 14.6665 5.34285 14.6665C5.1134 14.6665 4.91562 14.5832 4.74951 14.4165C4.58284 14.2498 4.49951 14.0518 4.49951 13.8223C4.49951 13.5929 4.58284 13.3951 4.74951 13.229L12.1662 5.83317H5.83285C5.59673 5.83317 5.39868 5.75317 5.23868 5.59317C5.07868 5.43317 4.99896 5.2354 4.99951 4.99984C4.99951 4.76373 5.07951 4.56567 5.23951 4.40567C5.39951 4.24567 5.59729 4.16595 5.83285 4.16651H14.1662C14.4023 4.16651 14.6003 4.24651 14.7603 4.40651C14.9203 4.56651 15.0001 4.76428 14.9995 4.99984V13.3332C14.9995 13.5693 14.9195 13.7673 14.7595 13.9273C14.5995 14.0873 14.4017 14.1671 14.1662 14.1665C13.9301 14.1665 13.732 14.0865 13.572 13.9265C13.412 13.7665 13.3323 13.5687 13.3328 13.3332V6.99984Z"
+                                                                  fill="url(#paint0_linear_1401_4506)"/>
+                                                            <defs>
+                                                                <linearGradient id="paint0_linear_1401_4506" x1="3.67056" y1="1.81494"
+                                                                                x2="15.6561"
+                                                                                y2="13.2941" gradientUnits="userSpaceOnUse">
+                                                                    <stop offset="0.0633718" stop-color="#3619AB"/>
+                                                                    <stop offset="0.517512" stop-color="#2272BB"/>
+                                                                    <stop offset="1" stop-color="#00814B"/>
+                                                                </linearGradient>
+                                                            </defs>
+                                                        </svg>
+                                                    </a>
+
+                                                </li>
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico2.svg" alt="" class="header__sub-nav-ico">
+                                                        Technologies
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M13.3328 6.99984L5.93701 14.4165C5.77034 14.5832 5.57229 14.6665 5.34285 14.6665C5.1134 14.6665 4.91562 14.5832 4.74951 14.4165C4.58284 14.2498 4.49951 14.0518 4.49951 13.8223C4.49951 13.5929 4.58284 13.3951 4.74951 13.229L12.1662 5.83317H5.83285C5.59673 5.83317 5.39868 5.75317 5.23868 5.59317C5.07868 5.43317 4.99896 5.2354 4.99951 4.99984C4.99951 4.76373 5.07951 4.56567 5.23951 4.40567C5.39951 4.24567 5.59729 4.16595 5.83285 4.16651H14.1662C14.4023 4.16651 14.6003 4.24651 14.7603 4.40651C14.9203 4.56651 15.0001 4.76428 14.9995 4.99984V13.3332C14.9995 13.5693 14.9195 13.7673 14.7595 13.9273C14.5995 14.0873 14.4017 14.1671 14.1662 14.1665C13.9301 14.1665 13.732 14.0865 13.572 13.9265C13.412 13.7665 13.3323 13.5687 13.3328 13.3332V6.99984Z"
+                                                                  fill="url(#paint0_linear_1401_4506)"/>
+                                                            <defs>
+                                                                <linearGradient id="paint0_linear_1401_4506" x1="3.67056" y1="1.81494"
+                                                                                x2="15.6561"
+                                                                                y2="13.2941" gradientUnits="userSpaceOnUse">
+                                                                    <stop offset="0.0633718" stop-color="#3619AB"/>
+                                                                    <stop offset="0.517512" stop-color="#2272BB"/>
+                                                                    <stop offset="1" stop-color="#00814B"/>
+                                                                </linearGradient>
+                                                            </defs>
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico3.svg" alt="" class="header__sub-nav-ico">
+                                                        Multilingual</a>
+                                                </li>
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico4.svg" alt="" class="header__sub-nav-ico">
+                                                        Scaling and Fault Safety</a>
+                                                </li>
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico5.svg" alt="" class="header__sub-nav-ico">
+                                                        Security</a>
+                                                </li>
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico6.svg" alt="" class="header__sub-nav-ico">
+                                                        Integrations</a>
+                                                </li>
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico7.svg" alt="" class="header__sub-nav-ico">
+                                                        Licensing</a>
+                                                </li>
+                                            </ul>
+                                            <div class="header__sub-nav-links-wrapper">
+                                                <a href="" class="header__burger-sub-link header__burger-sub-link--back">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0.000976562 8C0.000976562 8.14035 0.0225506 8.27193 0.0656967 8.39474C0.108158 8.51754 0.180754 8.63158 0.283482 8.73684L7.06358 15.6842C7.26903 15.8947 7.51319 16 7.79603 16C8.07819 16 8.322 15.8947 8.52746 15.6842C8.73292 15.4737 8.83565 15.2281 8.83565 14.9474C8.83565 14.6667 8.73292 14.4211 8.52746 14.2105L3.49375 9.05263L14.9994 9.05263C15.2904 9.05263 15.5301 8.95158 15.7185 8.74948C15.9068 8.54807 16.001 8.29825 16.001 8C16.001 7.70176 15.9027 7.45158 15.7061 7.24948C15.5089 7.04807 15.2648 6.94737 14.9737 6.94737L3.49375 6.94737L8.52746 1.78947C8.73292 1.57895 8.83565 1.33333 8.83565 1.05263C8.83565 0.77193 8.73292 0.526317 8.52746 0.315791C8.322 0.105264 8.07819 1.2334e-08 7.79603 0C7.51319 -1.23633e-08 7.26904 0.105264 7.06358 0.315791L0.283482 7.26316C0.180754 7.36842 0.108158 7.48246 0.0656967 7.60526C0.0225506 7.72807 0.000976562 7.85965 0.000976562 8Z"
+                                                              fill="url(#paint0_linear_1401_11413)"/>
+                                                        <defs>
+                                                            <linearGradient id="paint0_linear_1401_11413" x1="17.2641" y1="-3.58333"
+                                                                            x2="-0.999485" y2="13.9088" gradientUnits="userSpaceOnUse">
+                                                                <stop offset="0.0633718" stop-color="#3619AB"/>
+                                                                <stop offset="0.517512" stop-color="#2272BB"/>
+                                                                <stop offset="1" stop-color="#00814B"/>
+                                                            </linearGradient>
+                                                        </defs>
+                                                    </svg>
+                                                </a>
+                                                <a href="" class="header__burger-sub-link">
+                                                <span>
+                                                Open About Page
+                                                </span>
+                                                </a>
+                                            </div>
+                                        </nav>
                 </li>
                 <li class="header__burger-list-item">
-                    <a href="#management" class="header__burger-list-link scroll-link">Management</a>
+                    <a href="#" class="header__burger-list-link ">Solutions</a>
                 </li>
-                <li class="header__burger-list-item">
-                    <a href="#faq" class="header__burger-list-link scroll-link">FAQ</a>
-                </li>
-                <li class="header__burger-list-item">
-                    <a href="#benefits" class="header__burger-list-link scroll-link">Benefits</a>
-                </li>
-                <li class="header__burger-list-item">
-                    <a href="#solutions" class="header__burger-list-link scroll-link">Solutions</a>
-                </li>
-                <li class="header__burger-list-item">
-                    <a href="#technologies" class="header__burger-list-link scroll-link">Technologies</a>
-                </li>
-                <li class="header__burger-list-item">
-                    <a href="#testimonials" class="header__burger-list-link scroll-link">Testimonials</a>
-                </li>
+
             </ul>
             <a href="#" data-popup-expert-mobile-header class="btn btn--primary">Talk to expert</a>
         </nav>

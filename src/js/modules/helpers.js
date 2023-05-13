@@ -139,7 +139,9 @@ export function burgerMenu() {
 	const burgerBtn = document.querySelector('.header__burger');
 	const mobileMenu = document.querySelector('.header__burger-menu');
 	const overlay = document.querySelector('.overlay');
-	const mobileMenuLinks = document.querySelectorAll('.header__burger-list-link');
+	const btns = document.querySelectorAll('.header__burger-list-link.arrow');
+	const burgerMenus = document.querySelectorAll('.header__burger-sub-nav');
+	const backBtns = document.querySelectorAll('.header__burger-sub-link.header__burger-sub-link--back');
 
 	burgerBtn.addEventListener('click', (e) => {
 		if (e.target && overlay.classList.contains('active')) {
@@ -155,16 +157,7 @@ export function burgerMenu() {
 			document.body.style.overflowY = 'hidden';
 		}
 	});
-	mobileMenuLinks.forEach(link => {
-		link.addEventListener('click', (e) => {
-			if (e.target && mobileMenu.classList.contains('active')) {
-				burgerBtn.classList.remove('active');
-				mobileMenu.classList.remove('active');
-				overlay.classList.remove('active');
-				document.body.style.overflowY = 'visible';
-			}
-		})
-	})
+
 	overlay.addEventListener('click', (e) => {
 		if (e.target && mobileMenu.classList.contains('active')) {
 			burgerBtn.classList.remove('active');
@@ -173,6 +166,24 @@ export function burgerMenu() {
 			document.body.style.overflowY = 'visible';
 		}
 	});
+
+
+	btns.forEach((btn, index) => {
+		btn.addEventListener('click', (e) => {
+			if (e.target) {
+				burgerMenus[index].classList.add('active');
+			}
+		});
+
+	})
+	backBtns.forEach((btn, index) => {
+		btn.addEventListener('click', (e) => {
+			if (e.target) {
+				e.preventDefault();
+				burgerMenus[index].classList.remove('active');
+			}
+		});
+	})
 }
 
 
@@ -270,3 +281,45 @@ export function popup(btnSelector, btnCloseSelector, popupSelector) {
 		});
 	});
 }
+
+
+export function headerMenu() {
+	const btns = document.querySelectorAll('.header__list-item.drop-down > a');
+	const headerMenus = document.querySelectorAll('.header__list-item.drop-down .header__sub-nav');
+	const listItems = document.querySelectorAll('.header__list-item.drop-down');
+
+	const deactivateAll = () => {
+		listItems.forEach((item) => item.classList.remove('active'));
+		headerMenus.forEach((menu) => menu.classList.remove('active'));
+		btns.forEach((btn) => btn.classList.remove('active'));
+	};
+
+	btns.forEach((btn, index) => {
+		btn.addEventListener('click', (e) => {
+			e.preventDefault();
+			if (headerMenus[index].classList.contains('active')) {
+				listItems[index].classList.remove('active');
+				headerMenus[index].classList.remove('active');
+				btn.classList.remove('active');
+			} else {
+				deactivateAll();
+
+				listItems[index].classList.add('active');
+				headerMenus[index].classList.add('active');
+				btn.classList.add('active');
+			}
+		});
+	});
+
+	document.addEventListener('click', (e) => {
+		const isMenuButton = [...btns].includes(e.target);
+		const isSubMenu = [...headerMenus].some(menu => menu.contains(e.target));
+
+		if (!isMenuButton && !isSubMenu) {
+			deactivateAll();
+		}
+	});
+}
+
+
+
