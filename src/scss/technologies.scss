@@ -1,16 +1,15 @@
 .technologies {
-  position: relative;
   @include desktop {
-    padding: 130px 0;
+    padding: 130px 24px;
   }
   @include tablet {
-    padding: 50px 0;
+    padding: 50px 16px;
   }
 
   &__wrapper {
     margin: 0 auto;
     overflow: hidden;
-
+    max-width: 1048px;
     .section__title {
       margin-bottom: 88px;
       @include tablet {
@@ -18,122 +17,41 @@
       }
     }
   }
-}
-
-.technologies-slider {
-  overflow: hidden;
-
-  &__wrap {
+  &__inner {
     display: flex;
-
-    &--desc {
-      display: none;
-      @media screen and (min-width: 768px) {
-        display: flex;
-        width: 400%;
-        animation: scroll 15s infinite linear;
-      }
-    }
-    &--mob {
-      display: flex;
-      width: 700%;
-      animation: scroll 20s infinite linear;
-      @media screen and (min-width: 768px) {
-        display: none;
-      }
+    flex-wrap: wrap;
+    gap: 32px;
+    @include mobile {
+      gap: 16px;
     }
   }
-
   &__item {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    img {
-      transform: scale(.85);
-      border-radius: 40px;
-      @media screen and (min-width: 1500px){
-        transform: none;
-      }
-    }
-  }
-}
-
-
-
-
-
-.technologies-swiper {
-  @include mobile {
-    width: 100%;
+    width: calc(25% - 24px);
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  &-wrapper {
-    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 12px 40px rgba(17, 26, 43, 0.02), 0px 0.5px 2px rgba(17, 26, 43, 0.08);
+    border-radius: 32px;
+    background: #FFF;
+    @include tablet_md {
+      width: calc(100%/ 3 - 24px);
+    }
     @include mobile {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto; // here is the amount of slidesPerColumn you want
-      grid-auto-flow: column;
-      row-gap: 24px;
+      width: calc(50% - 8px);
 
     }
-  }
-  &-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 40px;
-  }
-  &-pagination {
-    display: flex;
-    justify-content: center;
-    color: #5F6972;
-    font-family: Avenir, sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 32px;
-
-  }
-  &-button-next {
-    width: 48px;
-    height: 48px;
-    box-shadow: 0px 80px 90px rgba(17, 26, 43, 0.08), 0px 40px 30px rgba(0, 14, 26, 0.03), 0px 5px 7px rgba(0, 14, 26, 0.02);
-    border-radius: 999px;
-    cursor: pointer;
-    background: url("../images/swiper-next.svg") center center no-repeat, #fff;
-  }
-  &-button-prev {
-    width: 48px;
-    height: 48px;
-    box-shadow: 0px 80px 90px rgba(17, 26, 43, 0.08), 0px 40px 30px rgba(0, 14, 26, 0.03), 0px 5px 7px rgba(0, 14, 26, 0.02);
-    border-radius: 999px;
-    cursor: pointer;
-    background: url("../images/swiper-prev.svg") no-repeat center center, #fff;
-  }
-  &__swiper-slide {
-    display: flex;
-    justify-content: center;
-    @include mobile {
-
-      align-self: center;
-      justify-content: center;
+    @include mobile_md {
+      width: 156px;
+      height: 72px;
+      border-radius: 20px;
     }
     & > img {
-      border-radius: 40px;
-      @include mobile {
+      width: 100%;
+      height: 100%;
+      display: block;
 
-      }
     }
   }
-
 }
 
-@media (min-width: 567px) {
-  .technologies-swiper__swiper-slide {
-    width: fit-content!important;
-  }
-
-}

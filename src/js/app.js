@@ -7,14 +7,12 @@ import {
 	symbolsCounter,
 	scroll,
 	inputsValidation,
-	techSwiper,
 	popup,
 } from './modules/helpers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	scroll();
 	testimonilasSwiper;
-	techSwiper;
 	accordion();
 	burgerMenu();
 	capabilitiesSwiper();

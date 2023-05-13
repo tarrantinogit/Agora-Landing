@@ -71,34 +71,7 @@ export const testimonilasSwiper = new Swiper('.swiper.testimonials__swiper', {
 	}
 });
 
-export const techSwiper = new Swiper('.swiper.technologies-swiper', {
-	slidesPerView: 1,
-	centeredSlides: false,
-	rewind: true,
-	grid: {
-		rows: 2,
-	},
 
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
-	pagination: {
-		el: ".swiper-pagination",
-		type: "fraction",
-	},
-	breakpoints: {
-		567: {
-			slidesPerView: "auto",
-			centeredSlides: true,
-			slidesPerGroup: 1,
-			spaceBetween: 32,
-			grid: false,
-			loop: true,
-			loopAdditionalSlides: 30,
-		}
-	}
-});
 
 
 export function capabilitiesSwiper() {
