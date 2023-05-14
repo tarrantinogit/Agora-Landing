@@ -17,6 +17,7 @@
 @import "faq";
 @import "subscribe-form";
 @import "contact-us";
+@import "architecture";
 @import "footer";
 @import "popup";
 
@@ -309,4 +310,76 @@ section {
   text-align: center;
   margin-top: 25px !important;
   line-height: 100% !important;
+}
+
+.read-more__btn {
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #111A2B;
+  text-decoration: none;
+  border: 1.5px solid #111A2B;
+  border-radius: 999px;
+  padding: 8px 48px 8px 24px;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    display: block;
+    width: 11px;
+    height: 11px;
+    background: url("../images/read_more_arrow.svg") center no-repeat ;
+  }
+}
+
+.page__nav {
+  flex-shrink: 1;
+  width: fit-content;
+  margin-left: auto;
+  @include tablet {
+    display: none;
+  }
+  &-title {
+    font-family: 'Avenir', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 22px;
+    color: #111A2B;
+    margin-bottom: 12px;
+  }
+
+  &-list {
+    list-style: none;
+
+    &-item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &-item {
+      &:first-child {
+        background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      font-family: 'Avenir', sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 14px;
+      line-height: 22px;
+      color: #5F6972;
+    }
+  }
 }

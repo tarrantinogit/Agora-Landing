@@ -2940,6 +2940,150 @@ template {
     position: relative;
   }
 }
+.architecture {
+  background: url("../images/specs/arch_bg.jpg") center no-repeat;
+  padding: 78px 0 130px 0;
+}
+@media (max-width: 1600px) {
+  .architecture {
+    padding: 78px 24px 130px 24px;
+  }
+}
+@media (max-width: 576px) {
+  .architecture {
+    padding: 40px 24px 0 24px;
+  }
+}
+.architecture__wrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+@media (max-width: 992px) {
+  .architecture__wrapper {
+    flex-direction: column;
+  }
+}
+.architecture__title.section__title {
+  text-align: left;
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 64px;
+  margin-top: 0;
+}
+@media (max-width: 1200px) {
+  .architecture__title.section__title {
+    font-size: 38px;
+    line-height: 46px;
+  }
+}
+@media (max-width: 992px) {
+  .architecture__title.section__title {
+    margin-bottom: 0;
+  }
+}
+.architecture__title-wrapper {
+  max-width: 408px;
+  width: 100%;
+  margin-right: 32px;
+}
+@media (max-width: 1200px) {
+  .architecture__title-wrapper {
+    width: fit-content;
+  }
+}
+@media (max-width: 992px) {
+  .architecture__title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+}
+.architecture__content {
+  max-width: 518px;
+  margin-bottom: 88px;
+}
+@media (max-width: 992px) {
+  .architecture__content {
+    max-width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .architecture__content {
+    margin-bottom: 32px;
+  }
+}
+.architecture__content p {
+  font-family: "Avenir", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #242D3B;
+}
+@media (max-width: 576px) {
+  .architecture__content p {
+    font-size: 15px;
+  }
+  .architecture__content p strong {
+    font-size: 16px;
+  }
+}
+.architecture__content p:not(:last-child) {
+  margin-bottom: 16px;
+}
+@media (max-width: 576px) {
+  .architecture__content p:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+.architecture__content-title {
+  font-family: "Avenir", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 24px;
+  color: #242D3B;
+  margin-bottom: 16px;
+}
+.architecture__img-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.architecture__img-inner {
+  max-width: 958px;
+  border-radius: 40px;
+  box-shadow: 0px 80px 90px rgba(17, 26, 43, 0.08), 0px 40px 30px rgba(0, 14, 26, 0.03), 0px 5px 7px rgba(0, 14, 26, 0.02);
+}
+.architecture__img-inner img {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  display: block;
+}
+.architecture__img-inner--mobile {
+  display: none;
+}
+@media (max-width: 576px) {
+  .architecture__img-inner--mobile {
+    display: block;
+    margin-bottom: 52px;
+  }
+  .architecture__img-inner--mobile > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .architecture__img-inner {
+    display: none;
+  }
+}
+
 .footer {
   background-color: #FCFCFE;
   padding-bottom: 88px;
@@ -3601,4 +3745,72 @@ section {
   text-align: center;
   margin-top: 25px !important;
   line-height: 100% !important;
+}
+
+.read-more__btn {
+  font-family: "Avenir", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #111A2B;
+  text-decoration: none;
+  border: 1.5px solid #111A2B;
+  border-radius: 999px;
+  padding: 8px 48px 8px 24px;
+  position: relative;
+}
+.read-more__btn:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: block;
+  width: 11px;
+  height: 11px;
+  background: url("../images/read_more_arrow.svg") center no-repeat;
+}
+
+.page__nav {
+  flex-shrink: 1;
+  width: fit-content;
+  margin-left: auto;
+}
+@media (max-width: 992px) {
+  .page__nav {
+    display: none;
+  }
+}
+.page__nav-title {
+  font-family: "Avenir", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 22px;
+  color: #111A2B;
+  margin-bottom: 12px;
+}
+.page__nav-list {
+  list-style: none;
+}
+.page__nav-list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.page__nav-list-item:first-child {
+  background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.page__nav-list-link {
+  text-decoration: none;
+  font-family: "Avenir", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 22px;
+  color: #5F6972;
 }
