@@ -9,12 +9,13 @@ import {
 	inputsValidation,
 	popup,
 	headerMenu,
+	changeText
 } from './modules/helpers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	scroll();
 	headerMenu();
-
+	changeText();
 	testimonilasSwiper;
 	accordion();
 	burgerMenu();

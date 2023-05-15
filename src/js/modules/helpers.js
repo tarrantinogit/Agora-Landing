@@ -72,8 +72,6 @@ export const testimonilasSwiper = new Swiper('.swiper.testimonials__swiper', {
 });
 
 
-
-
 export function capabilitiesSwiper() {
 	if (document.body.clientWidth <= 640) {
 		const swiper = new Swiper('.capabilities__swiper.swiper', {
@@ -321,5 +319,10 @@ export function headerMenu() {
 	});
 }
 
-
+export function changeText() {
+	const item = document.querySelector('.multilingual__flag.multilingual__flag--more');
+	if (document.body.offsetWidth < 577) {
+		item.innerHTML = '+3 <br> more';
+	}
+}
 
