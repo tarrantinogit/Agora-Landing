@@ -319,10 +319,10 @@ export function headerMenu() {
 	});
 }
 
-export function changeText() {
-	const item = document.querySelector('.multilingual__flag.multilingual__flag--more');
+export function changeText(elem, inner) {
+	const item = document.querySelector(elem);
 	if (document.body.offsetWidth < 577) {
-		item.innerHTML = '+3 <br> more';
+		item.innerHTML = inner;
 	}
 }
 

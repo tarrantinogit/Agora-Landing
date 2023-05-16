@@ -1,15 +1,16 @@
 .footer {
-  background-color: #FCFCFE;
-  padding-bottom: 88px;
-  padding-top: 130px;
-  @include desktop {
-    padding-bottom: 50px;
-    padding-top: 50px;
-  }
-  @include tablet_sm {
-    padding-top: 0;
-  }
   &__wrapper {
+    background-color: #FCFCFE;
+    padding: 130px 0 88px 0;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    @include desktop {
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+    @include tablet_sm {
+      padding-top: 0;
+    }
     @include desktop {
       padding: 75px 24px;
     }
@@ -18,6 +19,10 @@
     }
     @include tablet_sm {
       padding: 50px 16px;
+    }
+    @include mobile {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
     }
   }
 

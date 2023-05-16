@@ -15,7 +15,8 @@ import {
 document.addEventListener('DOMContentLoaded', () => {
 	scroll();
 	headerMenu();
-	changeText();
+	changeText('.multilingual__flag.multilingual__flag--more', '+3 <br> more');
+	changeText('.read-more__btn.read-more__btn--apache', 'Apache 2.0');
 	testimonilasSwiper;
 	accordion();
 	burgerMenu();

@@ -21,6 +21,7 @@
 @import "tech";
 @import "multilingual";
 @import "integrations";
+@import "licensing";
 @import "footer";
 @import "popup";
 
@@ -328,6 +329,15 @@ section {
   border-radius: 999px;
   padding: 8px 48px 8px 24px;
   position: relative;
+
+  &.read-more__btn--apache {
+    &:after {
+      background: url("../images/external_link.svg") center no-repeat;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   &:after {
     position: absolute;
     content: '';
@@ -337,7 +347,7 @@ section {
     display: block;
     width: 11px;
     height: 11px;
-    background: url("../images/read_more_arrow.svg") center no-repeat ;
+    background: url("../images/read_more_arrow.svg") center no-repeat;
   }
 }
 
@@ -348,6 +358,7 @@ section {
   @include tablet {
     display: none;
   }
+
   &-title {
     font-family: 'Avenir', sans-serif;
     font-style: normal;
@@ -384,5 +395,14 @@ section {
       line-height: 22px;
       color: #5F6972;
     }
+  }
+}
+
+
+.specifications + .footer {
+  background-color: #4363B0;
+  padding-top: 20px;
+  @include mobile {
+    padding-top: 10px;
   }
 }
