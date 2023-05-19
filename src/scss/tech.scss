@@ -1,0 +1,96 @@
+.tech {
+  background-size: contain !important;
+  background: url("../images/specs/tech_bg.jpg") 100% 50% no-repeat;
+  padding: 64px 0;
+  &__wrapper {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &__title.section__title {
+    margin: 0;
+    font-size: 48px;
+    line-height: 64px;
+    margin-bottom: 24px;
+    text-align: left;
+    @include desktop {
+      font-size: 38px;
+      line-height: 42px;
+    }
+    @include tablet {
+      margin-bottom: 0;
+    }
+    @include mobile {
+      font-size: 23px;
+      line-height: 32px;
+    }
+  }
+  &__title-description {
+    font-family: 'Avenir', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #384350;
+    margin-bottom: 24px;
+  }
+  &__title-wrapper {
+    max-width: 407px;
+    width: 100%;
+    margin-top: 64px;
+    margin-right: 32px;
+    @include desktop_xm {
+      max-width: 300px;
+    }
+    @include tablet {
+      display: flex;
+      max-width: 100%;
+      width: 100%;
+      margin-top: 0;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding: 0 16px;
+    }
+  }
+  &__content {
+    max-width: 518px;
+    width: 100%;
+    padding: 64px 64px 64px 0;
+    align-self: center;
+    background-color: #fff;
+    position: relative;
+    border-radius: 0px 24px 24px 0px;
+    box-shadow: 0px 80px 90px rgba(17, 26, 43, 0.08), 0px 40px 30px rgba(0, 14, 26, 0.03), 0px 5px 7px rgba(0, 14, 26, 0.02);
+    @include desktop {
+      padding: 32px 32px 32px 0;
+    }
+    @include tablet {
+      order: 3;
+      box-shadow: none;
+      max-width: 100%;
+      padding: 0 16px;
+    }
+
+    & p:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    & p {
+      font-family: 'Avenir', sans-serif;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: #242D3B;
+      @include desktop {
+        font-size: 15px;
+      }
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
+  &__img-wrapper {
+
+  }
+}
