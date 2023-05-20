@@ -1,0 +1,38 @@
+.scontrol {
+  background: url("../images/specs/scontrol_bg.jpg") 100% 0% no-repeat;
+  &__wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &__title.section__title {
+    font-size: 36px;
+    line-height: 48px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    text-align: left;
+    margin-top: 0;
+  }
+  &__description {
+    font-family: 'Avenir', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 958px;
+    color: #F8F8FA;
+  }
+  &__description:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  &__item {
+    margin-top: 88px;
+    border-radius: 40px;
+    background: url("../images/specs/scontrol_item_bg.jpg") center/cover no-repeat;
+    padding: 59px 64px;
+    max-width: 958px;
+    & > img {
+      width: 50%;
+      height: 100%;
+    }
+  }
+ }
