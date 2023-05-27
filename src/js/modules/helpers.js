@@ -326,3 +326,41 @@ export function changeText(elem, inner) {
 	}
 }
 
+
+export function initScrollObserver(itemSelector, imageWrapperSelector) {
+
+		// Initialize items and images
+		let items = Array.from($(itemSelector));
+		let images = Array.from($(imageWrapperSelector));
+
+		// Add the active class to the first image by default
+		$(images[0]).addClass('is-active');
+
+		// Initialize a variable to keep track of the last scroll position
+		let lastScrollTop = 0;
+
+		// Initialize IntersectionObserver
+		let observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+				let index = items.indexOf(entry.target);
+				let st = window.pageYOffset || document.documentElement.scrollTop;
+
+				if (entry.isIntersecting) {
+					// If the item is in view, make the corresponding image active
+					$(`${imageWrapperSelector}[data-index=${index}]`).addClass('is-active');
+				} else {
+					// If the item is not in view, make the corresponding image inactive
+					// except for the last image when scrolling down
+					if (index !== items.length - 1 || st <= lastScrollTop) {
+						$(`${imageWrapperSelector}[data-index=${index}]`).removeClass('is-active');
+					}
+				}
+				// Update the last scroll position
+				lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+			});
+		}, {threshold: 0.5});
+
+		// Observe each item
+		items.forEach(item => observer.observe(item));
+}
+

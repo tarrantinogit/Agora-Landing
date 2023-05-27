@@ -9,7 +9,7 @@ import {
 	inputsValidation,
 	popup,
 	headerMenu,
-	changeText
+	changeText, initScrollObserver
 } from './modules/helpers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,4 +25,44 @@ document.addEventListener('DOMContentLoaded', () => {
 	symbolsCounter();
 	inputsValidation();
 	popup('a[data-popup-contact]', 'img[data-popup-contact-close]', '.popup-contact');
+	initScrollObserver('.system__item', '.system__img-wrapper');
+	initScrollObserver('.collection__item', '.collection__img-wrapper');
 });
+let showMoreBtn = document.querySelector(".show-more__btn");
+
+showMoreBtn.addEventListener('click', function (e) {
+	e.preventDefault();
+	this.classList.toggle("open");
+	if (this.classList.contains("open")) {
+		this.textContent = "Show less";
+		this.insertAdjacentHTML('afterbegin', '<span class="icon"></span>');
+	} else {
+		this.textContent = "Show more";
+		this.insertAdjacentHTML('afterbegin', '<span class="icon"></span>');
+	}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

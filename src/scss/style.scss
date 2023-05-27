@@ -1,3 +1,7 @@
+/*
+General styles
+*/
+
 @import "helpers/fonts";
 @import "helpers/normalize";
 @import 'helpers/media_mixins';
@@ -6,6 +10,10 @@
 @import "form-elements";
 @import "cards";
 @import "header";
+
+/*
+Homepage
+*/
 @import "hero";
 @import "processes";
 @import "capabilities";
@@ -17,14 +25,35 @@
 @import "faq";
 @import "subscribe-form";
 @import "contact-us";
+
+/*
+Specifications styles
+*/
 @import "architecture";
 @import "tech";
 @import "multilingual";
 @import "integrations";
 @import "licensing";
+
+/*
+Architecture styles
+
+*/
 @import "scaling";
 @import "security";
 @import "scontrol";
+@import "service";
+@import "system";
+@import "geocms";
+@import "collection";
+@import "unity-base";
+@import "options";
+
+/*
+Technologies styles
+*/
+@import "why";
+@import "infrastructure";
 @import "footer";
 @import "popup";
 
@@ -402,10 +431,82 @@ section {
 }
 
 
+.show-more__btn {
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-top: 24px;
+  display: none;
+
+}
+
+
+.show-more__btn .icon {
+  display: inline-block;
+  margin-right: 10px;
+  width: 12px;
+  height: 12px;
+  position: relative;
+}
+
+.show-more__btn .icon::before,
+.show-more__btn .icon::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: currentColor;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.show-more__btn .icon::before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.show-more__btn.open .icon::after {
+  display: none;
+}
+
+
 .specifications + .footer {
   background-color: #4363B0;
   padding-top: 20px;
   @include mobile {
     padding-top: 10px;
+  }
+}
+
+.gradient__btn {
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 8px 24px;
+  border: double 2px transparent;
+  outline: none;
+  background-image: linear-gradient(#F7F7F9, #F7F7F9), linear-gradient(135deg, #9124B8, #2782D3, #1BDAC3);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  & span {
+    font-family: 'Avenir', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
   }
 }

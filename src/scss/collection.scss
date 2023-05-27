@@ -1,0 +1,131 @@
+.collection {
+  background: url("../images/arch/collection_bg.jpg") right/cover no-repeat;
+  padding: 130px 0 0 0;
+
+  &__title-wrapper {
+    display: flex;
+    max-width: 958px;
+    justify-content: space-between;
+  }
+
+  &__title-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+
+  &__title.section__title {
+    font-family: 'Avenir', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    color: #111A2B;
+    margin: 0 32px 0 0;
+    text-align: left;
+  }
+
+  &__description {
+    font-family: 'Avenir', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #384350;
+    max-width: 518px;
+  }
+
+  &__items-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__items {
+    //max-width: 1440px;
+    width: 100%;
+  }
+
+  &__images {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    height: calc(100vh - 56px);
+    display: grid;
+    align-items: baseline;
+    justify-content: end;
+  }
+
+  &__img-wrapper {
+    grid-area: 1/1/2/2;
+    opacity: 0;
+    -webkit-transition: opacity .15s ease-in-out;
+    -o-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+
+  &__item-img {
+    max-width: 622px;
+    max-height: 640px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px 0px 0px 40px;
+  }
+
+  &__img-wrapper.is-active {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  &__item {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &-title {
+      font-family: 'Avenir', sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 33px;
+      line-height: 46px;
+      color: #111A2B;
+      margin-bottom: 24px;
+    }
+
+    &-text {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      color: #242D3B;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      &.mb {
+        margin-bottom: 50px;
+      }
+    }
+
+    &-content {
+      max-width: 628px;
+    }
+
+  }
+
+
+}
+
