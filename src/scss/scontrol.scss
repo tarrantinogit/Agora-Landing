@@ -1,7 +1,19 @@
 .scontrol {
   background: url("../images/specs/scontrol_bg.jpg") 100% 0% no-repeat;
+  @include desktop_xl {
+    padding: 130px 24px;
+  }
+  @include tablet_md {
+    padding: 50px 16px;
+  }
+  @include mobile {
+    background-position: 75% 100%;
+  }
+  @include mobile_sm {
+    background-position: 85% 100%;
+  }
   &__wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
   }
   &__title.section__title {
@@ -11,6 +23,13 @@
     margin-bottom: 50px;
     text-align: left;
     margin-top: 0;
+    @include tablet_md {
+      margin-bottom: 24px;
+    }
+    @include mobile {
+      font-size: 23px;
+      line-height: 32px;
+    }
   }
   &__description {
     font-family: 'Avenir', sans-serif;
@@ -20,6 +39,10 @@
     line-height: 32px;
     max-width: 958px;
     color: #F8F8FA;
+    @include mobile {
+      font-size: 15px;
+      line-height: 24px;
+    }
   }
   &__description:not(:last-child) {
     margin-bottom: 24px;
@@ -30,9 +53,25 @@
     background: url("../images/specs/scontrol_item_bg.jpg") center/cover no-repeat;
     padding: 59px 64px;
     max-width: 958px;
+    @include tablet_md {
+      margin-top: 48px;
+    }
+    @include mobile {
+      padding: 40px 32px;
+      border-radius: 24px;
+    }
+    @include mobile_sm {
+      padding: 24px 32px;
+    }
     & > img {
       width: 50%;
       height: 100%;
+      @include mobile {
+        width: 80%;
+      }
+      @include mobile_sm {
+        width: 95%;
+      }
     }
   }
  }

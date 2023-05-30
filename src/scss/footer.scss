@@ -1,9 +1,10 @@
 .footer {
   &__wrapper {
-    background-color: #FCFCFE;
+
     padding: 130px 0 88px 0;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    background: #FCFCFE url("../images/footer.jpg") center/cover no-repeat;
     @include desktop {
       padding-bottom: 50px;
       padding-top: 50px;
@@ -43,6 +44,9 @@
     }
     @include tablet_sm {
       padding: 0 16px;
+    }
+    @include mobile {
+      padding: 0;
     }
   }
 
@@ -123,11 +127,11 @@
     }
     @include mobile {
       grid-template-areas:
-            "processes capabilities"
-            "benefits capabilities"
-            "benefits testimonials"
-            "management technology"
-            "management  solutions ";
+            "processes management"
+            "capabilities solutions"
+            "capabilities  .";
+
+
       grid-template-columns:  repeat(2, 1fr);
       column-gap: 16px;
       row-gap: 32px;
@@ -136,7 +140,9 @@
     &-list {
       list-style: none;
       min-width: 150px;
-
+      @include mobile {
+        width: 150px;
+      }
       &--processes {
         grid-area: processes;
       }
@@ -151,6 +157,9 @@
 
       &--solutions {
         grid-area: solutions;
+        @include mobile {
+          margin-top: -42px;
+        }
       }
 
       &--benefits {

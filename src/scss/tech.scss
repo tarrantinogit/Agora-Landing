@@ -17,7 +17,7 @@
 
   &__wrapper {
     display: flex;
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
     @include desktop {
       flex-direction: column;
@@ -70,7 +70,7 @@
     width: 100%;
     margin-top: 64px;
     margin-right: 32px;
-    @include desktop_xm {
+    @include desktop_lg {
       max-width: 300px;
     }
     @include desktop_xl {
@@ -78,6 +78,7 @@
     }
     @include desktop {
       margin-top: 0;
+      max-width: 407px;
     }
     @include tablet {
       display: flex;
@@ -125,6 +126,9 @@
       max-width: 100%;
       padding: 0 16px;
       margin-bottom: 48px;
+      &:after {
+        display: none;
+      }
     }
 
     & p:not(:last-child) {

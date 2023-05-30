@@ -5,12 +5,12 @@
     padding: 78px 24px 130px 24px;
   }
   @include mobile {
-    padding: 40px 24px 0 24px;
+    padding: 33px 16px 0 16px;
   }
   &__wrapper {
     display: flex;
     margin:  0 auto;
-    max-width: 1440px;
+    max-width: 1280px;
     @include tablet {
       flex-direction: column;
     }
@@ -92,7 +92,7 @@
     }
   }
   &__img-wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
 
 

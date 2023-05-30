@@ -190,7 +190,11 @@
 @media (max-width: 1350px) {
   .contact-us {
     margin: 50px 24px;
+    @include mobile {
+      margin: 40px 0 !important;
+    }
   }
+
 }
 
 .contact-us__form .wpcf7-spinner {

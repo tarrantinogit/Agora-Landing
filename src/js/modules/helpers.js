@@ -364,3 +364,38 @@ export function initScrollObserver(itemSelector, imageWrapperSelector) {
 		items.forEach(item => observer.observe(item));
 }
 
+export function scrollButton() {
+	// Получите кнопку
+	var scrollTopButton = document.querySelector('.btn__top');
+
+	// Получите все секции на странице
+	var sections = document.querySelectorAll('section');
+
+	// Инициализировать IntersectionObserver
+	var observer = new IntersectionObserver(function(entries, observer) {
+		entries.forEach(function(entry) {
+			// Проверяем, является ли пересекаемый элемент первой секцией
+			if (entry.target === sections[0]) {
+				if (entry.isIntersecting) {
+					// Если первая секция пересекает область видимости, скрываем кнопку
+					scrollTopButton.classList.remove('active');
+				} else {
+					// Если первая секция не пересекает область видимости, показываем кнопку
+					scrollTopButton.classList.add('active');
+				}
+			}
+		});
+	}, {threshold: 0.5});
+
+	// Наблюдаем за всеми секциями
+	sections.forEach(section => observer.observe(section));
+
+	// При клике прокрутите до верха документа
+	scrollTopButton.addEventListener('click', function() {
+		window.scrollTo({top: 0, behavior: 'smooth'});
+	});
+}
+
+
+
+

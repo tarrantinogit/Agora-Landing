@@ -54,6 +54,7 @@ Technologies styles
 */
 @import "why";
 @import "infrastructure";
+@import "deployment";
 @import "footer";
 @import "popup";
 
@@ -508,5 +509,32 @@ section {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+  }
+}
+
+.btn__top {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  background-color: rgba(17, 31, 43, 0.6);
+  box-shadow: 0px 80px 90px rgba(17, 26, 43, 0.08), 0px 40px 30px rgba(0, 14, 26, 0.03), 0px 5px 7px rgba(0, 14, 26, 0.02);
+  border-radius: 999px;
+  z-index: -9;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s linear;
+  @include mobile {
+    right: 24px;
+    bottom: 24px;
+  }
+  &.active {
+    z-index: 2;
+    opacity: 1;
+    visibility: visible;
   }
 }
