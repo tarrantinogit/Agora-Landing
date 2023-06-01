@@ -78,10 +78,12 @@
   }
 
   &__items {
-    //max-width: 1440px;
+    max-width: 1230px;
+    margin: 0 auto;
     width: 100%;
     @include desktop_xl {
       width: 50%;
+      max-width: 100%;
     }
     @include tablet {
       width: 100%;
@@ -165,7 +167,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     position: relative;
     @include desktop_xl {
       justify-content: flex-start;
