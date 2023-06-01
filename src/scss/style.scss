@@ -439,14 +439,19 @@ section {
   font-size: 16px;
   line-height: 24px;
   position: relative;
-  background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  text-decoration: none;
   margin-top: 24px;
   display: none;
-
+  & span {
+    background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  @include tablet_md {
+    display: block;
+  }
 }
 
 

@@ -1,7 +1,16 @@
 .infrastructure {
   background: url("../images/technologies/infrastructure.jpg") bottom/cover no-repeat;
+  @include desktop_xl {
+    padding: 130px 24px;
+  }
+  @include tablet {
+    padding: 50px 24px;
+  }
+  @include tablet_md {
+    padding: 50px 16px;
+  }
   &__wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
   }
   &__title-wrapper {
@@ -9,6 +18,11 @@
     max-width: 958px;
     justify-content: space-between;
     margin-bottom: 88px;
+    @include tablet {
+      flex-direction: column;
+      row-gap: 24px;
+      margin-bottom: 50px;
+    }
   }
   &__title.section__title {
     margin: 0;
@@ -20,6 +34,10 @@
     color: #111A2B;
     text-align: left;
     max-width: 408px;
+    @include tablet_sm {
+      font-size: 23px;
+      line-height: 32px;
+    }
   }
   &__description {
     font-family: 'Avenir', sans-serif;
@@ -29,14 +47,27 @@
     line-height: 32px;
     color: #242D3B;
     max-width: 518px;
+    @include tablet_sm {
+      font-size: 15px;
+      line-height: 24px;
+      max-width: 100%;
+    }
   }
   &__items {
     display: flex;
     column-gap: 32px;
+    @include tablet_sm {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 48px;
+    }
   }
   &__items-row {
     max-width: 298px;
     width: 100%;
+    @include mobile_md {
+      max-width: 100%;
+    }
   }
   &__item {
     background: #FFFFFF;
@@ -48,6 +79,9 @@
     padding: 12px 0;
     column-gap: 12px;
     box-shadow: -8px -8px 0px 0px rgb(67, 99, 176);
+    @include tablet_sm {
+      box-shadow: -4px -4px 0px 0px rgb(67, 99, 176);
+    }
     &:not(:last-child) {
       margin-bottom: 16px;
       position: relative;

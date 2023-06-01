@@ -1,19 +1,46 @@
 .deployment {
   background-color: #4363B0;
   padding: 0 0 20px 0;
-
+@include mobile {
+  padding: 0 0 10px 0;
+}
   &__container {
     background: #F8F8FA url("../images/technologies/deployment.png") 100% 50% no-repeat;
     background-size: contain !important;
     padding: 0;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
+    @include desktop {
+      background: #F8F8FA url("../images/technologies/deployment.png") 135% 50% no-repeat;
+    }
+    @include tablet {
+      background: #F8F8FA url("../images/technologies/deployment.png") 200% 50% no-repeat;
+    }
+    @include tablet_md {
+      background: #F8F8FA url("../images/technologies/deployment.jpg") no-repeat center;
+      background-size: cover !important;
+    }
+    @include mobile {
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+
+    }
   }
 
   &__wrapper {
     max-width: 1440px;
     margin: 0 auto;
     padding: 130px 0;
+    @include desktop_xl {
+      max-width: 1280px;
+      padding: 130px 24px;
+    }
+    @include tablet {
+      padding: 50px 24px;
+    }
+    @include tablet_md {
+      padding: 50px 16px;
+    }
   }
 
   &__title.section__title {
@@ -22,11 +49,24 @@
     max-width: 583px;
     font-size: 48px;
     line-height: 64px;
+    @include tablet_md {
+      color: #fff;
+      font-size: 23px;
+      line-height: 32px;
+      margin-bottom: 24px;
+    }
   }
 
   &__title-wrapper {
     max-width: 628px;
     margin-bottom: 88px;
+    @include desktop {
+      max-width: 408px;
+    }
+    @include tablet_md {
+      margin-bottom: 48px;
+      max-width: 100%;
+    }
   }
 
   &__description {
@@ -36,6 +76,12 @@
     font-size: 20px;
     line-height: 32px;
     color: #384350;
+    @include tablet_md {
+      font-size: 15px;
+      line-height: 24px;
+      color: #F8F8FA;
+
+    }
   }
 
   &__items {
@@ -54,17 +100,45 @@
     border-radius: 40px;
     display: flex;
     justify-content: space-between;
-
+    @include desktop_xl {
+      max-width: 958px;
+    }
+    @include tablet_md {
+      flex-direction: column;
+      padding: 40px 32px;
+    }
+    @include mobile {
+      border-radius: 24px;
+    }
     &-content {
       max-width: 395px;
+      @include tablet_md {
+        max-width: 100%;
+
+      }
+    }
+    &-description {
+      @include tablet_md {
+        margin-bottom: 24px;
+      }
+      @include mobile {
+        display: none;
+      }
     }
 
     &:first-child {
       background: url("../images/specs/security_item_1.jpg") center/cover no-repeat;
+      @include mobile_md {
+        background-position:  right bottom;
+
+      }
     }
 
     &:nth-child(2) {
       background: url("../images/specs/security_item_2.jpg") center/cover no-repeat;
+      @include mobile_md {
+        background-position:  right bottom;
+      }
     }
 
     &-list {
@@ -75,6 +149,7 @@
         display: flex;
         align-items: center;
         column-gap: 16px;
+
 
         &:not(:last-child ) {
           margin-bottom: 12px;
@@ -103,7 +178,11 @@
       line-height: 46px;
       color: #111A2B;
       margin-bottom: 24px;
-
+      max-width: 385px;
+      @include tablet_md {
+        font-size: 20px;
+        line-height: 32px;
+      }
     }
 
     & p {

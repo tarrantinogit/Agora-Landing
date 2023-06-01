@@ -1,15 +1,29 @@
 .unity-base {
   background-color: #4363B0;
   padding: 0 0 20px 0;
-
+  @include tablet_md {
+    padding: 0 0 10px 0;
+  }
   &__container {
     background: #1C5393 url("../images/arch/unity-base.jpg") center/cover no-repeat;
     border-radius: 0 0 40px 40px;
     padding: 130px 0;
+    @include desktop_xm {
+      padding: 130px 24px;
+    }
+    @include desktop {
+      padding: 50px 24px;
+    }
+    @include tablet {
+      padding: 50px 16px;
+    }
+    @include tablet_md {
+      border-radius: 0px 0px 16px 16px;
+    }
   }
 
   &__wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
 
   }
@@ -22,6 +36,11 @@
     font-size: 48px;
     line-height: 64px;
     margin: 0 32px 0 0;
+    @include tablet_md {
+      font-size: 23px;
+      line-height: 32px;
+      margin-bottom: 24px;
+    }
   }
 
   &__title-wrapper {
@@ -29,11 +48,18 @@
     justify-content: space-between;
     max-width: 958px;
     margin-bottom: 88px;
+    @include tablet_md {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 50px;
+    }
   }
 
   &__description {
     max-width: 518px;
-
+    @include tablet_md {
+      max-width: 100%;
+    }
     & p {
       font-family: 'Avenir', sans-serif;
       font-style: normal;
@@ -41,6 +67,10 @@
       font-size: 20px;
       line-height: 32px;
       color: #F8F8FA;
+      @include tablet_md {
+        font-size: 15px;
+        line-height: 24px;
+      }
 
       &:not(:last-child) {
         margin-bottom: 24px;
@@ -61,17 +91,34 @@
     "fourth fourth fourth fourth fifth fifth"
     "sixth sixth sixth sixth fifth fifth"
     "seventh seventh seventh seventh . .";
+    @include desktop {
+      grid-template-areas:
+    "first first first first first first first first"
+    "second second second second second second second second"
+    "third third third third third third third third"
+    "fourth fourth fourth fourth fourth fourth fourth fourth"
+    "sixth sixth sixth sixth fifth fifth fifth fifth"
+    "seventh seventh seventh seventh seventh seventh seventh seventh";
+      grid-template-rows: auto;
+      grid-template-columns: auto;
+      justify-content: center;
+    }
 
     &-inner {
       max-width: 850px;
       width: 100%;
       display: flex;
       column-gap: 16px;
-
+      @include desktop {
+        max-width: 100%;
+      }
       &.first {
         position: relative;
         grid-area: first;
         margin-bottom: 32px;
+        @include tablet_md {
+          margin-bottom: 26px;
+        }
         &:after {
           position: absolute;
           content: '';
@@ -82,6 +129,14 @@
           left: 50%;
           transform: translateX(-50%);
           bottom: -35px;
+          @include tablet_md {
+            background: url("../images/arch/union_mob_unity_2.png") center/contain no-repeat;
+            max-width: 350px;
+          }
+          @include mobile_md {
+            max-width: 227px;
+            height: 35px;
+          }
         }
       }
 
@@ -89,6 +144,15 @@
         position: relative;
         grid-area: second;
         max-height: 48px;
+        @include desktop {
+          margin-bottom: 24px;
+        }
+        @include tablet_md {
+          max-height: 48px;
+          & .unity-base__schema-item {
+            padding: 12px 0 16px 0;
+          }
+        }
         &:after {
           position: absolute;
           content: '';
@@ -106,6 +170,12 @@
         grid-area: third;
         max-height: 48px;
         align-self: flex-start;
+        @include desktop {
+          margin-bottom: 24px;
+        }
+        @include tablet_md {
+          max-height: 100%;
+        }
         &:after {
           position: absolute;
           content: '';
@@ -121,6 +191,8 @@
       &.fourth {
         grid-area: fourth;
         position: relative;
+
+
         &:after {
           position: absolute;
           content: '';
@@ -144,6 +216,30 @@
         & .unity-base__schema-item {
           padding: 16px;
         }
+        @include desktop {
+          flex-direction: column;
+          row-gap: 10px;
+          margin-bottom: 24px;
+          &:after, &:before {
+            position: absolute;
+            content: '';
+            height: 27px;
+            border-left: 3px dashed #fff;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -20px;
+            border-top: none;
+            top: auto;
+          }
+          &:after {
+            left: 25%;
+            right: auto;
+          }
+          &:before {
+            left: 75%;
+            right: auto;
+          }
+        }
       }
 
       &.fifth {
@@ -151,6 +247,12 @@
         flex-direction: column;
         row-gap: 32px;
         max-width: 408px;
+        position: relative;
+        justify-self: flex-end;
+        @include desktop {
+          max-width: calc(100% - 32px);
+
+        }
         & .unity-base__schema-item:first-child {
           padding: 28px 16px;
           position: relative;
@@ -172,6 +274,10 @@
         grid-area: sixth;
         margin-top: 32px;
         position: relative;
+        @include desktop {
+          margin-top: 0;
+
+        }
         &:after {
           position: absolute;
           content: '';
@@ -182,9 +288,17 @@
           left: 50%;
           transform: translateX(-50%);
           bottom: -32px;
+          @include desktop {
+            background: url("../images/arch/union_mob_unity.png") center center no-repeat;
+            width: 180px;
+            left: 110%;
+          }
         }
         & .unity-base__schema-item {
           align-self: flex-start;
+          @include desktop {
+            align-self: stretch;
+          }
         }
       }
 
@@ -193,6 +307,13 @@
         margin-top: 32px;
         & .unity-base__schema-item {
           align-self: flex-start;
+        }
+        @include desktop {
+          flex-wrap: wrap;
+          gap: 16px;
+          & .unity-base__schema-item {
+            width: calc(50% - 8px);
+          }
         }
       }
     }
@@ -208,6 +329,15 @@
       border-radius: 32px 8px;
       padding: 12px;
       position: relative;
+      @include desktop {
+        box-shadow: 5px 5px 0px 0px rgba(67, 99, 176, 1);
+      }
+      @include tablet_md {
+        flex-direction: column;
+        row-gap: 11px;
+        padding: 12px 20px 16px 20px !important;
+      }
+
       &:before {
         content: '';
         position: absolute;
@@ -226,6 +356,9 @@
         line-height: 24px;
         text-align: center;
         color: #4363B0;
+        @include mobile_md {
+          max-width: 253px;
+        }
       }
     }
   }

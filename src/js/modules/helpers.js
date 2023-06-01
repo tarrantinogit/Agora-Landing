@@ -397,5 +397,52 @@ export function scrollButton() {
 }
 
 
+export function handleToggle(btnSelector, textSelector, linesCount = 4.2) {
+	const descriptions = Array.from(document.querySelectorAll(textSelector));
+	const btns = Array.from(document.querySelectorAll(btnSelector));
+
+	function updateDescription(description, btn) {
+		if (window.innerWidth <= 768) {
+			if (btn.classList.contains("open")) {
+				description.style.maxHeight = `${description.scrollHeight}px`;
+				description.style.transition = 'max-height 0.5s';
+			} else {
+				description.style.maxHeight = `${linesCount}em`;
+				description.style.overflow = 'hidden';
+			}
+		} else {
+			description.style.maxHeight = 'none';
+		}
+	}
+
+	descriptions.forEach((description, index) => {
+		const btn = btns[index];
+		updateDescription(description, btn);
+
+		window.addEventListener("resize", function () {
+			if (!btn.classList.contains("open")) {
+				updateDescription(description, btn);
+			}
+		});
+
+		btn.addEventListener("click", function (e) {
+			e.preventDefault();
+			btn.classList.toggle("open");
+			if (btn.classList.contains("open")) {
+				btn.innerHTML = "<span>Show less</span>";
+				btn.insertAdjacentHTML('afterbegin', '<span class="icon"></span>');
+				updateDescription(description, btn);
+			} else {
+				btn.innerHTML = "<span>Show more</span>";
+				btn.insertAdjacentHTML('afterbegin', '<span class="icon"></span>');
+				updateDescription(description, btn);
+			}
+		});
+	});
+}
+
+
+
+
 
 
