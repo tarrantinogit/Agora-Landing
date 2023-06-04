@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Specifications</title>
+</head>
+<body>
+<header class="header">
+    <div class="header__wrapper">
+        <div class="header__logo"><img src="../images/header_logo.svg"></div>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__list-item drop-down">
+                    <a href="javascript:void(0);" class="header__list-link" id="about">About</a>
+                    <svg class="gradient" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <lineargradient id="gradient" gradientunits="userSpaceOnUse" fy="90%">
+                                <stop offset="0.0633718" stop-color="#3619AB"/>
+                                <stop offset="0.517512" stop-color="#2272BB"/>
+                                <stop offset="1" stop-color="#00814B"/>
+                            </lineargradient>
+                            <mask id="clock-icon-mask" maskunits="userSpaceOnUse" x="0" y="0" width="8" height="5">
+                                <path d="M3.29928 4.3L0.69928 1.7C0.382613 1.38333 0.311946 1.021 0.48728 0.613C0.662613 0.205 0.974947 0.000666667 1.42428 0L6.57428 0C7.02428 0 7.33695 0.204333 7.51228 0.613C7.68761 1.02167 7.61661 1.384 7.29928 1.7L4.69928 4.3C4.59928 4.4 4.49095 4.475 4.37428 4.525C4.25761 4.575 4.13261 4.6 3.99928 4.6C3.86595 4.6 3.74095 4.575 3.62428 4.525C3.50761 4.475 3.39928 4.4 3.29928 4.3Z" fill="white"/>
+                            </mask>
+                        </defs>
+                        <g mask="url(#clock-icon-mask)">
+                            <rect x="0" y="0" width="8" height="5" fill="#384350"/>
+                            <rect id="clock-gradient" x="0" y="0" width="8" height="5" fill="url(#gradient)"/>
+                        </g>
+                    </svg>
+                    <nav class="header__sub-nav">
+                        <ul class="header__sub-nav-list">
+                            <li class="header__sub-nav-list-item">
+                                <a href="/#processes" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico1.svg" alt="" class="header__sub-nav-ico">
+                                    Processes</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/#capabilities" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico2.svg" alt="" class="header__sub-nav-ico">
+                                    Capabilities</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/#management" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico3.svg" alt="" class="header__sub-nav-ico">
+                                    Management</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/#faq" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico4.svg" alt="" class="header__sub-nav-ico">
+                                    FAQ</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/#benefits" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico5.svg" alt="" class="header__sub-nav-ico">
+                                    Benefits</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/#solutions" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico6.svg" alt="" class="header__sub-nav-ico">
+                                    Solutions</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/#technologies" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico7.svg" alt="" class="header__sub-nav-ico">
+                                    Technologies</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/#testimonials" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico8.svg" alt="" class="header__sub-nav-ico">
+                                    Testimonials</a>
+                            </li>
+                        </ul>
+                        <div class="header__sub-nav-link-wrapper">
+                            <a href="/" class="header__sub-link">Open About Page</a>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3328 6.99984L5.93701 14.4165C5.77034 14.5832 5.57229 14.6665 5.34285 14.6665C5.1134 14.6665 4.91562 14.5832 4.74951 14.4165C4.58284 14.2498 4.49951 14.0518 4.49951 13.8223C4.49951 13.5929 4.58284 13.3951 4.74951 13.229L12.1662 5.83317H5.83285C5.59673 5.83317 5.39868 5.75317 5.23868 5.59317C5.07868 5.43317 4.99896 5.2354 4.99951 4.99984C4.99951 4.76373 5.07951 4.56567 5.23951 4.40567C5.39951 4.24567 5.59729 4.16595 5.83285 4.16651H14.1662C14.4023 4.16651 14.6003 4.24651 14.7603 4.40651C14.9203 4.56651 15.0001 4.76428 14.9995 4.99984V13.3332C14.9995 13.5693 14.9195 13.7673 14.7595 13.9273C14.5995 14.0873 14.4017 14.1671 14.1662 14.1665C13.9301 14.1665 13.732 14.0865 13.572 13.9265C13.412 13.7665 13.3323 13.5687 13.3328 13.3332V6.99984Z" fill="url(#paint0_linear_1401_4506)"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1401_4506" x1="3.67056" y1="1.81494" x2="15.6561" y2="13.2941" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.0633718" stop-color="#3619AB"/>
+                                        <stop offset="0.517512" stop-color="#2272BB"/>
+                                        <stop offset="1" stop-color="#00814B"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </nav>
+                </li>
+                <li class="header__list-item drop-down">
+                    <a href="javascript:void(0);" class="header__list-link" id="specifications">Specifications</a>
+                    <svg class="gradient" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <lineargradient id="gradient" gradientunits="userSpaceOnUse" fy="90%">
+                                <stop offset="0.0633718" stop-color="#3619AB"/>
+                                <stop offset="0.517512" stop-color="#2272BB"/>
+                                <stop offset="1" stop-color="#00814B"/>
+                            </lineargradient>
+                            <mask id="clock-icon-mask" maskunits="userSpaceOnUse" x="0" y="0" width="8" height="5">
+                                <path d="M3.29928 4.3L0.69928 1.7C0.382613 1.38333 0.311946 1.021 0.48728 0.613C0.662613 0.205 0.974947 0.000666667 1.42428 0L6.57428 0C7.02428 0 7.33695 0.204333 7.51228 0.613C7.68761 1.02167 7.61661 1.384 7.29928 1.7L4.69928 4.3C4.59928 4.4 4.49095 4.475 4.37428 4.525C4.25761 4.575 4.13261 4.6 3.99928 4.6C3.86595 4.6 3.74095 4.575 3.62428 4.525C3.50761 4.475 3.39928 4.4 3.29928 4.3Z" fill="white"/>
+                            </mask>
+                        </defs>
+                        <g mask="url(#clock-icon-mask)">
+                            <rect x="0" y="0" width="8" height="5" fill="#384350"/>
+                            <rect id="clock-gradient" x="0" y="0" width="8" height="5" fill="url(#gradient)"/>
+                        </g>
+                    </svg>
+                    <nav class="header__sub-nav">
+                        <ul class="header__sub-nav-list">
+                            <li class="header__sub-nav-list-item">
+                                <a href="/architecture.html" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico1.svg" alt="" class="header__sub-nav-ico">
+                                    Architecture
+                                    <img src="../images/header_svg_arrow.svg" class="arrow-ico" alt="">
+                                </a>
+
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/technologies.html" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico2.svg" alt="" class="header__sub-nav-ico">
+                                    Technologies
+                                    <img src="../images/header_svg_arrow.svg" class="arrow-ico" alt="">
+                                </a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/specifications.html#multilingual" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico3.svg" alt="" class="header__sub-nav-ico">
+                                    Multilingual</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/specifications.html#scaling" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico4.svg" alt="" class="header__sub-nav-ico">
+                                    Scaling and Fault Safety</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/specifications.html#security" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico5.svg" alt="" class="header__sub-nav-ico">
+                                    Security</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/specifications.html#integrations" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico6.svg" alt="" class="header__sub-nav-ico">
+                                    Integrations</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="/specifications.html#licensing" class="header__sub-nav-list-link">
+                                    <img src="../images/header_spec/ico7.svg" alt="" class="header__sub-nav-ico">
+                                    Licensing</a>
+                            </li>
+                        </ul>
+                        <div class="header__sub-nav-link-wrapper">
+                            <a href="" class="header__sub-link">Open About Page</a>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3328 6.99984L5.93701 14.4165C5.77034 14.5832 5.57229 14.6665 5.34285 14.6665C5.1134 14.6665 4.91562 14.5832 4.74951 14.4165C4.58284 14.2498 4.49951 14.0518 4.49951 13.8223C4.49951 13.5929 4.58284 13.3951 4.74951 13.229L12.1662 5.83317H5.83285C5.59673 5.83317 5.39868 5.75317 5.23868 5.59317C5.07868 5.43317 4.99896 5.2354 4.99951 4.99984C4.99951 4.76373 5.07951 4.56567 5.23951 4.40567C5.39951 4.24567 5.59729 4.16595 5.83285 4.16651H14.1662C14.4023 4.16651 14.6003 4.24651 14.7603 4.40651C14.9203 4.56651 15.0001 4.76428 14.9995 4.99984V13.3332C14.9995 13.5693 14.9195 13.7673 14.7595 13.9273C14.5995 14.0873 14.4017 14.1671 14.1662 14.1665C13.9301 14.1665 13.732 14.0865 13.572 13.9265C13.412 13.7665 13.3323 13.5687 13.3328 13.3332V6.99984Z" fill="url(#paint0_linear_1401_4506)"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1401_4506" x1="3.67056" y1="1.81494" x2="15.6561" y2="13.2941" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.0633718" stop-color="#3619AB"/>
+                                        <stop offset="0.517512" stop-color="#2272BB"/>
+                                        <stop offset="1" stop-color="#00814B"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </nav>
+                </li>
+                <li class="header__list-item">
+                    <a href="#" class="header__list-link">Solutions</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" data-popup class="btn btn--primary">Talk to Expert</a>
+        <div class="header__burger">
+            <span class="header__burger-item"></span>
+        </div>
+        <nav class="header__burger-menu">
+            <ul class="header__burger-list">
+                <li class="header__burger-list-item">
+                    <a href="javascript:void(0);" class="header__burger-list-link arrow">About</a>
+                    <nav class="header__burger-sub-nav">
+                        <ul class="header__sub-nav-list">
+                            <li class="header__sub-nav-list-item">
+                                <a href="#processes" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico1.svg" alt="" class="header__sub-nav-ico">
+                                    Processes</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="#capabilities" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico2.svg" alt="" class="header__sub-nav-ico">
+                                    Capabilities</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="#management" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico3.svg" alt="" class="header__sub-nav-ico">
+                                    Management</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="#faq" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico4.svg" alt="" class="header__sub-nav-ico">
+                                    FAQ</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="#benefits" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico5.svg" alt="" class="header__sub-nav-ico">
+                                    Benefits</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="#solutions" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico6.svg" alt="" class="header__sub-nav-ico">
+                                    Solutions</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="#technologies" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico7.svg" alt="" class="header__sub-nav-ico">
+                                    Technologies</a>
+                            </li>
+                            <li class="header__sub-nav-list-item">
+                                <a href="#testimonials" class="header__sub-nav-list-link">
+                                    <img src="../images/header_about/ico8.svg" alt="" class="header__sub-nav-ico">
+                                    Testimonials</a>
+                            </li>
+                        </ul>
+                        <div class="header__sub-nav-links-wrapper">
+                            <a href="" class="header__burger-sub-link header__burger-sub-link--back">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.000976562 8C0.000976562 8.14035 0.0225506 8.27193 0.0656967 8.39474C0.108158 8.51754 0.180754 8.63158 0.283482 8.73684L7.06358 15.6842C7.26903 15.8947 7.51319 16 7.79603 16C8.07819 16 8.322 15.8947 8.52746 15.6842C8.73292 15.4737 8.83565 15.2281 8.83565 14.9474C8.83565 14.6667 8.73292 14.4211 8.52746 14.2105L3.49375 9.05263L14.9994 9.05263C15.2904 9.05263 15.5301 8.95158 15.7185 8.74948C15.9068 8.54807 16.001 8.29825 16.001 8C16.001 7.70176 15.9027 7.45158 15.7061 7.24948C15.5089 7.04807 15.2648 6.94737 14.9737 6.94737L3.49375 6.94737L8.52746 1.78947C8.73292 1.57895 8.83565 1.33333 8.83565 1.05263C8.83565 0.77193 8.73292 0.526317 8.52746 0.315791C8.322 0.105264 8.07819 1.2334e-08 7.79603 0C7.51319 -1.23633e-08 7.26904 0.105264 7.06358 0.315791L0.283482 7.26316C0.180754 7.36842 0.108158 7.48246 0.0656967 7.60526C0.0225506 7.72807 0.000976562 7.85965 0.000976562 8Z" fill="url(#paint0_linear_1401_11413)"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1401_11413" x1="17.2641" y1="-3.58333" x2="-0.999485" y2="13.9088" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.0633718" stop-color="#3619AB"/>
+                                            <stop offset="0.517512" stop-color="#2272BB"/>
+                                            <stop offset="1" stop-color="#00814B"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="" class="header__burger-sub-link">
+                                <span>
+                                Open About Page
+                                </span>
+                            </a>
+                        </div>
+                    </nav>
+                </li>
+                <li class="header__burger-list-item">
+                    <a href="javascript:void(0);" class="header__burger-list-link arrow">Specifications</a>
+                                        <nav class="header__burger-sub-nav">
+                                            <ul class="header__sub-nav-list">
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="/architecture.html" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico1.svg" alt="" class="header__sub-nav-ico">
+                                                        Architecture
+                                                        <img src="../images/header_svg_arrow.svg" class="arrow-ico" alt="">
+                                                    </a>
+
+                                                </li>
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="/technologies.html" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico2.svg" alt="" class="header__sub-nav-ico">
+                                                        Technologies
+                                                        <img src="../images/header_svg_arrow.svg" class="arrow-ico" alt="">
+                                                    </a>
+                                                </li>
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="/specifications.html#multilingual" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico3.svg" alt="" class="header__sub-nav-ico">
+                                                        Multilingual</a>
+                                                </li>
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="/specifications.html#scaling" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico4.svg" alt="" class="header__sub-nav-ico">
+                                                        Scaling and Fault Safety</a>
+                                                </li>
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="/specifications.html#security" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico5.svg" alt="" class="header__sub-nav-ico">
+                                                        Security</a>
+                                                </li>
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="/specifications.html#integrations" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico6.svg" alt="" class="header__sub-nav-ico">
+                                                        Integrations</a>
+                                                </li>
+                                                <li class="header__sub-nav-list-item">
+                                                    <a href="/specifications.html#licensing" class="header__sub-nav-list-link">
+                                                        <img src="../images/header_spec/ico7.svg" alt="" class="header__sub-nav-ico">
+                                                        Licensing</a>
+                                                </li>
+                                            </ul>
+                                            <div class="header__sub-nav-links-wrapper">
+                                                <a href="" class="header__burger-sub-link header__burger-sub-link--back">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0.000976562 8C0.000976562 8.14035 0.0225506 8.27193 0.0656967 8.39474C0.108158 8.51754 0.180754 8.63158 0.283482 8.73684L7.06358 15.6842C7.26903 15.8947 7.51319 16 7.79603 16C8.07819 16 8.322 15.8947 8.52746 15.6842C8.73292 15.4737 8.83565 15.2281 8.83565 14.9474C8.83565 14.6667 8.73292 14.4211 8.52746 14.2105L3.49375 9.05263L14.9994 9.05263C15.2904 9.05263 15.5301 8.95158 15.7185 8.74948C15.9068 8.54807 16.001 8.29825 16.001 8C16.001 7.70176 15.9027 7.45158 15.7061 7.24948C15.5089 7.04807 15.2648 6.94737 14.9737 6.94737L3.49375 6.94737L8.52746 1.78947C8.73292 1.57895 8.83565 1.33333 8.83565 1.05263C8.83565 0.77193 8.73292 0.526317 8.52746 0.315791C8.322 0.105264 8.07819 1.2334e-08 7.79603 0C7.51319 -1.23633e-08 7.26904 0.105264 7.06358 0.315791L0.283482 7.26316C0.180754 7.36842 0.108158 7.48246 0.0656967 7.60526C0.0225506 7.72807 0.000976562 7.85965 0.000976562 8Z" fill="url(#paint0_linear_1401_11413)"/>
+                                                        <defs>
+                                                            <linearGradient id="paint0_linear_1401_11413" x1="17.2641" y1="-3.58333" x2="-0.999485" y2="13.9088" gradientUnits="userSpaceOnUse">
+                                                                <stop offset="0.0633718" stop-color="#3619AB"/>
+                                                                <stop offset="0.517512" stop-color="#2272BB"/>
+                                                                <stop offset="1" stop-color="#00814B"/>
+                                                            </linearGradient>
+                                                        </defs>
+                                                    </svg>
+                                                </a>
+                                                <a href="" class="header__burger-sub-link">
+                                                <span>
+                                                Open About Page
+                                                </span>
+                                                </a>
+                                            </div>
+                                        </nav>
+                </li>
+                <li class="header__burger-list-item">
+                    <a href="#" class="header__burger-list-link">Solutions</a>
+                </li>
+
+            </ul>
+            <a href="#" data-popup-expert-mobile-header class="btn btn--primary">Talk to expert</a>
+        </nav>
+    </div>
+</header>
+
+<main class="specifications">
+    <section class="architecture" id="architecture">
+    <div class="architecture__wrapper">
+        <div class="architecture__title-wrapper">
+            <h2 class="section__title architecture__title">Architecture</h2>
+            <a href="#" class="gradient__btn"><span>Talk to Expert</span></a>
+        </div>
+        <div class="architecture__content">
+            <p><strong>AGORA is a multi-component content services platform</strong> designed to implement enterprise
+                solutions of any
+                complexity and developed on the basis of a number of open-source platforms, libraries, and
+                applications.</p>
+            <p>When designing solutions on the AGORA platform, modern approaches are taken into account for the
+                implementation of corporate applications of any difficulty and ensuring increased requirements for their
+                <strong>productivity, fault tolerance, and scaling.</strong></p>
+            <p>The architecture of each solution is designed on the basis of the general scheme of AGORA components and
+                consists of elements that are necessary to meet the needs of the organization. This approach ensures the
+                most <strong>efficient use of the organization's resources</strong> during the operation of the
+                developed solution.</p>
+            <h6 class="architecture__content-title">General Scheme of Components:</h6>
+            <p>Each AGORA component has its own architecture and approach to its implementation. All of them are united
+                by the main component – the UnityBase module, which is responsible for the fast intercomponent
+                interaction of the solution.</p>
+        </div>
+        <nav class="page__nav">
+            <h6 class="page__nav-title">CONTENTS:</h6>
+            <ul class="page__nav-list">
+                <li class="page__nav-list-item"><a href="#architecture" class="page__nav-list-link scroll-link">Architecture</a></li>
+                <li class="page__nav-list-item"><a href="#tech" class="page__nav-list-link scroll-link">Technologies</a></li>
+                <li class="page__nav-list-item"><a href="#multilingual" class="page__nav-list-link scroll-link">Multilingual</a></li>
+                <li class="page__nav-list-item"><a href="#scaling" class="page__nav-list-link scroll-link">Scaling and Fault Safety</a>
+                </li>
+                <li class="page__nav-list-item"><a href="#security" class="page__nav-list-link scroll-link">Security</a></li>
+                <li class="page__nav-list-item"><a href="#" class="page__nav-list-link scroll-link">Access & Network Level</a></li>
+                <li class="page__nav-list-item"><a href="#" class="page__nav-list-link scroll-link">App Level</a></li>
+                <li class="page__nav-list-item"><a href="#scontrol" class="page__nav-list-link scroll-link">Security Control</a></li>
+                <li class="page__nav-list-item"><a href="#" class="page__nav-list-link scroll-link">Integrations</a></li>
+                <li class="page__nav-list-item"><a href="#licensing" class="page__nav-list-link scroll-link">Licensing</a></li>
+                <li class="page__nav-list-item"><a href="#contact-us" class="page__nav-list-link scroll-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="architecture__img-wrapper">
+        <div class="architecture__img-inner">
+            <img src="../images/specs/arch_img.png" alt="" class="architecture__img">
+        </div>
+    </div>
+</section>
+<div class="architecture__img-inner--mobile">
+    <img src="../images/specs/diagram+mobile.jpg" alt="" class="architecture__img">
+</div>
+    <section class="why" id="why">
+    <div class="why__wrapper">
+        <div class="why__title-wrapper">
+            <h2 class="section__title why__title">Why JavaScript?</h2>
+            <p class="why__description">AGORA takes an open-source approach
+                and uses widespread technologies based
+                on JavaScript (both for front-end and
+                back-end) to grant the decreased cost
+                of ownership, easy support, and solution maintenance.</p>
+        </div>
+        <div class="why__items">
+            <div class="why__item">
+                <h3 class="why__item-title">The Most Popular Software Technology</h3>
+                <div class="why__item-description">
+                    <p>It is proven that <strong> JavaScript is the most popular technology in the software
+                        engineering </strong> world.
+                        JavaScript takes a leading spot in usage, popularity, and discussions.</p>
+                    <p>UAccording to Stack Overflow Developer Survey (https://survey.stackoverflow.co/2022/#technology),
+                        JavaScript is the most popular programming language in the world. Stack Overflow says that 69.8
+                        percent of its <strong>78,334 developers-respondents use JavaScript</strong> . Another Stack
+                        Overflow’s Annual
+                        Survey indicates that for the sixth consecutive year, JavaScript was named the most commonly
+                        used programming language.</p>
+                    <p>GitHub, a repository used by millions of developers, publishes yearly analytics about how things
+                        have been going on in the previous year on their platform. A great number of GitHub users are
+                        actually JavaScript developers. According to GitHub Octoverse 2022, <strong> JavaScript was
+                            touted as the
+                            most popular language </strong> based on the amount of opened pull requests.</p>
+                    <p>
+                        In addition, JavaScript-based technologies such as AngularJS, Node.js, and React also top the
+                        list of commonly used frameworks, libraries, and tools.
+                    </p>
+                </div>
+                <a href="#" class="show-more__btn show-more__btn--white">
+                    <span class="icon"></span>
+                    <span>Show more</span></a>
+            </div>
+            <div class="why__item">
+                <h3 class="why__item-title">The Dominant Language for Web Development and Server-Side Frameworks</h3>
+                <div class="why__item-description">
+                    <p>Web Technology Surveys (Web3Techs) reported that in 2022, <strong> JavaScript was used by 98
+                        percent of
+                        websites </strong> and topped the list of the highly popular client-side coding language.</p>
+                    <p>
+                        In web development, JavaScript has maintained dominance. Since 2009 when Node.js was released,
+                        the scenario of ‘JavaScript everywhere’ was seen as a reality. The server-side framework based
+                        on JavaScript language allows developers to <strong> unite web app development in a single
+                        coding
+                        language </strong> instead of relying on numerous languages to write the server-side code. The
+                        package
+                        manager of Node.js offers the biggest ecosystem comprising open-source libraries globally.
+                    </p>
+                    <p>
+                        Another reason why JavaScript is popular and was chosen for AGORA is because of the support it
+                        has. Many businesses would want to use the language because it has been utilized by large
+                        companies. The language has been <strong> implemented by major companies such as Alibaba,
+                        Google,
+                        Microsoft, LinkedIn, and Facebook. Companies like Netflix, GoDaddy, Slack, Yahoo, and
+                        PayPal </strong>
+                        have written their web apps entirely in JavaScript. HubSpot, Adblock Plus, Mozilla, Lightshot,
+                        and Greasemonkey make some of the desktop apps that have been built in JavaScript. Facebook has
+                        been backing the use of JavaScript all along, whereas LinkedIn changed its server-side to
+                        Node.js. PayPal also moved from Java to JavaScript. Being used by such big tech companies
+                        contributes to its popularity.
+                    </p>
+                    <p>
+                        The reason why tech giants are using JavaScript is because it can handle as well as solve a
+                        majority of their tasks. <strong> The programming language is powered by libraries and popular
+                        frameworks
+                        is has </strong>.
+                    </p>
+                    <p>
+                        JavaScript is platform-independent. Any JavaScript-enabled browser, which most browsers are, can
+                        easily understand and interpret JavaScript code.
+                    </p>
+                </div>
+                <a href="#" class="show-more__btn show-more__btn--white">
+                    <span class="icon"></span>
+                    <span>Show more</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="infrastructure" id="infrastructure">
+    <div class="infrastructure__wrapper">
+        <div class="infrastructure__title-wrapper">
+            <h2 class="section__title infrastructure__title">App Infrastructure</h2>
+            <p class="infrastructure__description">AGORA-based solutions are cross-browser web applications with the
+                ability to run the server part on the most popular operating systems and connect various DBMS.</p>
+        </div>
+        <div class="infrastructure__items">
+            <div class="infrastructure__items-row">
+                <div class="infrastructure__item">
+                    <span class="infrastructure__item-text">Web Servers:</span>
+                </div>
+                <div class="infrastructure__item">
+                    <img src="../images/technologies/Linux.svg" alt="" class="infrastructure__item-img">
+                    <span class="infrastructure__item-text">Linux</span>
+                </div>
+                <div class="infrastructure__item">
+                    <img src="../images/technologies/Windows.svg" alt="" class="infrastructure__item-img">
+                    <span class="infrastructure__item-text">Windows</span>
+                </div>
+            </div>
+            <div class="infrastructure__items-row">
+                <div class="infrastructure__item">
+                    <span class="infrastructure__item-text">Web Browsers:</span>
+                </div>
+                <div class="infrastructure__item">
+                    <img src="../images/technologies/Chrome.svg" alt="" class="infrastructure__item-img">
+                    <span class="infrastructure__item-text">Chrome</span>
+                </div>
+                <div class="infrastructure__item">
+                    <img src="../images/technologies/Safari.svg" alt="" class="infrastructure__item-img">
+                    <span class="infrastructure__item-text">Safari</span>
+                </div>
+                <div class="infrastructure__item">
+                    <img src="../images/technologies/Firefox.svg" alt="" class="infrastructure__item-img">
+                    <span class="infrastructure__item-text">Firefox</span>
+                </div>
+                <div class="infrastructure__item">
+                    <img src="../images/technologies/MS_edge.svg" alt="" class="infrastructure__item-img">
+                    <span class="infrastructure__item-text">MS Edge</span>
+                </div>
+            </div>
+            <div class="infrastructure__items-row">
+                <div class="infrastructure__item">
+                    <span class="infrastructure__item-text">DBMS</span>
+                </div>
+                <div class="infrastructure__item">
+                    <img src="../images/technologies/MS_SQL_Server.svg" alt="" class="infrastructure__item-img">
+                    <span class="infrastructure__item-text">MS SQL Server</span>
+                </div>
+                <div class="infrastructure__item">
+                    <img src="../images/technologies/Oracle.svg" alt="" class="infrastructure__item-img">
+                    <span class="infrastructure__item-text">Oracle</span>
+                </div>
+                <div class="infrastructure__item">
+                    <img src="../images/technologies/PostgreSQL.svg" alt="" class="infrastructure__item-img">
+                    <span class="infrastructure__item-text">PostgreSQL</span>
+                </div>
+                <div class="infrastructure__item">
+                    <img src="../images/technologies/SQLite3.svg" alt="" class="infrastructure__item-img">
+                    <span class="infrastructure__item-text">SQLite3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="deployment" id="deployment">
+    <div class="deployment__container">
+        <div class="deployment__wrapper">
+            <div class="deployment__title-wrapper">
+                <h2 class="section__title deployment__title">Deployment Options</h2>
+                <p class="deployment__description">Based on the conditions and specific needs, the Client can choose the
+                    most optimal option for deploying the Platform.</p>
+            </div>
+            <div class="deployment__items">
+                <div class="deployment__item">
+                    <div class="deployment__item-content">
+                        <h3 class="deployment__item-title">On-Premise (local private data centers)</h3>
+                        <div class="deployment__item-description">
+                            <p>Control and confidentiality for optimal server performance. On-Premise allows you to manage
+                                data privacy, cost-effectiveness, employee expertise, physical protection, and offline
+                                operation.</p>
+                        </div>
+                    </div>
+                    <ul class="deployment__item-list">
+                        <li class="deployment__item-list-item">
+                            <img src="../images/specs/password.svg" class="deployment__item-list-item-ico" alt="">
+                            <span class="deployment__item-list-item-text">Confidentiality of the organization's data</span>
+                        </li>
+                        <li class="deployment__item-list-item">
+                            <img src="../images/specs/price.svg" class="deployment__item-list-item-ico" alt="">
+                            <span class="deployment__item-list-item-text">Price/performance ratio of the server
+infrastructure for optimal performance</span>
+                        </li>
+                        <li class="deployment__item-list-item">
+                            <img src="../images/specs/employees.svg" class="deployment__item-list-item-ico" alt="">
+                            <span class="deployment__item-list-item-text">Professionalism of employees serving the server</span>
+                        </li>
+                        <li class="deployment__item-list-item">
+                            <img src="../images/specs/secure.svg" class="deployment__item-list-item-ico" alt="">
+                            <span class="deployment__item-list-item-text">Protection from physical damage to equipment</span>
+                        </li>
+                        <li class="deployment__item-list-item">
+                            <img src="../images/specs/connection.svg" class="deployment__item-list-item-ico" alt="">
+                            <span class="deployment__item-list-item-text">Operation without the Internet</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="deployment__item">
+                    <div class="deployment__item-content">
+                        <h3 class="deployment__item-title">On-Cloud</h3>
+                        <div class="deployment__item-description">
+                            <p>This section covers the advantages of cloud-based server infrastructure, which include easy
+                                scaling of server capacity, no direct maintenance costs, persistent and device-independent
+                                internet access, and duplication and backup of all infrastructure components.</p>
+                        </div>
+                    </div>
+                    <ul class="deployment__item-list">
+                        <li class="deployment__item-list-item">
+                            <img src="../images/specs/network.svg" class="deployment__item-list-item-ico" alt="">
+                            <span class="deployment__item-list-item-text">Easy server capacity scaling</span>
+                        </li>
+                        <li class="deployment__item-list-item">
+                            <img src="../images/specs/costs.svg" class="deployment__item-list-item-ico" alt="">
+                            <span class="deployment__item-list-item-text">No direct maintenance costs</span>
+                        </li>
+                        <li class="deployment__item-list-item">
+                            <img src="../images/specs/devices.svg" class="deployment__item-list-item-ico" alt="">
+                            <span class="deployment__item-list-item-text">Persistent and device-independent internet access</span>
+                        </li>
+                        <li class="deployment__item-list-item">
+                            <img src="../images/specs/backup.svg" class="deployment__item-list-item-ico" alt="">
+                            <span class="deployment__item-list-item-text">Duplication and backup of all infrastructure components</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+</main>
+<footer class="footer">
+    <div class="footer__wrapper">
+        <section class="contact-us" id="contact-us" style="background: #72B8BA url('../images/bg/contact-us.jpg') center center no-repeat">
+            <div class="contact-us__wrapper">
+                <div class="contact-us__info">
+                    <h3 class="contact-us__title">Contact Us</h3>
+                    <p class="contact-us__description">You can contact us by sending
+                        a message via this form</p>
+                    <a href="#" data-popup-contact class="btn btn--secondary mobile"><span>Open form</span></a>
+                </div>
+
+                <div class="contact-us__form-wrapper">
+                    <div class="contact-us__header">
+                        <div class="contact-us__form-title-wrapper">
+                            <h3 class="contact-us__form-title">Contact Us</h3>
+                        </div>
+
+                        <p class="contact-us__caption">You can contact us by sending
+                            a message via this pop-up form</p>
+                    </div>
+                    <form action="" class="contact-us__form">
+                        <div class="contact-us__form-inner">
+                            <label for="first-name" class="label">
+                                <span class="label__text label__text--required">First name</span>
+
+                                <input type="text" placeholder="First name" name="" id="first-name" class="input">
+
+
+                            </label>
+                            <label for="last-name" class="label">
+                                <span class="label__text label__text--required">Last name</span>
+
+                                <input type="text" placeholder="Last name" name="" id="last-name" class="input">
+
+                            </label>
+                            <label for="email" class="label">
+                                <span class="label__text label__text--required">Email</span>
+
+                                <input type="email" name="" placeholder="Email" id="email" class="input input--mail">
+
+                            </label>
+                            <label for="phone" class="label">
+                                <span class="label__text">Phone number</span>
+
+                                <input type="tel" name="" placeholder="Phone number (optional)" id="phone" class="input input--tel">
+
+                            </label>
+                        </div>
+                        <label for="add" class="check-label">
+                            <input type="checkbox" name=" " class="input--checkbox" id="add">
+                            <span>Add message field</span>
+                        </label>
+
+                        <label class="label">
+                <span class="label__inner">
+                      <span class="label__text">Message</span>
+                <span class="label__text label__text--additional">Max. <span>500</span> characters</span>
+                </span>
+
+                            <textarea name="" data-type maxlength="500" placeholder="Enter your message (optional)" class="input input--textarea"></textarea>
+
+                        </label>
+                        <div class="btn__inner">
+                            <span class="download__reset-btn">Delete a file</span>
+                            <label class="download__wrapper mobile">
+                                <span class="download__text">Attach a file</span>
+                                <input type="file" class="input--file" name="">
+                            </label>
+                        </div>
+
+                        <div class="btn__wrapper">
+                            <div class="btn__inner">
+                                <span class="download__reset-btn desktop">Delete a file</span>
+                                <label class="download__wrapper desktop">
+                                    <span class="download__text">Attach a file</span>
+                                    <input type="file" class="input--file" name="">
+
+                                </label>
+                                <div class="btn-secondary__wrapper">
+
+
+                                    <a data-contact-us_-close class="btn btn--secondary"><span>Close</span></a>
+                                </div>
+                            </div>
+                            <button class="btn btn--primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+        <div class="footer__top">
+            <div class="footer__main-info">
+                <div class="footer__logo-wrapper">
+                    <img src="../images/header_logo.svg" alt="" class="footer__logo">
+                </div>
+                <p class="footer__logo-caption">Powered by <span class="footer__logo-caption-gradient">Softengi</span>
+                </p>
+                <p class="footer__logo-caption">Accelerate productivity with the
+                    top-notch Content Services Platform</p>
+                <div class="footer__socials">
+                    <ul class="footer__socials-list">
+                        <li class="footer__socials-list-item">
+
+                            <a href="mailto:" class="footer__socials-list-link">
+                                <img src="../images/email-ico.svg" alt="" class="footer__socials-list-icon">
+                            </a>
+                        </li>
+                        <li class="footer__socials-list-item">
+                            <a href="#" class="footer__socials-list-link">
+                                <img src="../images/Facebook.svg" alt="" class="footer__socials-list-icon">
+                            </a>
+                        </li>
+                        <li class="footer__socials-list-item">
+                            <a href="#" class="footer__socials-list-link">
+                                <img src="../images/Youtube.svg" alt="" class="footer__socials-list-icon">
+                            </a>
+                        </li>
+                        <li class="footer__socials-list-item">
+                            <a href="#" class="footer__socials-list-link">
+                                <img src="../images/Twitter.svg" alt="" class="footer__socials-list-icon">
+                            </a>
+                        </li>
+                        <li class="footer__socials-list-item">
+                            <a href="#" class="footer__socials-list-link">
+                                <img src="../images/Linkedin.svg" alt="" class="footer__socials-list-icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <nav class="footer__links">
+                <ul class="footer__links-list footer__links-list--processes">
+                    <h4 class="footer__links-title">About</h4>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Automate Business Processes</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Tools and Services</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Smart Data Management</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Document Management</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">FAQ</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Benefits</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Solutions by Industry</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Technology Stack</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">What People Say</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="footer__links-list footer__links-list--capabilities">
+                    <h4 class="footer__links-title">Specifications</h4>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Architecture</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Technologies</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Multilingual</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Scaling and Fault Safety</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Security</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Integrations</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Licensing</a>
+                    </li>
+                </ul>
+                <ul class="footer__links-list footer__links-list--management">
+                    <h4 class="footer__links-title">Architecture</h4>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">General Scheme of Components</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Centralized Authorization Service</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Content Management System</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">GeoCMS</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Structured Information Collection</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">AI Tool</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">UnityBase</a>
+                    </li>
+                </ul>
+                <ul class="footer__links-list footer__links-list--solutions">
+                    <h4 class="footer__links-title">Technologies</h4>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Why JavaScript?</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">App Infrastructure</a>
+                    </li>
+                    <li class="footer__links-list-item">
+                        <a href="" class="footer__links-list-link">Deployment Options</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__rights">© 2022 AGORA - All Rights Reserved </p>
+            <div class="footer__dev-logo-wrapper">
+                <img src="../images/dev_logo.svg" alt="" class="footer__dev-logo">
+            </div>
+            <p class="footer__address">Tychy, Poland,
+                43-100 ul. Fabryczna 45</p>
+        </div>
+    </div>
+
+
+</footer>
+
+<div class="popup popup--expert">
+    <div class="popup__header">
+        <div class="popup__title-wrapper">
+            <h3 class="popup__title">Talk to Expert</h3>
+            <img src="../images/popup_close.svg" data-popup-expert-close alt="" class="popup__btn-close">
+        </div>
+        <p class="popup__caption">Leave your contacts, and we will reach out to you shortly</p>
+    </div>
+    <div class="popup__body">
+
+    </div>
+</div>
+<div class="popup-contact" data-popup-contact>
+
+    <div class="popup__header" style="background: #72B8BA url('../images/bg/popup-header.jpg') center center no-repeat">
+        <div class="popup__title-wrapper">
+            <h3 class="popup__title">Contact Us</h3>
+            <img src="../images/popup_close.svg" data-popup-contact-close alt="" class="popup__btn-close">
+        </div>
+        <p class="popup__caption">You can contact us by sending
+            a message via this pop-up form</p>
+    </div>
+    <div class="contact-us__form-wrapper-popup">
+        <form action="" class="contact-us__form">
+            <div class="contact-us__form-inner">
+                <label for="first-name" class="label">
+                    <span class="label__text label__text--required">First name</span>
+
+                     <input type="text" placeholder="First name" name="" id="first-name" class="input">
+
+
+                </label>
+                <label for="last-name" class="label">
+                    <span class="label__text label__text--required">Last name</span>
+
+                <input type="text" placeholder="Last name" name="" id="last-name" class="input">
+
+                </label>
+                <label for="email" class="label">
+                    <span class="label__text label__text--required">Email</span>
+
+                <input type="email" name="" placeholder="Email" id="email" class="input input--mail">
+
+                </label>
+                <label for="phone" class="label">
+                    <span class="label__text">Phone number</span>
+
+                <input type="tel" name="" placeholder="Phone number (optional)" id="phone" class="input input--tel">
+
+                </label>
+            </div>
+            <label for="add" class="check-label">
+                <input type="checkbox" name=" " class="input--checkbox" id="add">
+                <span>Add message field</span>
+            </label>
+
+            <label class="label">
+                <span class="label__inner">
+                      <span class="label__text">Message</span>
+                <span class="label__text label__text--additional">Max. <span>500</span>  characters</span>
+                </span>
+
+                <textarea data-type maxlength="500" name="" placeholder="Enter your message (optional)" class="input input--textarea"></textarea>
+
+            </label>
+            <div class="btn__inner mobile">
+                <span class="download__reset-btn">Delete a file</span>
+                <label for="download" class="download__wrapper mobile">
+                    <span class="download__text">Attach a file</span>
+                    <input type="file" class="input--file" name="" id="download">
+                </label>
+            </div>
+            <div class="btn__wrapper">
+                <div class="btn__inner">
+                    <span class="download__reset-btn">Delete a file</span>
+                    <label for="download" class="download__wrapper desktop">
+                        <span class="download__text">Attach a file</span>
+                        <input type="file" class="input--file" name="" id="download">
+                    </label>
+                    <div class="btn-secondary__wrapper">
+                        <a data-contact-us-close class="btn btn--secondary"><span>Close</span></a>
+                    </div>
+                </div>
+                <button class="btn btn--primary">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="overlay"></div>
+<a href="javascript:void(0);" class="btn__top">
+    <img src="images/arrow_top.svg" alt="">
+</a>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+
+<script src="js/app.min.js"></script>
+</body>
+</html>
+
+
