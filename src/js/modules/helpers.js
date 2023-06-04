@@ -140,6 +140,7 @@ export function burgerMenu() {
 	const btns = document.querySelectorAll('.header__burger-list-link.arrow');
 	const burgerMenus = document.querySelectorAll('.header__burger-sub-nav');
 	const backBtns = document.querySelectorAll('.header__burger-sub-link.header__burger-sub-link--back');
+	const headerInnerLinks = document.querySelectorAll('.header__sub-nav-list-link');
 
 	burgerBtn.addEventListener('click', (e) => {
 		if (e.target && overlay.classList.contains('active')) {
@@ -181,6 +182,15 @@ export function burgerMenu() {
 				burgerMenus[index].classList.remove('active');
 			}
 		});
+	})
+
+	headerInnerLinks.forEach(link=>{
+		link.addEventListener('click', (e)=>{
+			document.body.style.overflowY = 'visible';
+			burgerBtn.classList.remove('active');
+			mobileMenu.classList.remove('active');
+			overlay.classList.remove('active');
+		})
 	})
 }
 
@@ -285,7 +295,7 @@ export function headerMenu() {
 	const btns = document.querySelectorAll('.header__list-item.drop-down > a');
 	const headerMenus = document.querySelectorAll('.header__list-item.drop-down .header__sub-nav');
 	const listItems = document.querySelectorAll('.header__list-item.drop-down');
-
+	const headerInnerLinks = document.querySelectorAll('.header__sub-nav-list-link');
 	const deactivateAll = () => {
 		listItems.forEach((item) => item.classList.remove('active'));
 		headerMenus.forEach((menu) => menu.classList.remove('active'));
@@ -317,6 +327,11 @@ export function headerMenu() {
 			deactivateAll();
 		}
 	});
+	headerInnerLinks.forEach(link => {
+		link.addEventListener('click', () =>{
+			deactivateAll();
+		})
+	})
 }
 
 export function changeText(elem, inner) {
@@ -329,39 +344,39 @@ export function changeText(elem, inner) {
 
 export function initScrollObserver(itemSelector, imageWrapperSelector) {
 
-		// Initialize items and images
-		let items = Array.from($(itemSelector));
-		let images = Array.from($(imageWrapperSelector));
+	// Initialize items and images
+	let items = Array.from($(itemSelector));
+	let images = Array.from($(imageWrapperSelector));
 
-		// Add the active class to the first image by default
-		$(images[0]).addClass('is-active');
+	// Add the active class to the first image by default
+	$(images[0]).addClass('is-active');
 
-		// Initialize a variable to keep track of the last scroll position
-		let lastScrollTop = 0;
+	// Initialize a variable to keep track of the last scroll position
+	let lastScrollTop = 0;
 
-		// Initialize IntersectionObserver
-		let observer = new IntersectionObserver((entries, observer) => {
-			entries.forEach(entry => {
-				let index = items.indexOf(entry.target);
-				let st = window.pageYOffset || document.documentElement.scrollTop;
+	// Initialize IntersectionObserver
+	let observer = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+			let index = items.indexOf(entry.target);
+			let st = window.pageYOffset || document.documentElement.scrollTop;
 
-				if (entry.isIntersecting) {
-					// If the item is in view, make the corresponding image active
-					$(`${imageWrapperSelector}[data-index=${index}]`).addClass('is-active');
-				} else {
-					// If the item is not in view, make the corresponding image inactive
-					// except for the last image when scrolling down
-					if (index !== items.length - 1 || st <= lastScrollTop) {
-						$(`${imageWrapperSelector}[data-index=${index}]`).removeClass('is-active');
-					}
+			if (entry.isIntersecting) {
+				// If the item is in view, make the corresponding image active
+				$(`${imageWrapperSelector}[data-index=${index}]`).addClass('is-active');
+			} else {
+				// If the item is not in view, make the corresponding image inactive
+				// except for the last image when scrolling down
+				if (index !== items.length - 1 || st <= lastScrollTop) {
+					$(`${imageWrapperSelector}[data-index=${index}]`).removeClass('is-active');
 				}
-				// Update the last scroll position
-				lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-			});
-		}, {threshold: 0.5});
+			}
+			// Update the last scroll position
+			lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+		});
+	}, {threshold: 0.5});
 
-		// Observe each item
-		items.forEach(item => observer.observe(item));
+	// Observe each item
+	items.forEach(item => observer.observe(item));
 }
 
 export function scrollButton() {
@@ -372,8 +387,8 @@ export function scrollButton() {
 	var sections = document.querySelectorAll('section');
 
 	// Инициализировать IntersectionObserver
-	var observer = new IntersectionObserver(function(entries, observer) {
-		entries.forEach(function(entry) {
+	var observer = new IntersectionObserver(function (entries, observer) {
+		entries.forEach(function (entry) {
 			// Проверяем, является ли пересекаемый элемент первой секцией
 			if (entry.target === sections[0]) {
 				if (entry.isIntersecting) {
@@ -391,7 +406,7 @@ export function scrollButton() {
 	sections.forEach(section => observer.observe(section));
 
 	// При клике прокрутите до верха документа
-	scrollTopButton.addEventListener('click', function() {
+	scrollTopButton.addEventListener('click', function () {
 		window.scrollTo({top: 0, behavior: 'smooth'});
 	});
 }

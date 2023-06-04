@@ -40,6 +40,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+const url = window.location.href;
+
+if (url.includes('specifications') || url.includes('technologies') || url.includes('architecture') ) {
+	let element = document.getElementById('specifications');
+	element.classList.add('_active');
+	element.parentNode.classList.add('_active');
+} else if (url.includes('solutions')) {
+	let element = document.getElementById('solutions');
+	element.classList.add('_active');
+	element.parentNode.classList.add('_active');
+} else {
+	let element = document.getElementById('about');
+	element.classList.add('_active');
+	element.parentNode.classList.add('_active');
+}
+
 
 
 

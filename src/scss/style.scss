@@ -543,3 +543,40 @@ section {
     visibility: visible;
   }
 }
+
+.breadcrumps {
+  padding-top: 50px;
+  background-color: #FAFAFC;
+
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    @include desktop_xl {
+      padding: 0 24px;
+    }
+    @include tablet_md {
+      padding: 0 16px;
+    }
+    @include mobile {
+      column-gap: 8px;
+    }
+  }
+  &__item {
+    font-family: 'Avenir', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 22px;
+    color: #5F6972;
+    text-decoration: none;
+    &:not(:last-child):hover {
+      text-decoration: underline;
+    }
+    &:last-child {
+      color: #242D3B;
+    }
+  }
+}

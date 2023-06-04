@@ -132,10 +132,13 @@
           @include tablet_md {
             background: url("../images/arch/union_mob_unity_2.png") center/contain no-repeat;
             max-width: 350px;
+            height: 25px;
+            bottom: -27px;
           }
           @include mobile_md {
             max-width: 227px;
             height: 35px;
+            bottom: -34px;
           }
         }
       }

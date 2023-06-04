@@ -196,7 +196,11 @@
   }
 
 }
-
+@media (max-width: 576px) {
+  .footer__wrapper .contact-us {
+    margin: 0 !important;
+  }
+}
 .contact-us__form .wpcf7-spinner {
   align-self: center;
 }

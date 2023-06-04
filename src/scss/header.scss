@@ -174,7 +174,10 @@ $header-height-mob: 62px; //TODO: move cacl and set this value to positions menu
       &.active {
         background-color: #F8F8FA;
       }
-
+      &._active:after {
+        transition: all .3s linear;
+        background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+      }
       &.active:after {
         transition: all .3s linear;
         background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
@@ -225,7 +228,17 @@ $header-height-mob: 62px; //TODO: move cacl and set this value to positions menu
       line-height: 24px;
       position: relative;
       transition: all .3s linear;
-
+      &._active {
+        transition: all .3s linear;
+        background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        & + svg #clock-gradient {
+          opacity: 1.0;
+        }
+      }
       &.active {
         transition: all .3s linear;
         background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
@@ -315,8 +328,9 @@ $header-height-mob: 62px; //TODO: move cacl and set this value to positions menu
         align-items: center;
         column-gap: 16px;
 
-        & svg {
+        & .arrow-ico {
           margin-left: auto;
+          display: inline-block;
         }
 
         &:hover {

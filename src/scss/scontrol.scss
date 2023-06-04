@@ -5,12 +5,13 @@
   }
   @include tablet_md {
     padding: 50px 16px;
+    background: url("../images/arch/Security (2).jpg") no-repeat;
   }
   @include mobile {
-    background-position: 75% 100%;
+    background-position: 100% 0;
   }
   @include mobile_sm {
-    background-position: 85% 100%;
+   background-size: contain !important;
   }
   &__wrapper {
     max-width: 1280px;

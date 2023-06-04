@@ -10,12 +10,13 @@
     background-size: cover !important;
   }
   @include tablet_md {
-    background-size: 300% !important;
+    background: #F8F8FA url("../images/arch/Security (1).jpg") center bottom no-repeat;
     padding: 48px 16px;
   }
   @include mobile_md {
     background-size: cover !important;
     background-position: 100% 100%;
+    padding-bottom: 0;
   }
   &__wrapper {
     max-width: 1280px;
