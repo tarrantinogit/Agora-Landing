@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	scroll();
 	scrollButton();
 	headerMenu();
-	if (document.querySelector('.multilingual__flag.multilingual__flag--more')){
+	if (document.querySelector('.multilingual__flag.multilingual__flag--more')) {
 		changeText('.multilingual__flag.multilingual__flag--more', '+3 <br> more');
 	}
 	if (document.querySelector('.read-more__btn.read-more__btn--apache')) {
@@ -38,16 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
 const url = window.location.href;
 
-if (url.includes('specifications') || url.includes('technologies') || url.includes('architecture') ) {
+if (url.includes('specifications') || url.includes('technologies') || url.includes('specifications')) {
 	let element = document.getElementById('specifications');
-	element.classList.add('_active');
-	element.parentNode.classList.add('_active');
-} else if (url.includes('solutions')) {
-	let element = document.getElementById('solutions');
 	element.classList.add('_active');
 	element.parentNode.classList.add('_active');
 } else {
