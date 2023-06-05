@@ -80,7 +80,7 @@
   &__items {
     max-width: 1230px;
     margin: 0 auto;
-    width: 100%;
+    width: 50%;
     @include desktop_xl {
       width: 50%;
     }
@@ -225,9 +225,11 @@
 
     &-content {
       max-width: 628px;
+      margin-right: 24px;
       @include tablet {
         max-width: 100%;
         padding: 0 24px;
+        margin-right: 0;
       }
       @include mobile {
         padding: 0 16px;
