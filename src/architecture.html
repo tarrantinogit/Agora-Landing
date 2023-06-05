@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/head.html', {
-'title': 'Specifications'
+'title': 'Architecture'
 })
 <body>
 @@include('html/header.html', {})
+@@include('html/breadcrumbs.html', {'pageName': 'Architecture'})
+
 
 <main class="specifications">
-    @@include('html/architecture.html', {"isLink": false})
+    @@include('html/architecture.html', {"isLink": false, "showImage": true, "page": "arch"})
     @@include('html/service.html', {})
     @@include('html/system.html', {})
     @@include('html/geocms.html', {})

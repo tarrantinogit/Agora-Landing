@@ -1,55 +1,93 @@
 <section class="architecture" id="architecture">
-    <div class="architecture__wrapper">
-        <div class="architecture__title-wrapper">
-            <h2 class="architecture__title section__title">Architecture</h2>
-            @@if(isLink) {
-            <a href="#" class="read-more__btn"><span>Talk to Expert</span></a>
-            }
-            @@if(!isLink) {
-            <a href="#" class="gradient__btn"><span>Talk to Expert</span></a>
-            }
-        </div>
-        <div class="architecture__content">
-            <p><strong>AGORA is a multi-component content services platform</strong> designed to implement enterprise
-                solutions of any
-                complexity and developed on the basis of a number of open-source platforms, libraries, and
-                applications.</p>
-            <p>When designing solutions on the AGORA platform, modern approaches are taken into account for the
-                implementation of corporate applications of any difficulty and ensuring increased requirements for their
-                <strong>productivity, fault tolerance, and scaling.</strong></p>
-            <p>The architecture of each solution is designed on the basis of the general scheme of AGORA components and
-                consists of elements that are necessary to meet the needs of the organization. This approach ensures the
-                most <strong>efficient use of the organization's resources</strong> during the operation of the
-                developed solution.</p>
-            <h6 class="architecture__content-title">General Scheme of Components:</h6>
-            <p>Each AGORA component has its own architecture and approach to its implementation. All of them are united
-                by the main component – the UnityBase module, which is responsible for the fast intercomponent
-                interaction of the solution.</p>
-        </div>
-        <nav class="page__nav">
-            <h6 class="page__nav-title">CONTENTS:</h6>
-            <ul class="page__nav-list">
-                <li class="page__nav-list-item "><a href="#architecture" class="page__nav-list-link scroll-link">Architecture</a></li>
-                <li class="page__nav-list-item "><a href="#tech" class="page__nav-list-link scroll-link">Technologies</a></li>
-                <li class="page__nav-list-item "><a href="#multilingual" class="page__nav-list-link scroll-link">Multilingual</a></li>
-                <li class="page__nav-list-item "><a href="#scaling" class="page__nav-list-link scroll-link">Scaling and Fault Safety</a>
-                </li>
-                <li class="page__nav-list-item "><a href="#security" class="page__nav-list-link scroll-link">Security</a></li>
-                <li class="page__nav-list-item "><a href="#" class="page__nav-list-link scroll-link">Access & Network Level</a></li>
-                <li class="page__nav-list-item "><a href="#" class="page__nav-list-link scroll-link">App Level</a></li>
-                <li class="page__nav-list-item "><a href="#scontrol" class="page__nav-list-link scroll-link">Security Control</a></li>
-                <li class="page__nav-list-item "><a href="#" class="page__nav-list-link scroll-link">Integrations</a></li>
-                <li class="page__nav-list-item "><a href="#licensing" class="page__nav-list-link scroll-link">Licensing</a></li>
-                <li class="page__nav-list-item "><a href="#contact-us" class="page__nav-list-link scroll-link">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="architecture__img-wrapper">
-        <div class="architecture__img-inner">
-            <img src="../images/specs/arch_img.png" alt="" class="architecture__img">
-        </div>
-    </div>
+	<div class="architecture__wrapper">
+		<div class="architecture__title-wrapper">
+			<h2 class="architecture__title section__title">Architecture</h2>
+			@@if(isLink) {
+			<a href="#" class="read-more__btn"><span>Read more</span></a>
+			} @@if(!isLink) {
+			<a href="#" class="gradient__btn"><span>Talk to Expert</span></a>
+			}
+		</div>
+		<div class="architecture__content">
+			<p>
+				<strong>AGORA is a multi-component content services platform</strong> designed to
+				implement enterprise solutions of any complexity and developed on the basis of a
+				number of open-source platforms, libraries, and applications.
+			</p>
+			<p>
+				When designing solutions on the AGORA platform, modern approaches are taken into
+				account for the implementation of corporate applications of any difficulty and
+				ensuring increased requirements for their
+				<strong>productivity, fault tolerance, and scaling.</strong>
+			</p>
+			<p>
+				The architecture of each solution is designed on the basis of the general scheme of
+				AGORA components and consists of elements that are necessary to meet the needs of
+				the organization. This approach ensures the most
+				<strong>efficient use of the organization's resources</strong> during the operation
+				of the developed solution.
+			</p>
+			<h6 class="architecture__content-title">General Scheme of Components:</h6>
+			<p>
+				Each AGORA component has its own architecture and approach to its implementation.
+				All of them are united by the main component – the UnityBase module, which is
+				responsible for the fast intercomponent interaction of the solution.
+			</p>
+		</div>
+		<nav class="page__nav">
+			<h6 class="page__nav-title">CONTENTS:</h6>
+			<ul class="page__nav-list">
+				@@if(page === 'tech') { 
+                    @@loop('loop-nav-list-item.html', [ 
+                        {link: '#architecture', title: 'Technologies'}, 
+                        {link: '#why', title: 'Why JavaScript?'}, 
+                        {link: '#infrastructure', title: 'App Infrastructure'}, 
+                        {link: '#deployment', title: 'Deployment Options'}, 
+                    ]) 
+                }
+
+                @@if(page === 'spec') {
+                    @@loop('loop-nav-list-item.html', [
+                        {link: '#architecture', title: 'Architecture'},
+                        {link: '#tech', title: 'Technologies'},
+                        {link: '#multilingual', title: 'Multilingual'},
+                        {link: '#scaling', title: 'Scaling and Fault Safety'},
+                        {link: '#security', title: 'Security'},
+                        {link: '#', title: 'Access & Network Level'},
+                        {link: '#', title: 'App Level'},
+                        {link: '#scontrol', title: 'Security Control'},
+                        {link: '#licensing', title: 'Licensing'},
+                    ])
+                }
+
+                @@if(page === 'arch') {
+                    @@loop('loop-nav-list-item.html', [
+                        {link: '#architecture', title: 'Architecture'},
+                        {link: '#', title: 'Centralized Authorization Servic'},
+                        {link: '#', title: 'Content Management System'},
+                        {link: '#multilingual', title: 'GeoCMS'},
+                        {link: '#scaling', title: 'Structured Information Collection'},
+                        {link: '#security', title: 'AI Tool'},
+                        {link: '#', title: 'UnityBase'},
+                        {link: '#', title: 'Flexible User Authentication Options'},
+                    ])
+                }
+				<li class="page__nav-list-item">
+					<a href="#contact-us" class="page__nav-list-link scroll-link">Contact Us</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	@@if(showImage) {
+	<div class="architecture__img-wrapper">
+		<div class="architecture__img-inner">
+			<img src="../images/specs/arch_img.png" alt="" class="architecture__img" />
+		</div>
+	</div>
+	}
 </section>
+@@if(showImage) {
 <div class="architecture__img-inner--mobile">
-    <img src="../images/specs/diagram+mobile.jpg" alt="" class="architecture__img">
+	<img src="../images/specs/diagram+mobile.jpg" alt="" class="architecture__img" />
 </div>
+}
