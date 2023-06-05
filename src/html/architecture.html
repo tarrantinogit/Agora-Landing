@@ -2,7 +2,12 @@
     <div class="architecture__wrapper">
         <div class="architecture__title-wrapper">
             <h2 class="architecture__title section__title">Architecture</h2>
+            @@if(isLink) {
+            <a href="#" class="read-more__btn"><span>Talk to Expert</span></a>
+            }
+            @@if(!isLink) {
             <a href="#" class="gradient__btn"><span>Talk to Expert</span></a>
+            }
         </div>
         <div class="architecture__content">
             <p><strong>AGORA is a multi-component content services platform</strong> designed to implement enterprise
