@@ -37,40 +37,26 @@
 		<nav class="page__nav">
 			<h6 class="page__nav-title">CONTENTS:</h6>
 			<ul class="page__nav-list">
-				@@if(page === 'tech') { 
-                    @@loop('loop-nav-list-item.html', [ 
-                        {link: '#architecture', title: 'Technologies'}, 
-                        {link: '#why', title: 'Why JavaScript?'}, 
-                        {link: '#infrastructure', title: 'App Infrastructure'}, 
-                        {link: '#deployment', title: 'Deployment Options'}, 
-                    ]) 
-                }
-
-                @@if(page === 'spec') {
-                    @@loop('loop-nav-list-item.html', [
-                        {link: '#architecture', title: 'Architecture'},
-                        {link: '#tech', title: 'Technologies'},
-                        {link: '#multilingual', title: 'Multilingual'},
-                        {link: '#scaling', title: 'Scaling and Fault Safety'},
-                        {link: '#security', title: 'Security'},
-                        {link: '#', title: 'Access & Network Level'},
-                        {link: '#', title: 'App Level'},
-                        {link: '#scontrol', title: 'Security Control'},
-                        {link: '#licensing', title: 'Licensing'},
-                    ])
-                }
-
+				@@if(page === 'tech') { @@loop('loop-nav-list-item.html', [ {link: '#architecture',
+				title: 'Technologies'}, {link: '#why', title: 'Why JavaScript?'}, {link:
+				'#infrastructure', title: 'App Infrastructure'}, {link: '#deployment', title:
+				'Deployment Options'}, ]) } @@if(page === 'spec') {
+				@@loop('loop-nav-list-item.html', [ {link: '#architecture', title: 'Architecture'},
+				{link: '#tech', title: 'Technologies'}, {link: '#multilingual', title:
+				'Multilingual'}, {link: '#scaling', title: 'Scaling and Fault Safety'}, {link:
+				'#security', title: 'Security'}, {link: '#', title: 'Access & Network Level'},
+				{link: '#', title: 'App Level'}, {link: '#scontrol', title: 'Security Control'},
+				{link: '#licensing', title: 'Licensing'}, ]) } 
+                
                 @@if(page === 'arch') {
-                    @@loop('loop-nav-list-item.html', [
-                        {link: '#architecture', title: 'Architecture'},
-                        {link: '#', title: 'Centralized Authorization Servic'},
-                        {link: '#', title: 'Content Management System'},
-                        {link: '#multilingual', title: 'GeoCMS'},
-                        {link: '#scaling', title: 'Structured Information Collection'},
-                        {link: '#security', title: 'AI Tool'},
-                        {link: '#', title: 'UnityBase'},
-                        {link: '#', title: 'Flexible User Authentication Options'},
-                    ])
+				    @@loop('loop-nav-list-item.html', [ 
+                    {link: '#architecture', title: 'Architecture'},
+                    {link: '#', title: 'Centralized Authorization Servic'}, 
+                    {link: '#', title: 'Content Management System'},
+                     {link: '#multilingual', title: 'GeoCMS'}, 
+                     {link: '#scaling', title: 'Structured Information Collection'}, {link: '#security', title: 'AI Tool'},
+                    {link: '#', title: 'UnityBase'}, {link: '#', title: 'Flexible User Authentication Options'}, 
+                    ]) 
                 }
 				<li class="page__nav-list-item">
 					<a href="#contact-us" class="page__nav-list-link scroll-link">Contact Us</a>
@@ -81,13 +67,13 @@
 	@@if(showImage) {
 	<div class="architecture__img-wrapper">
 		<div class="architecture__img-inner">
-			<img src="../images/specs/arch_img.png" alt="" class="architecture__img" />
+			<img src="./images/specs/arch_img.png" alt="" class="architecture__img" />
 		</div>
 	</div>
 	}
 </section>
 @@if(showImage) {
 <div class="architecture__img-inner--mobile">
-	<img src="../images/specs/diagram+mobile.jpg" alt="" class="architecture__img" />
+	<img src="./images/specs/diagram+mobile.jpg" alt="" class="architecture__img" />
 </div>
 }
