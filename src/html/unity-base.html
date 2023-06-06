@@ -1,90 +1,132 @@
 <section class="unity-base" id="unity-base">
-    <div class="unity-base__container">
-        <div class="unity-base__wrapper">
-            <div class="unity-base__title-wrapper">
-                <h2 class="unity-base__title section__title">UnityBase</h2>
-                <div class="unity-base__description">
-                    <p>UnityBase is the basic component of AGORA, the core of platform solutions. It is based on the common
-                       <strong>programming language JavaScript</strong> , which covers both the client side and the server side of
-                        development. From a technical standpoint, UnityBase is a multi-threaded, synchronous JavaScript
-                        runtime built on the Mozilla SpiderMonkey JavaScript engine. It has a built-in event-driven,
-                        non-blocking HTTP server and drivers for the most popular databases provided by the Synopse Open
-                        Source project. The UnityBase package ecosystem is compatible with npm, the world's largest
-                        ecosystem of open-source libraries.</p>
-                    <p><strong>General scheme of server architecture:</strong></p>
-                </div>
-            </div>
-            <div class="unity-base__schema">
-                <div class="unity-base__schema-inner first">
-                    <div class="unity-base__schema-item">
-                        <img src="../images/arch/browser.svg" alt="" class="unity-base__schema-item-img">
-                        <p class="unity-base__schema-item-text">Browser</p>
-                    </div>
-                    <div class="unity-base__schema-item">
-                        <img src="../images/arch/mobile.svg" alt="" class="unity-base__schema-item-img">
-                        <p class="unity-base__schema-item-text">Mobile</p>
-                    </div>
-                    <div class="unity-base__schema-item">
-                        <img src="../images/arch/other.svg" alt="" class="unity-base__schema-item-img">
-                        <p class="unity-base__schema-item-text">Other Software</p>
-                    </div>
-                </div>
-                <div class="unity-base__schema-inner second">
-                    <div class="unity-base__schema-item">
-                        <p class="unity-base__schema-item-text">HTTP(s), REST, JSON RPC, OData</p>
-                    </div>
-                </div>
-                <div class="unity-base__schema-inner third">
-                    <div class="unity-base__schema-item">
-                        <img src="../images/arch/mobile.svg" alt="" class="unity-base__schema-item-img">
-                        <p class="unity-base__schema-item-text">Asynchronous Non-blocking Request/Response Queue</p>
-                    </div>
-                </div>
-                <div class="unity-base__schema-inner fourth">
-                    <div class="unity-base__schema-item">
-                        <p class="unity-base__schema-item-text">UB Server Process With Pull of Synchronous Workers</p>
-                    </div>
-                    <div class="unity-base__schema-item">
-                        <p class="unity-base__schema-item-text">In-memory data shared between threads</p>
-                    </div>
-                    <div class="unity-base__schema-item">
-                        <p class="unity-base__schema-item-text">Workers threads each with its own SpiderMonkey engine</p>
-                    </div>
-                </div>
-                <div class="unity-base__schema-inner fifth">
-                    <div class="unity-base__schema-item">
-                        <p class="unity-base__schema-item-text">CIFS, SAMBA, NFTS, ext4, zfs, btrfs</p>
-                    </div>
-                    <div class="unity-base__schema-item">
-                        <img src="../images/arch/other.svg" alt="" class="unity-base__schema-item-img">
-                        <p class="unity-base__schema-item-text">File Storage</p>
-                    </div>
-                </div>
-                <div class="unity-base__schema-inner sixth">
-                    <div class="unity-base__schema-item">
-                        <p class="unity-base__schema-item-text">Pool of Synchronous Connections MQIT, OCI, libpg, ODBC,
-                            OleDB</p>
-                    </div>
-                </div>
-                <div class="unity-base__schema-inner seventh">
-                    <div class="unity-base__schema-item">
-                        <img src="../images/arch/db.svg" alt="" class="unity-base__schema-item-img">
-                        <p class="unity-base__schema-item-text">Oracle</p>
-                    </div>
-                    <div class="unity-base__schema-item">
-                        <img src="../images/arch/db.svg" alt="" class="unity-base__schema-item-img">
-                        <p class="unity-base__schema-item-text">MS SQL</p>
-                    </div>
-                    <div class="unity-base__schema-item">
-                        <img src="../images/arch/db.svg" alt="" class="unity-base__schema-item-img">
-                        <p class="unity-base__schema-item-text">Postgre SQL</p>
-                    </div>
-                    <div class="unity-base__schema-item">
-                        <img src="../images/arch/db.svg" alt="" class="unity-base__schema-item-img">
-                        <p class="unity-base__schema-item-text">SQLite3</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="unity-base__container">
+		<div class="unity-base__wrapper">
+			<div class="unity-base__title-wrapper">
+				<h2 class="unity-base__title section__title">UnityBase</h2>
+				<div class="unity-base__description">
+					<p>
+						UnityBase is the basic component of AGORA, the core of platform solutions.
+						It is based on the common <strong>programming language JavaScript</strong> ,
+						which covers both the client side and the server side of development. From a
+						technical standpoint, UnityBase is a multi-threaded, synchronous JavaScript
+						runtime built on the Mozilla SpiderMonkey JavaScript engine. It has a
+						built-in event-driven, non-blocking HTTP server and drivers for the most
+						popular databases provided by the Synopse Open Source project. The UnityBase
+						package ecosystem is compatible with npm, the world's largest ecosystem of
+						open-source libraries.
+					</p>
+					<p><strong>General scheme of server architecture:</strong></p>
+				</div>
+			</div>
+			<div class="unity-base__schema">
+				<div class="unity-base__schema-inner first">
+					<div class="unity-base__schema-item">
+						<img
+							src="./images/arch/browser.svg"
+							alt=""
+							class="unity-base__schema-item-img" />
+						<p class="unity-base__schema-item-text">Browser</p>
+					</div>
+					<div class="unity-base__schema-item">
+						<img
+							src="./images/arch/mobile.svg"
+							alt=""
+							class="unity-base__schema-item-img" />
+						<p class="unity-base__schema-item-text">Mobile</p>
+					</div>
+					<div class="unity-base__schema-item">
+						<img
+							src="./images/arch/other.svg"
+							alt=""
+							class="unity-base__schema-item-img" />
+						<p class="unity-base__schema-item-text">Other Software</p>
+					</div>
+				</div>
+				<div class="unity-base__schema-inner second">
+					<div class="unity-base__schema-item">
+						<p class="unity-base__schema-item-text">HTTP(s), REST, JSON RPC, OData</p>
+					</div>
+				</div>
+				<div class="unity-base__schema-inner third">
+					<div class="unity-base__schema-item">
+						<img
+							src="./images/arch/mobile.svg"
+							alt=""
+							class="unity-base__schema-item-img" />
+						<p class="unity-base__schema-item-text">
+							Asynchronous Non-blocking Request/Response Queue
+						</p>
+					</div>
+				</div>
+				<div class="unity-base__schema-inner fourth">
+					<div class="unity-base__schema-item">
+						<p class="unity-base__schema-item-text">
+							UB Server Process With Pull of Synchronous Workers
+						</p>
+					</div>
+					<div class="unity-base__schema-item">
+						<p class="unity-base__schema-item-text">
+							In-memory data shared between threads
+						</p>
+					</div>
+					<div class="unity-base__schema-item">
+						<p class="unity-base__schema-item-text">
+							Workers threads each with its own SpiderMonkey engine
+						</p>
+					</div>
+				</div>
+				<div class="unity-base__schema-inner fifth">
+					<div class="unity-base__schema-item">
+						<p class="unity-base__schema-item-text">
+							CIFS, SAMBA, NFTS, ext4, zfs, btrfs
+						</p>
+					</div>
+					<div class="unity-base__schema-item">
+						<img
+							src="./images/arch/other.svg"
+							alt=""
+							class="unity-base__schema-item-img" />
+						<p class="unity-base__schema-item-text">File Storage</p>
+					</div>
+				</div>
+				<div class="unity-base__schema-inner sixth">
+					<div class="unity-base__schema-item">
+						<p class="unity-base__schema-item-text">
+							Pool of Synchronous Connections MQIT, OCI, libpg, ODBC, OleDB
+						</p>
+					</div>
+				</div>
+				<div class="unity-base__schema-inner seventh">
+					<div class="unity-base__schema-item">
+						<img
+							src="./images/arch/db.svg"
+							alt=""
+							class="unity-base__schema-item-img" />
+						<p class="unity-base__schema-item-text">Oracle</p>
+					</div>
+					<div class="unity-base__schema-item">
+						<img
+							src="./images/arch/db.svg"
+							alt=""
+							class="unity-base__schema-item-img" />
+						<p class="unity-base__schema-item-text">MS SQL</p>
+					</div>
+					<div class="unity-base__schema-item">
+						<img
+							src="./images/arch/db.svg"
+							alt=""
+							class="unity-base__schema-item-img" />
+						<p class="unity-base__schema-item-text">Postgre SQL</p>
+					</div>
+					<div class="unity-base__schema-item">
+						<img
+							src="./images/arch/db.svg"
+							alt=""
+							class="unity-base__schema-item-img" />
+						<p class="unity-base__schema-item-text">SQLite3</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>

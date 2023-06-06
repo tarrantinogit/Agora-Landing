@@ -1,84 +1,123 @@
-<section class="contact-us" id="contact-us" style="background: url('../images/bg/contact-us.jpg') center center no-repeat">
-  <div class="contact-us__wrapper">
-    <div class="contact-us__info">
-      <h3 class="contact-us__title">Contact Us</h3>
-      <p class="contact-us__description">You can contact us by sending
-        a message via this form</p>
-      <a href="#" data-popup-contact class="btn btn--secondary mobile"><span>Open form</span></a>
-    </div>
+<section
+	class="contact-us"
+	id="contact-us"
+	style="background: url('../images/bg/contact-us.jpg') center center no-repeat">
+	<div class="contact-us__wrapper">
+		<div class="contact-us__info">
+			<h3 class="contact-us__title">Contact Us</h3>
+			<p class="contact-us__description">
+				You can contact us by sending a message via this form
+			</p>
+			<a href="#" data-popup-contact class="btn btn--secondary mobile"
+				><span>Open form</span></a
+			>
+		</div>
 
-    <div class="contact-us__form-wrapper">
-      <div class="contact-us__header">
-        <div class="contact-us__form-title-wrapper">
-          <h3 class="contact-us__form-title">Contact Us</h3>
-          <img src="../images/popup_close.svg " data-popup-contact-close alt="" class="contact-us__btn-close">
-        </div>
+		<div class="contact-us__form-wrapper">
+			<div class="contact-us__header">
+				<div class="contact-us__form-title-wrapper">
+					<h3 class="contact-us__form-title">Contact Us</h3>
+					<img
+						src="./images/popup_close.svg "
+						data-popup-contact-close
+						alt=""
+						class="contact-us__btn-close" />
+				</div>
 
-        <p class="contact-us__caption">You can contact us by sending
-          a message via this pop-up form</p>
-      </div>
-      <form action="" class="contact-us__form">
-        <div class="contact-us__form-inner">
-          <label for="first-name" class="label">
-            <span class="label__text label__text--required">First name</span>
-            <span class="input__wrapper">
-                     <input type="text" placeholder="First name" name="" id="first-name" class="input">
-                </span>
+				<p class="contact-us__caption">
+					You can contact us by sending a message via this pop-up form
+				</p>
+			</div>
+			<form action="" class="contact-us__form">
+				<div class="contact-us__form-inner">
+					<label for="first-name" class="label">
+						<span class="label__text label__text--required">First name</span>
+						<span class="input__wrapper">
+							<input
+								type="text"
+								placeholder="First name"
+								name=""
+								id="first-name"
+								class="input" />
+						</span>
+					</label>
+					<label for="last-name" class="label">
+						<span class="label__text label__text--required">Last name</span>
+						<span class="input__wrapper">
+							<input
+								type="text"
+								placeholder="Last name"
+								name=""
+								id="last-name"
+								class="input" />
+						</span>
+					</label>
+					<label for="email" class="label">
+						<span class="label__text label__text--required">Email</span>
+						<span class="input__wrapper">
+							<input
+								type="email"
+								name=""
+								placeholder="Email"
+								id="email"
+								class="input input--mail" />
+						</span>
+					</label>
+					<label for="phone" class="label">
+						<span class="label__text">Phone number</span>
+						<span class="input__wrapper">
+							<input
+								type="tel"
+								name=""
+								placeholder="Phone number (optional)"
+								id="phone"
+								class="input input--tel" />
+						</span>
+					</label>
+				</div>
+				<label for="add" class="check-label">
+					<input type="checkbox" name=" " class="input--checkbox" id="add" />
+					<span>Add message field</span>
+				</label>
 
-          </label>
-          <label for="last-name" class="label">
-            <span class="label__text label__text--required">Last name</span>
-            <span class="input__wrapper">
-                <input type="text" placeholder="Last name" name="" id="last-name" class="input">
-                </span>
-          </label>
-          <label for="email" class="label">
-            <span class="label__text label__text--required">Email</span>
-            <span class="input__wrapper">
-                <input type="email" name="" placeholder="Email" id="email" class="input input--mail">
-                </span>
-          </label>
-          <label for="phone" class="label">
-            <span class="label__text">Phone number</span>
-            <span class="input__wrapper">
-                <input type="tel" name="" placeholder="Phone number (optional)" id="phone" class="input input--tel">
-                </span>
-          </label>
-        </div>
-        <label for="add" class="check-label">
-          <input type="checkbox" name=" " class="input--checkbox" id="add">
-          <span>Add message field</span>
-        </label>
+				<label for="message" class="label">
+					<span class="label__inner">
+						<span class="label__text">Message</span>
+						<span class="label__text label__text--additional">Max. 500 characters</span>
+					</span>
+					<span class="input__wrapper">
+						<textarea
+							name=""
+							id="message"
+							placeholder="Enter your message (optional)"
+							class="input input--textarea"></textarea>
+					</span>
+				</label>
+				<label for="download" class="download__wrapper mobile">
+					<span class="download__text">Attach a file</span>
+					<input type="file" accept=".pdf" class="input--file" name="" id="download" />
+				</label>
+				<div class="btn__wrapper">
+					<div class="btn__inner">
+						<div class="btn-secondary__wrapper">
+							<label for="download" class="download__wrapper desktop">
+								<span class="download__text">Attach a file</span>
+								<input
+									type="file"
+									accept=".pdf"
+									class="input--file"
+									name=""
+									id="download" />
+							</label>
 
-        <label for="message" class="label">
-                <span class="label__inner">
-                      <span class="label__text">Message</span>
-                <span class="label__text label__text--additional">Max. 500 characters</span>
-                </span>
-          <span class="input__wrapper">
-                <textarea name="" id="message" placeholder="Enter your message (optional)"
-                          class="input input--textarea"></textarea>
-                    </span>
-        </label>
-        <label for="download" class="download__wrapper mobile">
-          <span class="download__text">Attach a file</span>
-          <input type="file" accept=".pdf" class="input--file " name="" id="download">
-        </label>
-        <div class="btn__wrapper">
-          <div class="btn__inner">
-            <div class="btn-secondary__wrapper">
-              <label for="download" class="download__wrapper desktop">
-                <span class="download__text">Attach a file</span>
-                <input type="file" accept=".pdf" class="input--file " name="" id="download">
-              </label>
-
-              <a data-contact-us_-close class="btn btn--secondary"><span>Close</span></a>
-            </div>
-          </div>
-          <button class="btn btn--primary">Send</button>
-        </div>
-      </form>
-    </div>
-
-  </div>
+							<a data-contact-us_-close class="btn btn--secondary"
+								><span>Close</span></a
+							>
+						</div>
+					</div>
+					<button class="btn btn--primary">Send</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </section>
