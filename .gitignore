@@ -17,7 +17,7 @@ src/.temporary_cache
 ehthumbs.db
 Thumbs.db
 _config.yml
-dist/
+
 
 deployment.xml
 misc.xml
