@@ -10,6 +10,7 @@
   @include tablet {
     padding: 50px 0;
   }
+
   &__title-wrapper {
     display: flex;
     max-width: 958px;
@@ -47,22 +48,29 @@
     color: #111A2B;
     margin: 0 32px 0 0;
     text-align: left;
+    max-width: 408px;
+    @include tablet_md {
+      max-width: 100%;
+    }
     @include mobile {
       font-size: 23px;
       line-height: 32px;
     }
   }
 
-  &__description {
+  &__description span, .system__description p, .system__description  {
     font-family: 'Avenir', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
+    display: inline;
     line-height: 32px;
     color: #384350;
     max-width: 518px;
     @include tablet {
       max-width: 100%;
+      display: block;
+      margin-bottom: 24px;
     }
     @include mobile {
       font-size: 15px;
@@ -129,6 +137,7 @@
     //width: 100%;
     object-fit: cover;
     border-radius: 40px 0px 0px 40px;
+
     &-wrapper--mobile {
       display: none;
       @include tablet {
@@ -150,6 +159,7 @@
       width: 100%;
       height: 100%;
     }
+
     &--mobile {
       border-radius: 0;
       max-width: 100%;
@@ -186,6 +196,7 @@
       margin-right: 0;
       flex-direction: column;
     }
+
     &-title {
       font-family: 'Avenir', sans-serif;
       font-style: normal;
@@ -202,39 +213,50 @@
     }
 
     &-text {
-      font-family: 'Avenir';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 24px;
-      color: #242D3B;
 
-      &:not(:last-child) {
-        margin-bottom: 16px;
+      & + .gradient__btn {
+        display: inline-block;
+        margin-top: 48px;
       }
 
-      &.mb {
-        margin-bottom: 50px;
-        @include tablet {
-          margin-bottom: 24px;
+      & p {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        color: #242D3B;
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
         }
 
+        @include mobile {
+          font-size: 15px;
+          line-height: 24px;
+        }
       }
+
+
       @include tablet {
         & + .gradient__btn {
           display: none;
         }
       }
-      @include mobile {
-        font-size: 15px;
-        line-height: 24px;
 
-      }
     }
 
     &-content {
       max-width: 628px;
       margin-right: 24px;
+
+      & .system__item-title:not(:first-child) {
+        margin-top: 48px;
+        @include tablet {
+          margin-bottom: 24px;
+        }
+      }
+
       @include tablet {
         max-width: 100%;
         padding: 0 24px;

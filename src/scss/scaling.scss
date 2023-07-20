@@ -43,7 +43,7 @@
     }
   }
 
-  &__description {
+  &__description p {
     font-family: 'Avenir', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -407,6 +407,7 @@
       margin-bottom: 18px;
       @include tablet {
         margin-bottom: 0;
+        max-width: 120px;
       }
     }
   }

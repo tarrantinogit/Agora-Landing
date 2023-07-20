@@ -52,7 +52,7 @@
     }
   }
 
-  &__description {
+  &__description p {
     font-family: 'Avenir', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -127,7 +127,7 @@
     }
 
     &-title {
-      background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
+      background: linear-gradient(133.76deg, #3619AB -3.9%, #2272BB 69.86%, #00814B 160.8%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;

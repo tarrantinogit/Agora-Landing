@@ -15,7 +15,30 @@
       flex-direction: column;
     }
   }
-
+  &__title-description {
+    @include tablet {
+      width: 100%;
+      order: 2;
+    }
+  }
+  &__title-description p {
+    color: #384350;
+    font-family: Avenir, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    margin-bottom: 24px;
+    max-width: 360px;
+    @include tablet {
+      width: 100%;
+      order: 2;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
   &__title.section__title {
     text-align: left;
     margin-bottom: 24px;
@@ -49,6 +72,8 @@
       width: 100%;
       max-width: 100%;
       margin-bottom: 16px;
+      flex-wrap: wrap;
+      row-gap: 16px;
     }
   }
 
@@ -81,7 +106,7 @@
         margin-bottom: 24px;
       }
     }
-    &-title {
+    & h6 {
       font-family: 'Avenir', sans-serif;
       font-style: normal;
       font-weight: 800;

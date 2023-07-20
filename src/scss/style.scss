@@ -230,6 +230,7 @@ p {
 section {
   padding: 130px 0;
   background-size: cover !important;
+  position: relative;
   @include desktop {
     padding: 130px 24px;
   }
@@ -239,6 +240,13 @@ section {
   @include mobile {
     padding: 50px 16px;
   }
+}
+
+.anchor-link {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -150px;
 }
 
 .overlay {
@@ -362,6 +370,7 @@ section {
   border-radius: 999px;
   padding: 8px 48px 8px 24px;
   position: relative;
+  display: inline-block;
 
   &.read-more__btn--apache {
     &:after {
@@ -442,6 +451,7 @@ section {
   text-decoration: none;
   margin-top: 24px;
   display: none;
+
   & span {
     background: linear-gradient(133.76deg, #3619AB -7.9%, #2272BB 42.86%, #00814B 96.8%);
     -webkit-background-clip: text;
@@ -449,6 +459,7 @@ section {
     background-clip: text;
     text-fill-color: transparent;
   }
+
   @include tablet_md {
     display: block;
   }
@@ -537,6 +548,7 @@ section {
     right: 24px;
     bottom: 24px;
   }
+
   &.active {
     z-index: 2;
     opacity: 1;
@@ -544,16 +556,26 @@ section {
   }
 }
 
-.breadcrumbs {
+#breadcrumbs {
   padding-top: 50px;
-  background-color: #FAFAFC;
+  @include mobile {
+    padding-top: 32px;
+  }
+}
 
-  &__container {
+.breadcrumbs {
+  background-color: #FAFAFC;
+  @include mobile {
+    padding-top: 0;
+  }
+
+  & > span {
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
     column-gap: 16px;
     align-items: center;
+    color: transparent;
     @include desktop_xl {
       padding: 0 24px;
     }
@@ -562,9 +584,29 @@ section {
     }
     @include mobile {
       column-gap: 8px;
+      padding-top: 0;
+    }
+
+    & span:not(:last-child) {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        right: -30px;
+        transform: translateY(-50%);
+        background: url("../images/br_arrow.svg") center no-repeat;
+        @include mobile {
+          right: -23px;
+        }
+      }
     }
   }
-  &__item {
+
+  & a {
     font-family: 'Avenir', sans-serif;
     font-style: normal;
     font-weight: 900;
@@ -572,11 +614,14 @@ section {
     line-height: 22px;
     color: #5F6972;
     text-decoration: none;
-    &:not(:last-child):hover {
-      text-decoration: underline;
-    }
-    &:last-child {
-      color: #242D3B;
-    }
   }
+}
+
+.breadcrumb_last {
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 22px;
+  color: #242D3B;
 }

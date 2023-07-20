@@ -40,7 +40,10 @@
 
   &__wrapper {
     background-size: cover !important;
-
+    padding-top: 130px;
+    @include desktop {
+      padding-top: 50px;
+    }
     &:first-child {
       padding-top: 130px;
       @include desktop {

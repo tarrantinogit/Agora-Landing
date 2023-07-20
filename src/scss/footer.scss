@@ -160,9 +160,6 @@
 
       &--solutions {
         grid-area: solutions;
-        @include mobile {
-          margin-top: -42px;
-        }
       }
 
       &--benefits {
@@ -201,7 +198,7 @@
       }
     }
 
-    &-title {
+    &-title a {
       font-family: Avenir, sans-serif;
       font-style: normal;
       font-weight: 800;
@@ -211,6 +208,8 @@
       text-transform: uppercase;
       color: #384350;
       margin-bottom: 20px;
+      text-decoration: none;
+      display: inline-block;
       @include mobile {
         margin-bottom: 16px;
       }

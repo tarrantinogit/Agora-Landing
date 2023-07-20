@@ -287,7 +287,6 @@ $header-height-mob: 62px; //TODO: move cacl and set this value to positions menu
     z-index: -999;
     visibility: hidden;
     opacity: 0;
-    transition: all .4s linear;
 
     &.active {
       z-index: 9999;

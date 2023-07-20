@@ -417,6 +417,7 @@ export function handleToggle(btnSelector, textSelector, linesCount = 4.2) {
 	const btns = Array.from(document.querySelectorAll(btnSelector));
 
 	function updateDescription(description, btn) {
+		if (!btn) return;
 		if (window.innerWidth <= 768) {
 			if (btn.classList.contains("open")) {
 				description.style.maxHeight = `${description.scrollHeight}px`;
@@ -435,26 +436,29 @@ export function handleToggle(btnSelector, textSelector, linesCount = 4.2) {
 		updateDescription(description, btn);
 
 		window.addEventListener("resize", function () {
-			if (!btn.classList.contains("open")) {
+			if (btn && !btn.classList.contains("open")) {
 				updateDescription(description, btn);
 			}
 		});
 
-		btn.addEventListener("click", function (e) {
-			e.preventDefault();
-			btn.classList.toggle("open");
-			if (btn.classList.contains("open")) {
-				btn.innerHTML = "<span>Show less</span>";
-				btn.insertAdjacentHTML('afterbegin', '<span class="icon"></span>');
-				updateDescription(description, btn);
-			} else {
-				btn.innerHTML = "<span>Show more</span>";
-				btn.insertAdjacentHTML('afterbegin', '<span class="icon"></span>');
-				updateDescription(description, btn);
-			}
-		});
+		if (btn) {
+			btn.addEventListener("click", function (e) {
+				e.preventDefault();
+				btn.classList.toggle("open");
+				if (btn.classList.contains("open")) {
+					btn.innerHTML = "<span>Show less</span>";
+					btn.insertAdjacentHTML('afterbegin', '<span class="icon"></span>');
+					updateDescription(description, btn);
+				} else {
+					btn.innerHTML = "<span>Show more</span>";
+					btn.insertAdjacentHTML('afterbegin', '<span class="icon"></span>');
+					updateDescription(description, btn);
+				}
+			});
+		}
 	});
 }
+
 
 
 
